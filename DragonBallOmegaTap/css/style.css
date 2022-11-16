@@ -1,0 +1,1007 @@
+@font-face 
+{
+  font-family: BoldFont;
+  src: url("../fonts/boldfont.ttf");
+}
+
+*{
+    margin: 0;
+    font-family: BoldFont;
+    image-rendering: pixelated;
+}
+
+body{
+  background-image: url(../images/background/namek.webp);
+  background-size: cover;
+  overflow:hidden;
+}
+
+#panelPerso{
+  display: none;
+}
+
+/**********************************************************/
+/***************************CHOOSEPERSO*******************************/
+/**********************************************************/
+
+.bigTxT{
+  background-image: url(../images/text/ChooseFighter.png);
+  background-size: cover;
+  width: 50vh;
+  height: 25vh;
+  left: 37.5%;
+  position: absolute;
+  top: 0%;
+}
+
+#selectedPlayer1{
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  width: 30vh;
+  height: 30vh;
+  background-size: cover;
+  z-index: 0;
+  transform: rotateY(180deg);
+}
+
+#selectedPlayer2{
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  width: 30vh;
+  height: 30vh;
+  background-size: cover;
+  z-index: 0;
+}
+
+/***********************************/
+
+#selectedPlayer1.Gogeta{
+  background-image: url(../images/sprites/gogetablue/gogetaportrait.png);
+}
+
+#selectedPlayer2.Gogeta{
+  background-image: url(../images/sprites/gogetablue/gogetaportrait.png);
+}
+
+#selectedPlayer1.VegitoSSJ{
+  background-image: url(../images/sprites/gogetasayan/vegetoPortrait.png);
+}
+
+#selectedPlayer2.VegitoSSJ{
+  background-image: url(../images/sprites/gogetasayan/vegetoPortrait.png);
+}
+
+#selectedPlayer1.GokuSSJ3{
+  background-image: url(../images/sprites/gokuSSJ3/gokuSSJ3portrait.png);
+}
+
+#selectedPlayer2.GokuSSJ3{
+  background-image: url(../images/sprites/gokuSSJ3/gokuSSJ3portrait.png);
+}
+
+#selectedPlayer1.GoldenFrieza{
+  background-image: url(../images/sprites/goldenFrieza/goldenFriezaPortrait.png);
+}
+
+#selectedPlayer2.GoldenFrieza{
+  background-image: url(../images/sprites/goldenFrieza/goldenFriezaPortrait.png);
+}
+
+#selectedPlayer1.BlackGoku{
+  background-image: url(../images/sprites/blackgoku/blackGokuPortrait.png);
+}
+
+#selectedPlayer2.BlackGoku{
+  background-image: url(../images/sprites/blackgoku/blackGokuPortrait.png);
+}
+
+/***********************************/
+
+#choosePerso{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  top:22.5%;
+}
+
+.perso{
+  width: 10vh;
+  height: 10vh;
+  margin: 1vh;
+  cursor: pointer;
+  background-size: cover;
+  transition: all 1s;
+}
+
+.perso:hover{
+  transition: all 1s;
+  transform: scale(1.25);
+  z-index: 10;
+}
+
+.perso.Gogeta{
+  background-image: url(../images/slotCharacter/gogetaSlot.png);
+}
+
+.perso.VegitoSSJ{
+  background-image: url(../images/slotCharacter/vegetoSlot.png);
+}
+
+.perso.GokuSSJ3{
+  background-image: url(../images/slotCharacter/gokuSSJ3Portrait.png);
+}
+
+.perso.GoldenFrieza{
+  background-image: url(../images/slotCharacter/goldenFriezaSlot.png);
+}
+
+.perso.BlackGoku{
+  background-image: url(../images/slotCharacter/gokuSlot.png);
+}
+
+/**********************************************************/
+/***************************CHOOSEPERSO*******************************/
+/**********************************************************/
+
+.buttonStartGame{
+  background-image: url(../images/ui/start\ game.png);
+  background-size: cover;
+  width: 25vw;
+  height: 5vw;
+  position: absolute;
+  left: 37.5vw;
+  bottom: 3%;
+  cursor: pointer;
+}
+
+/**********************************************************/
+/***************************Game*******************************/
+/**********************************************************/
+
+.centering{
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  perspective: 1000px;
+}
+
+#txtStart{
+  font-size: 15vh;
+  animation: startinText 3.5s;
+}
+
+@keyframes startinText{
+  from{
+    transform: scale(2) rotateX(80deg);
+  }to{
+    transform: scale(1);
+  }
+}
+
+#gameTable{
+  display: none;
+}
+
+.Player1{
+  position: absolute;
+  left:0;
+  top:39%;
+  width: 17vh;
+  height: 17vh;
+  background-size: cover;
+  background-image: url(../images/sprites/gogetablue/gogetaKamehaDo.png);
+}
+
+#auraP1{
+  width: 34vh;
+  height: 34vh;
+  position: absolute;
+  left:0%;
+  top:20%;
+  background-size: cover;
+  z-index: -2;
+  transform: rotateY(180deg);
+}
+
+#auraP1Starting{
+  width: 34vh;
+  height: 34vh;
+  position: absolute;
+  left:0%;
+  top:20%;
+  background-size: cover;
+  z-index: -1;
+  transform: rotateY(180deg);
+}
+
+.Player2{
+  position: absolute;
+  right: 0;
+  top:39%;
+  width: 17vh;
+  height: 17vh;
+  transform: rotateY(180deg);
+  background-size: cover;
+  background-image: url(../images/sprites/gogetasayan/vegetoKamehaDo.png);
+}
+
+#auraP2{
+  width: 34vh;
+  height: 34vh;
+  position: absolute;
+  right:0%;
+  background-size: cover;
+  top:20%;
+  z-index: -2;
+}
+
+#auraP2Starting{
+  width: 34vh;
+  height: 34vh;
+  position: absolute;
+  right:0%;
+  background-size: cover;
+  top:20%;
+  z-index: -1;
+}
+
+/***************AURASET********************/
+
+#auraP1.GokuSSJ3{
+  animation: auraSSJ1 1s infinite;
+  animation-delay: 3s;
+}
+
+#auraP2.GokuSSJ3{
+  animation: auraSSJ1 1s infinite;
+  animation-delay: 3s;
+}
+
+@keyframes auraSSJ1 {
+  0%{
+    background-image: url(../images/sprites/aura/ssj1.png);
+  }49%{
+    background-image: url(../images/sprites/aura/ssj1.png);
+  }50%{
+    background-image: url(../images/sprites/aura/ssj1\(2\).png);
+  }100%{
+    background-image: url(../images/sprites/aura/ssj1\(2\).png);
+  }
+}
+
+#auraP1.BlackGoku{
+  animation: auraBlackGoku 1s infinite;
+  animation-delay: 3s;
+}
+
+#auraP2.BlackGoku{
+  animation: auraBlackGoku 1s infinite;
+  animation-delay: 3s;
+}
+
+@keyframes auraBlackGoku {
+  0%{
+    background-image: url(../images/sprites/blackgoku/aura/blackgokuAura1.png);
+  }49%{
+    background-image: url(../images/sprites/blackgoku/aura/blackgokuAura1.png);
+  }50%{
+    background-image: url(../images/sprites/blackgoku/aura/blackgokuAura2.png);
+  }100%{
+    background-image: url(../images/sprites/blackgoku/aura/blackgokuAura2.png);
+  }
+}
+
+/***************AURASET********************/
+
+/***************STARTINGAURASET********************/
+
+#auraP1Starting.GokuSSJ3{
+  animation : startingAuraGokuSSJ3 3s;
+}
+
+#auraP2Starting.GokuSSJ3{
+  animation : startingAuraGokuSSJ3 3s;
+}
+
+@keyframes startingAuraGokuSSJ3 {
+  0%{
+    background-image: url(../images/sprites/gokuSSJ3/startingAura/1.png);
+  }19%{
+    background-image: url(../images/sprites/gokuSSJ3/startingAura/1.png);
+  }20%{
+    background-image: url(../images/sprites/gokuSSJ3/startingAura/2.png);
+  }39%{
+    background-image: url(../images/sprites/gokuSSJ3/startingAura/2.png);
+  }40%{
+    background-image: url(../images/sprites/gokuSSJ3/startingAura/3.png);
+  }59%{
+    background-image: url(../images/sprites/gokuSSJ3/startingAura/3.png);
+  }60%{
+    background-image: url(../images/sprites/gokuSSJ3/startingAura/4.png);
+  }79%{
+    background-image: url(../images/sprites/gokuSSJ3/startingAura/4.png);
+  }80%{
+    background-image: url(../images/sprites/gokuSSJ3/startingAura/5.png);
+  }100%{
+    background-image: url(../images/sprites/gokuSSJ3/startingAura/5.png);
+  }
+}
+
+#auraP1Starting.BlackGoku{
+  animation : startingAuraBlackGoku 3s;
+}
+
+#auraP2Starting.BlackGoku{
+  animation : startingAuraBlackGoku 3s;
+}
+
+@keyframes startingAuraBlackGoku {
+  0%{
+    background-image: url(../images/sprites/blackgoku/auraStarting/1.png);
+  }19%{
+    background-image: url(../images/sprites/blackgoku/auraStarting/1.png);
+  }20%{
+    background-image: url(../images/sprites/blackgoku/auraStarting/2.png);
+  }39%{
+    background-image: url(../images/sprites/blackgoku/auraStarting/2.png);
+  }40%{
+    background-image: url(../images/sprites/blackgoku/auraStarting/3.png);
+  }59%{
+    background-image: url(../images/sprites/blackgoku/auraStarting/3.png);
+  }60%{
+    background-image: none;
+  }100%{
+    background-image: none;
+  }
+}
+
+/***************STARTINGAURASET********************/
+
+/***************PLAYERSET********************/
+
+.Player1{
+  background-image: url(../images/sprites/gogetablue/gogetaKamehaDo.png);
+}
+
+.Player2{
+  background-image: url(../images/sprites/gogetablue/gogetaKamehaDo.png);
+}
+
+.Player1.Gogeta{
+}
+
+.Player2.Gogeta{
+}
+
+.Player1.VegitoSSJ{
+  background-image: url(../images/sprites/gogetasayan/vegetoKamehaDo.png);
+  animation: comingVegitoSSJ 3s;
+}
+
+.Player2.VegitoSSJ{
+  background-image: url(../images/sprites/gogetasayan/vegetoKamehaDo.png);
+  animation: comingVegitoSSJ 3s;
+}
+
+@keyframes comingVegitoSSJ {
+  0%{
+    background-image: url(../images/sprites/gogetasayan/comingInFight/1.png);
+  }19%{
+    background-image: url(../images/sprites/gogetasayan/comingInFight/1.png);
+  }20%{
+    background-image: url(../images/sprites/gogetasayan/comingInFight/2.png);
+  }39%{
+    background-image: url(../images/sprites/gogetasayan/comingInFight/2.png);
+  }40%{
+    background-image: url(../images/sprites/gogetasayan/comingInFight/3.png);
+  }59%{
+    background-image: url(../images/sprites/gogetasayan/comingInFight/3.png);
+  }60%{
+    background-image: url(../images/sprites/gogetasayan/comingInFight/4.png);
+  }79%{
+    background-image: url(../images/sprites/gogetasayan/comingInFight/4.png);
+  }80%{
+    background-image: url(../images/sprites/gogetasayan/comingInFight/5.png);
+  }100%{
+    background-image: url(../images/sprites/gogetasayan/comingInFight/5.png);
+  }
+}
+
+.Player1.GokuSSJ3{
+  background-image: url(../images/sprites/gokuSSJ3/gokuSSJ3KamehaDo.png);
+  animation: comingGokuSSJ3 3s;
+}
+
+.Player1.GokuSSJ3.loose{
+  background-image: none;
+  animation: LoosingGoku 3s;
+}
+
+.Player2.GokuSSJ3{
+  background-image: url(../images/sprites/gokuSSJ3/gokuSSJ3KamehaDo.png);
+  animation: comingGokuSSJ3 3s;
+}
+
+.Player2.GokuSSJ3.loose{
+  background-image: none;
+  animation: LoosingGoku 3s;
+}
+
+@keyframes comingGokuSSJ3 {
+  0%{
+    background-image: url(../images/sprites/gokuSSJ3/comingInFight/1.png);
+  }19%{
+    background-image: url(../images/sprites/gokuSSJ3/comingInFight/1.png);
+  }20%{
+    background-image: url(../images/sprites/gokuSSJ3/comingInFight/2.png);
+  }39%{
+    background-image: url(../images/sprites/gokuSSJ3/comingInFight/2.png);
+  }40%{
+    background-image: url(../images/sprites/gokuSSJ3/comingInFight/3.png);
+  }59%{
+    background-image: url(../images/sprites/gokuSSJ3/comingInFight/3.png);
+  }60%{
+    background-image: url(../images/sprites/gokuSSJ3/comingInFight/4.png);
+  }79%{
+    background-image: url(../images/sprites/gokuSSJ3/comingInFight/4.png);
+  }80%{
+    background-image: url(../images/sprites/gokuSSJ3/comingInFight/5.png);
+  }100%{
+    background-image: url(../images/sprites/gokuSSJ3/comingInFight/5.png);
+  }
+}
+
+@keyframes LoosingGoku {
+  0%{
+    background-image: url(../images/sprites/gokuSSJ3/loose/1.png);
+  }19%{
+    background-image: url(../images/sprites/gokuSSJ3/loose/1.png);
+  }20%{
+    background-image: url(../images/sprites/gokuSSJ3/loose/2.png);
+  }39%{
+    background-image: url(../images/sprites/gokuSSJ3/loose/2.png);
+  }40%{
+    background-image: url(../images/sprites/gokuSSJ3/loose/3.png);
+  }59%{
+    background-image: url(../images/sprites/gokuSSJ3/loose/3.png);
+  }60%{
+    background-image: url(../images/sprites/gokuSSJ3/loose/4.png);
+  }79%{
+    background-image: url(../images/sprites/gokuSSJ3/loose/4.png);
+  }80%{
+    background-image: url(../images/sprites/gokuSSJ3/loose/5.png);
+  }100%{
+    background-image: url(../images/sprites/gokuSSJ3/loose/5.png);
+  }
+}
+
+.Player1.GoldenFrieza{
+  background-image: url(../images/sprites/goldenFrieza/goldenFriezaDoingKameha.png);
+  animation: comingFrieza 3s;
+}
+
+.Player2.GoldenFrieza{
+  background-image: url(../images/sprites/goldenFrieza/goldenFriezaDoingKameha.png);
+  animation: comingFrieza 3s;
+}
+
+@keyframes comingFrieza {
+  0%{
+    background-image: url(../images/sprites/goldenFrieza/comingInFight/1.png);
+  }19%{
+    background-image: url(../images/sprites/goldenFrieza/comingInFight/1.png);
+  }20%{
+    background-image: url(../images/sprites/goldenFrieza/comingInFight/2.png);
+  }39%{
+    background-image: url(../images/sprites/goldenFrieza/comingInFight/2.png);
+  }40%{
+    background-image: url(../images/sprites/goldenFrieza/comingInFight/3.png);
+  }59%{
+    background-image: url(../images/sprites/goldenFrieza/comingInFight/3.png);
+  }60%{
+    background-image: url(../images/sprites/goldenFrieza/comingInFight/4.png);
+  }79%{
+    background-image: url(../images/sprites/goldenFrieza/comingInFight/4.png);
+  }80%{
+    background-image: url(../images/sprites/goldenFrieza/comingInFight/5.png);
+  }100%{
+    background-image: url(../images/sprites/goldenFrieza/comingInFight/5.png);
+  }
+}
+
+.Player1.BlackGoku{
+  background-image: url(../images/sprites/blackgoku/blackGokuKamehaDo.png);
+  animation: comingBlackGoku 3s;
+}
+
+.Player1.BlackGoku.win{
+  background-image: none;
+  animation: winBlackGoku 1s;
+}
+
+.Player2.BlackGoku{
+  background-image: url(../images/sprites/blackgoku/blackGokuKamehaDo.png);
+  animation: comingBlackGoku 3s;
+}
+
+.Player2.BlackGoku.win{
+  background-image: none;
+  animation: winBlackGoku 1s;
+}
+
+@keyframes winBlackGoku{
+  0%{
+    background-image: url(../images/sprites/blackgoku/win/1.png);
+  }49%{
+    background-image: url(../images/sprites/blackgoku/win/1.png);
+  }50%{
+    background-image: url(../images/sprites/blackgoku/win/2.png);
+  }100%{
+    background-image: url(../images/sprites/blackgoku/win/2.png);
+  }
+}
+
+@keyframes comingBlackGoku {
+  0%{
+    background-image: none;
+  }39%{
+    background-image: none;
+  }40%{
+    background-image: url(../images/sprites/blackgoku/comingInFight/3.png);
+  }59%{
+    background-image: url(../images/sprites/blackgoku/comingInFight/3.png);
+  }60%{
+    background-image: url(../images/sprites/blackgoku/comingInFight/4.png);
+  }79%{
+    background-image: url(../images/sprites/blackgoku/comingInFight/4.png);
+  }80%{
+    background-image: url(../images/sprites/blackgoku/comingInFight/5.png);
+  }100%{
+    background-image: url(../images/sprites/blackgoku/comingInFight/5.png);
+  }
+}
+
+/***************PLAYERSET********************/
+
+/*KamehaP1*/
+
+.KamehaPlayer1{
+  position: absolute;
+  top: 32%;
+  width: 43.75%;
+  transition: all 1s;
+  height: 30%;
+  left: 12.5vh;
+  display: flex;
+}
+
+.startPlayer1{
+  background-image:url(../images/sprites/gogetablue/gogetaStartKameha.png);
+  background-size: cover;
+  width: 40vh;
+  height: 100%;
+}
+
+.midPlayer1{
+  background-image:url(../images/sprites/gogetablue/gogetaMidKameha.png);
+  background-size: contain;
+  
+  width: 70%;
+  height: 100%;
+}
+
+.endPlayer1{
+  width: 25vh;
+  height: 100%;
+  background-image:url(../images/sprites/gogetablue/gogetaEnKameha.png);
+  background-size: cover;
+  background-position: right;
+  animation: endKameha 1s infinite;
+  transition: all 0s;
+}
+
+/*KamehaP1*/
+
+/*KamehaP2*/
+
+.KamehaPlayer2{
+  position: absolute;
+  top: 32%;
+  width: 43.75%;
+  height: 30%;
+  transition: all 1s;
+  right: 12.5vh;
+  display: flex;
+  transform: rotate(180deg);
+}
+
+.startPlayer2{
+  background-image:url(../images/sprites/gogetablue/gogetaStartKameha.png);
+  background-size: cover;
+  width: 40vh;
+  height: 100%;
+}
+
+.midPlayer2{
+  background-image:url(../images/sprites/gogetablue/gogetaMidKameha.png);
+  background-size: contain;
+  
+  width: 70%;
+  height: 100%;
+}
+
+.endPlayer2{
+  width: 25vh;
+  height: 100%;
+  background-size: cover;
+  animation: endKameha 1s infinite;
+  background-position: right;
+}
+
+/*KamehaP2*/
+
+/*AnimKameha*/
+
+@keyframes endKameha {
+  0%{
+    background-image:url(../images/sprites/gogetablue/gogetaEnKameha.png);
+  }49%{
+    background-image:url(../images/sprites/gogetablue/gogetaEnKameha.png);
+  }50%{
+    background-image:url(../images/sprites/gogetablue/gogetaEnKameha2.png);
+  }100%{
+    background-image:url(../images/sprites/gogetablue/gogetaEnKameha2.png);
+  }
+
+}
+
+/*AnimKameha*/
+
+/***************KAMEHASET********************/
+
+/* ! region kamehaBlackGoku */
+
+/*KamehaP1*/
+
+.KamehaPlayer1.BlackGoku .startPlayer1{
+  background-image:url(../images/sprites/kameha/purpleStartKameha.png);
+}
+
+.KamehaPlayer1.BlackGoku .midPlayer1{
+  background-image:url(../images/sprites/kameha/purpleMidKameha.png);
+}
+
+.KamehaPlayer1.BlackGoku .endPlayer1{
+  animation: endKamehaPurple 1s infinite;
+}
+
+/*KamehaP1*/
+
+/*KamehaP2*/
+
+.KamehaPlayer2.BlackGoku .startPlayer2{
+  background-image:url(../images/sprites/kameha/purpleStartKameha.png);
+}
+
+.KamehaPlayer2.BlackGoku .midPlayer2{
+  background-image:url(../images/sprites/kameha/purpleMidKameha.png);
+}
+
+.KamehaPlayer2.BlackGoku .endPlayer2{
+  animation: endKamehaPurple 1s infinite;
+}
+
+/*KamehaP2*/
+
+@keyframes endKamehaPurple {
+  0%{
+    background-image:url(../images/sprites/kameha/purpleEndKameha.png);
+  }49%{
+    background-image:url(../images/sprites/kameha/purpleEndKameha.png);
+  }50%{
+    background-image:url(../images/sprites/kameha/purpleEndKameha2.png);
+  }100%{
+    background-image:url(../images/sprites/kameha/purpleEndKameha2.png);
+  }
+
+}
+
+/* ! endregion kamehaBlackGoku */
+
+/***************KAMEHASET********************/
+
+.floorP1{
+  background-image: url(../images/background/platformP1.png);
+  position: absolute;
+  background-size: cover;
+  bottom: 0%;
+  width: 35%;
+  height: 60%;
+  left: -19%;
+  z-index: -10;
+}
+
+.floorP2{
+  background-image: url(../images/background/platformP2.png);
+  position: absolute;
+  background-size: cover;
+  bottom: -2%;
+  width: 35%;
+  height: 65%;
+  right:-19%;
+  z-index: -10;
+}
+
+
+.casePlayer1{
+  width: 32vh;
+  height: 3.99vh;
+  background-size: cover;
+  background-image: url(../images/case/case.png);
+  position: absolute;
+  bottom: 5%;
+  left: 45vh;
+}
+
+.casePlayer2{
+  transform: rotateY(180deg);
+  width: 32vh;
+  height: 4vh;
+  background-size: cover;
+  background-image: url(../images/case/case.png);
+  position: absolute;
+  bottom: 5%;
+  right: 45vh;
+}
+
+#fillCase1{
+  height: 100%;
+  width: 0%;
+  background-color: rgba(0, 132, 255, 0.486);
+}
+
+#fillCase2{
+  background-color: rgba(255, 0, 0, 0.603);
+  height: 100%;
+  width: 0%;
+}
+
+#player1txt{
+  position: absolute;
+  bottom: 13%;
+  left: 47vh;
+  font-size: 4vh;
+  color: white;
+}
+
+#player2txt{
+  position: absolute;
+  bottom: 13%;
+  right: 47vh;
+  font-size: 4vh;
+  color: white;
+}
+
+.portraitP1{
+  background-image: url(../images/sprites/gogetasayan/vegetoPortrait.png);
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  width: 30vh;
+  height: 30vh;
+  background-size: cover;
+  z-index: 0;
+  transform: rotateY(180deg);
+}
+
+.portraitP2{
+  background-image: url(../images/sprites/gogetasayan/vegetoPortrait.png);
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  width: 30vh;
+  height: 30vh;
+  background-size: cover;
+  z-index: 0;
+}
+
+/***************PORTRAITSET********************/
+
+.portraitP1.Gogeta{
+  background-image: url(../images/sprites/gogetablue/gogetaportrait.png);
+}
+
+.portraitP2.Gogeta{
+  background-image: url(../images/sprites/gogetablue/gogetaportrait.png);
+}
+
+.portraitP1.VegitoSSJ{
+  background-image: url(../images/sprites/gogetasayan/vegetoPortrait.png);
+}
+
+.portraitP2.VegitoSSJ{
+  background-image: url(../images/sprites/gogetasayan/vegetoPortrait.png);
+}
+
+.portraitP1.GokuSSJ3{
+  background-image: url(../images/sprites/gokuSSJ3/gokuSSJ3portrait.png);
+}
+
+.portraitP2.GokuSSJ3{
+  background-image: url(../images/sprites/gokuSSJ3/gokuSSJ3portrait.png);
+}
+
+.portraitP1.GoldenFrieza{
+  background-image: url(../images/sprites/goldenFrieza/goldenFriezaPortrait.png);
+}
+
+.portraitP2.GoldenFrieza{
+  background-image: url(../images/sprites/goldenFrieza/goldenFriezaPortrait.png);
+}
+
+.portraitP1.BlackGoku{
+  background-image: url(../images/sprites/blackgoku/blackGokuPortrait.png);
+}
+
+.portraitP2.BlackGoku{
+  background-image: url(../images/sprites/blackgoku/blackGokuPortrait.png);
+}
+
+/******************PORTRAITSET*****************/
+
+/**********************************************************/
+/***************************Game*******************************/
+/**********************************************************/
+
+/**********************************************************/
+/***************************MenuRestart*******************************/
+/**********************************************************/
+
+.menuRestart{
+  top:0%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.295);
+  width: 100%;
+  height: 100%;
+  display: none;
+  opacity: 0%;
+  transition: all 1s;
+}
+
+.flexCenterButton{
+  display: flex;
+  justify-content: center;
+  margin-top: 45vh;
+}
+
+.buttonGoToPanelPerso{
+  width: 50vh;
+  height: 10vh;
+  cursor: pointer;
+  background-size: cover;
+  background-image: url(../images/ui/mainmenubutton.png);
+}
+
+/**********************************************************/
+/***************************MenuRestart*******************************/
+/**********************************************************/
+
+/**********************************************************/
+/***************************MainMenu*******************************/
+/**********************************************************/
+
+.mainTitle{
+  position: absolute;
+  width: 50%;
+  height: 25%;
+  left:22.5%;
+  background-image: url(../images/title/dragonballomegatapper.png);
+  background-size: cover;
+  background-repeat: none;
+  animation: animTitle 2.5s;
+}
+
+@keyframes animTitle{
+  0%{
+    background-image: url(../images/title/anim1.png);
+    transform: translateY(-25vh);
+  }15%{
+    background-image: url(../images/title/anim2.png);
+  }30%{
+    background-image: url(../images/title/anim3.png);
+  }45%{
+    background-image: url(../images/title/anim4.png);
+  }60%{
+    background-image: url(../images/title/anim5.png);
+    transform: translateY(0px);
+  }75%{
+    background-image: url(../images/title/dragonballomegatapper.png);
+  }
+}
+
+.centeringMainMenu{
+  position: absolute;
+  top:0%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 1s;
+}
+
+.buttonNormal{
+  margin: 2vh;
+  margin-top: 2vh;
+  width: 50vh;
+  height: 10vh;
+  background-color: aqua;
+  cursor: pointer;
+  background-size: cover;
+  transition: all 1s;
+  z-index: 1;
+}
+
+.underFightButton{
+  margin: 0.5vh;
+  width: 40vh;
+  transition: all 1s;
+  height: 8vh;
+  background-color: aqua;
+  cursor: pointer;
+  background-size: cover;
+  display: none;
+}
+
+.underFightButton.exist{
+  display: initial;
+  transition: all 1s;
+  animation: appearButton 1s;
+  z-index: 0;
+}
+
+#agIA{
+  background-image: url(../images/ui/vs\ ia\ button.png);
+  cursor:pointer;
+}
+
+#agPvP{
+  background-image: url(../images/ui/1vs1.png);
+  cursor:pointer;
+}
+
+@keyframes appearButton {
+  from{
+    display: none;
+    opacity: 0%;
+    transform: translateY(-15vh);
+  }to{
+    display: initial;
+    opacity: 100%;
+    transform: translateY(0vh);
+  }
+}
+
+#campaignButton{
+  background-image: url(../images/ui/campaign\ button.png);
+  transition: all 1s;
+}
+
+#fightButton{
+  background-image: url(../images/ui/1v1button.png);
+  transition: all 1s;
+}
+
+#exitButton{
+  background-image: url(../images/ui/exitButton.png);
+  transition: all 1s;
+}
+
+/**********************************************************/
+/***************************MainMenu*******************************/
+/**********************************************************/
