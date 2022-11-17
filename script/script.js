@@ -183,6 +183,11 @@ const startingCount = () => {
     }, 1000)
 }
 
+const returnMainMenu = () => {
+    divSelection.style.display = "none";
+    divMenu.style.display = "initial";
+}
+
 createTablePerso();
 
 buttonStart.addEventListener("click", () =>
@@ -190,6 +195,11 @@ buttonStart.addEventListener("click", () =>
     if(player1perso !== null && player2perso !== null){
         startGame();    
     }
+})
+
+document.getElementById("returnMain").addEventListener("click", () =>
+{
+    returnMainMenu();
 })
 
 //*SELECT PERSO*********************************
