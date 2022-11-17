@@ -714,6 +714,10 @@ body{
   animation: winBlackGoku 1s;
 }
 
+.Player1.BlackGoku.loose{
+  background-image: url(../images/sprites/blackgoku/loose/1.png);
+}
+
 .Player2.BlackGoku{
   background-image: url(../images/sprites/blackgoku/blackGokuKamehaDo.png);
   animation: comingBlackGoku 3s;
@@ -722,6 +726,10 @@ body{
 .Player2.BlackGoku.win{
   background-image: none;
   animation: winBlackGoku 1s;
+}
+
+.Player2.BlackGoku.loose{
+  background-image: url(../images/sprites/blackgoku/loose/1.png);
 }
 
 @keyframes winBlackGoku{

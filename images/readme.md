@@ -2,7 +2,7 @@
 # Gogeta = ++
 # Vegito = ++
 # GokuSSJ3 = ++
-# BlackGoku = //+
+# BlackGoku = ++
 # GoldenFrieza = ++
 # Buutenks = ++
 
