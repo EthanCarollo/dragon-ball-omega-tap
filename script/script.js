@@ -126,7 +126,7 @@ const createTablePerso = () => {
 const selectPlayer = (ID) => {
     if(player1perso === null){
         if(tabPerso[ID].version.length > 0){
-            console.log(ID);
+            console.log(ID + "version");
             player1perso = tabPerso[ID].version[0];
             player1DOM.classList.toggle(player1perso);
         }else{
@@ -138,7 +138,7 @@ const selectPlayer = (ID) => {
         if(tabPerso[ID].version.length > 0){
             console.log(ID);
             player2perso = tabPerso[ID].version[0];
-            player1DOM.classList.toggle(player2perso);
+            player2DOM.classList.toggle(player2perso);
         }else{
             console.log(ID);
             player2perso = tabPerso[ID].name;
