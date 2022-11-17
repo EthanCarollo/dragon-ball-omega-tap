@@ -1,5 +1,9 @@
 "use strict"
 
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+
 // TODO DIV SECTION***************************
 
 const divMenu = document.getElementById("menuMain");
@@ -12,6 +16,7 @@ const divGame = document.getElementById("gameTable");
 
 const fightButton = document.getElementById("fightButton");
 const underFightButton = document.querySelectorAll(".underFightButton");
+let gameIsIa = false;
 
 const rollFightMenu = () => {
     underFightButton[0].classList.toggle("exist");
@@ -23,8 +28,14 @@ const startChoosePerso = () => {
     divSelection.style.display = "initial"
 }
 
+const startChoosePersoIA = () => {
+    gameIsIa = true;
+    divMenu.style.display = "none";
+    divSelection.style.display = "initial"
+}
+
 fightButton.addEventListener("click", rollFightMenu);
-document.getElementById("agIA").addEventListener("click", startChoosePerso);
+document.getElementById("agIA").addEventListener("click", startChoosePersoIA);
 document.getElementById("agPvP").addEventListener("click", startChoosePerso);
 
 
@@ -173,6 +184,7 @@ const startingCount = () => {
             canClick = true;
             callbackFunctionDelay();
             setWidthKameha();
+            iaAgainstPlayer();
         }else{
             startCount--;
             let txtTemp = startCount;
@@ -229,7 +241,7 @@ document.addEventListener('keyup', (e) => {
             addPlayer1Click();
             console.log(player2KamehaWidth);
         }
-        if(e.code === "KeyE"){
+        if(e.code === "KeyE" && gameIsIa === false){
             addPlayer2Click();
         }
     }
@@ -251,6 +263,17 @@ const callbackFunctionDelay = () => {
         }
         callbackFunctionDelay();
     },200)
+}
+
+const iaAgainstPlayer = () => {
+    setTimeout(()=>{
+        if(gameIsIa===true && gameStarted === true){
+            if(getRandomInt(3)<=1){
+                addPlayer2Click();
+            }
+            iaAgainstPlayer();
+        }
+    }, 125)
 }
 
 const isNotClickingP1 =() => {
@@ -391,6 +414,7 @@ const callbackAppearRestartMenu = () => {
 }
 
 const goToMainMenu = () => {
+    gameIsIa = false;
     divMenu.style.display = "initial";
     divGame.style.display = "none";
     resetVisual();
