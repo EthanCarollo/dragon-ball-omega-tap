@@ -24,6 +24,23 @@ body{
 /***************************CHOOSEPERSO*******************************/
 /**********************************************************/
 
+.returnMainMenuButton{
+  position: absolute;
+  left: 2%;
+  top: 2%;
+  width: 10vh;
+  height: 10vh;
+  background-image: url(../images/ui/returnFlech.png);
+  background-size: cover;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.returnMainMenuButton:hover{
+  transform: scale(1.25);
+  transition: all 1s;
+}
+
 .bigTxT{
   background-image: url(../images/text/ChooseFighter.png);
   background-size: cover;
@@ -384,9 +401,81 @@ body{
 }
 
 .Player1.Gogeta{
+  background-image: url(../images/sprites/gogetablue/gogetaKamehaDo.png);
+  animation: comingGogetaSSJ 3s;
+}
+
+.Player1.Gogeta.win{
+  background-image: url(../images/sprites/gogetablue/win/3.png);
+  animation: winGogeta 3s;
+}
+
+.Player1.Gogeta.loose{
+  background-image: url(../images/sprites/gogetablue/loose/3.png);
+  animation: LoosingGogeta 3s;
+  animation-timing-function: steps(3);
 }
 
 .Player2.Gogeta{
+  background-image: url(../images/sprites/gogetablue/gogetaKamehaDo.png);
+  animation: comingGogetaSSJ 3s;
+}
+
+.Player2.Gogeta.win{
+  background-image: url(../images/sprites/gogetablue/win/3.png);
+  animation: winGogeta 3s;
+}
+
+.Player2.Gogeta.loose{
+  background-image: url(../images/sprites/gogetablue/loose/3.png);
+  animation: LoosingGogeta 3s;
+  animation-timing-function: steps(3);
+}
+
+@keyframes winGogeta{
+  0%{
+    background-image: url(../images/sprites/gogetablue/win/1.png);
+  }79%{
+    background-image: url(../images/sprites/gogetablue/win/2.png);
+  }80%{
+    background-image: url(../images/sprites/gogetablue/win/3.png);
+  }
+}
+
+@keyframes comingGogetaSSJ {
+  0%{
+    background-image: url(../images/sprites/gogetablue/comingInFight/1.png);
+  }19%{
+    background-image: url(../images/sprites/gogetablue/comingInFight/1.png);
+  }20%{
+    background-image: url(../images/sprites/gogetablue/comingInFight/2.png);
+  }39%{
+    background-image: url(../images/sprites/gogetablue/comingInFight/2.png);
+  }40%{
+    background-image: url(../images/sprites/gogetablue/comingInFight/3.png);
+  }59%{
+    background-image: url(../images/sprites/gogetablue/comingInFight/3.png);
+  }60%{
+    background-image: url(../images/sprites/gogetablue/comingInFight/4.png);
+  }79%{
+    background-image: url(../images/sprites/gogetablue/comingInFight/4.png);
+  }80%{
+    background-image: url(../images/sprites/gogetablue/comingInFight/5.png);
+  }100%{
+    background-image: url(../images/sprites/gogetablue/comingInFight/5.png);
+  }
+}
+
+@keyframes LoosingGogeta{
+  0%{
+    background-image: url(../images/sprites/gogetablue/loose/1.png);
+  }33%{
+    background-image: url(../images/sprites/gogetablue/loose/1.png);
+  }66%{
+    background-image: url(../images/sprites/gogetablue/loose/2.png);
+  }80%{
+    background-image: url(../images/sprites/gogetablue/loose/3.png);
+  }
 }
 
 .Player1.VegitoSSJ{
@@ -625,6 +714,10 @@ body{
   animation: winBlackGoku 1s;
 }
 
+.Player1.BlackGoku.loose{
+  background-image: url(../images/sprites/blackgoku/loose/1.png);
+}
+
 .Player2.BlackGoku{
   background-image: url(../images/sprites/blackgoku/blackGokuKamehaDo.png);
   animation: comingBlackGoku 3s;
@@ -633,6 +726,10 @@ body{
 .Player2.BlackGoku.win{
   background-image: none;
   animation: winBlackGoku 1s;
+}
+
+.Player2.BlackGoku.loose{
+  background-image: url(../images/sprites/blackgoku/loose/1.png);
 }
 
 @keyframes winBlackGoku{
@@ -664,6 +761,120 @@ body{
     background-image: url(../images/sprites/blackgoku/comingInFight/5.png);
   }100%{
     background-image: url(../images/sprites/blackgoku/comingInFight/5.png);
+  }
+}
+
+.Player1.Buutenks{
+  background-image: url(../images/sprites/buutenks/buutenksKamehaDo.png);
+  animation: comingBuutenks 3s;
+}
+
+.Player1.Buutenks.win{
+  background-image: url(../images/sprites/buutenks/comingInFight/1.png);
+}
+
+.Player1.Buutenks.loose{
+  background-image: url(../images/sprites/buutenks/loose/1.png);
+}
+
+.Player2.Buutenks{
+  background-image: url(../images/sprites/buutenks/buutenksKamehaDo.png);
+  animation: comingBuutenks 3s;
+}
+
+.Player2.Buutenks.win{
+  background-image: url(../images/sprites/buutenks/comingInFight/1.png);
+}
+
+.Player2.Buutenks.loose{
+  background-image: url(../images/sprites/buutenks/loose/1.png);
+}
+
+@keyframes comingBuutenks {
+  0%{
+    background-image: url(../images/sprites/buutenks/comingInFight/1.png);
+  }100%{
+    background-image: url(../images/sprites/buutenks/comingInFight/1.png);
+  }
+}
+
+.Player1.GohanSSJ3{
+  background-image: url(../images/sprites/gohanSSJ3/gohanSSJ3KamehaDo.png);
+  animation: comingGohanSSJ3 3s;
+}
+
+.Player1.GohanSSJ3.win{
+  background-image: url(../images/sprites/gohanSSJ3/win/3.png);
+  animation: winGohanSSJ3 5s;
+  animation-timing-function: steps(4);
+}
+
+.Player1.GohanSSJ3.loose{
+  background-image: url(../images/sprites/gohanSSJ3/loose/4.png);
+  animation: looseGohanSSJ3 3s;
+  animation-timing-function: steps(4);
+}
+
+.Player2.GohanSSJ3{
+  background-image: url(../images/sprites/gohanSSJ3/gohanSSJ3KamehaDo.png);
+  animation: comingGohanSSJ3 3s;
+}
+
+.Player2.GohanSSJ3.win{
+  background-image: url(../images/sprites/gohanSSJ3/win/3.png);
+  animation: winGohanSSJ3 5s;
+  animation-timing-function: steps(4);
+}
+
+.Player2.GohanSSJ3.loose{
+  background-image: url(../images/sprites/gohanSSJ3/loose/4.png);
+  animation: looseGohanSSJ3 3s;
+  animation-timing-function: steps(4);
+}
+
+@keyframes comingGohanSSJ3 {
+  0%{
+    background-image: url(../images/sprites/gohanSSJ3/comingInFight/1.png);
+  }19%{
+    background-image: url(../images/sprites/gohanSSJ3/comingInFight/1.png);
+  }20%{
+    background-image: url(../images/sprites/gohanSSJ3/comingInFight/2.png);
+  }39%{
+    background-image: url(../images/sprites/gohanSSJ3/comingInFight/2.png);
+  }40%{
+    background-image: url(../images/sprites/gohanSSJ3/comingInFight/3.png);
+  }59%{
+    background-image: url(../images/sprites/gohanSSJ3/comingInFight/3.png);
+  }60%{
+    background-image: url(../images/sprites/gohanSSJ3/comingInFight/4.png);
+  }79%{
+    background-image: url(../images/sprites/gohanSSJ3/comingInFight/4.png);
+  }80%{
+    background-image: url(../images/sprites/gohanSSJ3/comingInFight/5.png);
+  }100%{
+    background-image: url(../images/sprites/gohanSSJ3/comingInFight/5.png);
+  }
+}
+
+@keyframes looseGohanSSJ3{
+  0%{
+    background-image: url(../images/sprites/gohanSSJ3/loose/1.png);
+  }25%{
+    background-image: url(../images/sprites/gohanSSJ3/loose/2.png);
+  }50%{
+    background-image: url(../images/sprites/gohanSSJ3/loose/3.png);
+  }75%{
+    background-image: url(../images/sprites/gohanSSJ3/loose/4.png);
+  }
+}
+
+@keyframes winGohanSSJ3{
+  0%{
+    background-image: url(../images/sprites/gohanSSJ3/win/1.png);
+  }25%{
+    background-image: url(../images/sprites/gohanSSJ3/win/2.png);
+  }50%{
+    background-image: url(../images/sprites/gohanSSJ3/win/3.png);
   }
 }
 
@@ -813,6 +1024,55 @@ body{
 }
 
 /* ! endregion kamehaBlackGoku */
+
+/* ! region Buutenks */
+
+/*KamehaP1*/
+
+.KamehaPlayer1.Buutenks .startPlayer1{
+  background-image:url(../images/sprites/kameha/pinkStartKameha.png);
+}
+
+.KamehaPlayer1.Buutenks .midPlayer1{
+  background-image:url(../images/sprites/kameha/pinkMidKameha.png);
+}
+
+.KamehaPlayer1.Buutenks .endPlayer1{
+  animation: endKamehaPink 1s infinite;
+}
+
+/*KamehaP1*/
+
+/*KamehaP2*/
+
+.KamehaPlayer2.Buutenks .startPlayer2{
+  background-image:url(../images/sprites/kameha/pinkStartKameha.png);
+}
+
+.KamehaPlayer2.Buutenks .midPlayer2{
+  background-image:url(../images/sprites/kameha/pinkMidKameha.png);
+}
+
+.KamehaPlayer2.Buutenks .endPlayer2{
+  animation: endKamehaPink 1s infinite;
+}
+
+/*KamehaP2*/
+
+@keyframes endKamehaPink {
+  0%{
+    background-image:url(../images/sprites/kameha/pinkEndKameha.png);
+  }49%{
+    background-image:url(../images/sprites/kameha/pinkEndKameha.png);
+  }50%{
+    background-image:url(../images/sprites/kameha/pinkEndKameha2.png);
+  }100%{
+    background-image:url(../images/sprites/kameha/pinkEndKameha2.png);
+  }
+
+}
+
+/* ! endregion Buutenks */
 
 /***************KAMEHASET********************/
 
