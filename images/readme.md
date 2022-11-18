@@ -6,6 +6,7 @@
 # GoldenFrieza = ++
 # Buutenks = ++
 # GohanSSJ3 = ++
+# Venom = ++ (LET ME BREAK THE MULTIVERSE)
 
 
 # Perso a rajouté = Baby Vegeta, Cell, Buu
