@@ -945,55 +945,6 @@ body{
 
 /* ! endregion kamehaBlackGoku */
 
-/* ! region Buutenks */
-
-/*KamehaP1*/
-
-.KamehaPlayer1.Buutenks .startPlayer1{
-  background-image:url(../images/sprites/kameha/pinkStartKameha.png);
-}
-
-.KamehaPlayer1.Buutenks .midPlayer1{
-  background-image:url(../images/sprites/kameha/pinkMidKameha.png);
-}
-
-.KamehaPlayer1.Buutenks .endPlayer1{
-  animation: endKamehaPink 1s infinite;
-}
-
-/*KamehaP1*/
-
-/*KamehaP2*/
-
-.KamehaPlayer2.Buutenks .startPlayer2{
-  background-image:url(../images/sprites/kameha/pinkStartKameha.png);
-}
-
-.KamehaPlayer2.Buutenks .midPlayer2{
-  background-image:url(../images/sprites/kameha/pinkMidKameha.png);
-}
-
-.KamehaPlayer2.Buutenks .endPlayer2{
-  animation: endKamehaPink 1s infinite;
-}
-
-/*KamehaP2*/
-
-@keyframes endKamehaPink {
-  0%{
-    background-image:url(../images/sprites/kameha/pinkEndKameha.png);
-  }49%{
-    background-image:url(../images/sprites/kameha/pinkEndKameha.png);
-  }50%{
-    background-image:url(../images/sprites/kameha/pinkEndKameha2.png);
-  }100%{
-    background-image:url(../images/sprites/kameha/pinkEndKameha2.png);
-  }
-
-}
-
-/* ! endregion Buutenks */
-
 /***************KAMEHASET********************/
 
 .floorP1{
