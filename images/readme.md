@@ -5,8 +5,9 @@
 # BlackGoku = ++
 # GoldenFrieza = ++
 # Buutenks = ++
+# GohanSSJ3 = ++
 
 
-# Perso a rajouté = Gohan, Baby Vegeta, Cell, Buu
+# Perso a rajouté = Baby Vegeta, Cell, Buu
 
 # Campagne = ---

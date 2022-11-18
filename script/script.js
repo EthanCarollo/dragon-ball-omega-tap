@@ -7,6 +7,7 @@ function getRandomInt(max) {
 // TODO DIV SECTION***************************
 
 const divMenu = document.getElementById("menuMain");
+const divCampaign = document.getElementById("menuCampaign");
 const divSelection = document.getElementById("panelPerso");
 const divGame = document.getElementById("gameTable");
 
@@ -23,6 +24,12 @@ const rollFightMenu = () => {
     underFightButton[1].classList.toggle("exist");
 }
 
+const startCampaign = () =>
+{
+    divCampaign.style.display = "initial";
+    divMenu.style.display = "none";
+}
+
 const startChoosePerso = () => {
     divMenu.style.display = "none";
     divSelection.style.display = "initial"
@@ -37,11 +44,31 @@ const startChoosePersoIA = () => {
 fightButton.addEventListener("click", rollFightMenu);
 document.getElementById("agIA").addEventListener("click", startChoosePersoIA);
 document.getElementById("agPvP").addEventListener("click", startChoosePerso);
+document.getElementById("campaignButton").addEventListener("click", startCampaign);
 
 
 //! MAIN MENU*********************************
 //! MAIN MENU*********************************
 //! MAIN MENU*********************************
+
+//? CAMPAIGN MENU*********************************
+//? CAMPAIGN MENU*********************************
+//? CAMPAIGN MENU*********************************
+
+
+const returnToMainMenuAsCampaign = () => {
+    divCampaign.style.display = "none";
+    divMenu.style.display = "initial";
+}
+
+document.getElementById("returnMainAsCampaign").addEventListener("click", () =>
+{
+    returnToMainMenuAsCampaign();
+})
+
+//? CAMPAIGN MENU*********************************
+//? CAMPAIGN MENU*********************************
+//? CAMPAIGN MENU*********************************
 
 //*SELECT PERSO*********************************
 //*SELECT PERSO*********************************
@@ -78,6 +105,10 @@ let tabPerso = [
         name: "Buu",
         ID: 5,
         version: ["Buutenks"]
+    },{
+        name: "GohanSSJ3",
+        ID: 5,
+        version: []
     }
 ];
 let tabPersoDiv = [];
@@ -262,7 +293,9 @@ const callbackFunctionDelay = () => {
             }
             setWidthKameha();
         }
-        callbackFunctionDelay();
+        if(gameStarted===true){
+            callbackFunctionDelay();
+        }
     },200)
 }
 

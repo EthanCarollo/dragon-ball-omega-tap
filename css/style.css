@@ -122,6 +122,14 @@ body{
   background-image: url(../images/sprites/buutenks/buutenksPortrait.png);
 }
 
+#selectedPlayer1.GohanSSJ3{
+  background-image: url(../images/sprites/gohanSSJ3/gohanSSJ3portrait.png);
+}
+
+#selectedPlayer2.GohanSSJ3{
+  background-image: url(../images/sprites/gohanSSJ3/gohanSSJ3portrait.png);
+}
+
 /***********************************/
 
 #choosePerso{
@@ -170,6 +178,10 @@ body{
 
 .perso.Buutenks{
   background-image: url(../images/slotCharacter/buutenksSlot.png);
+}
+
+.perso.GohanSSJ3{
+  background-image: url(../images/slotCharacter/gohanSSJ3Portrait.png);
 }
 
 /**********************************************************/
@@ -806,13 +818,13 @@ body{
 .Player1.GohanSSJ3.win{
   background-image: url(../images/sprites/gohanSSJ3/win/3.png);
   animation: winGohanSSJ3 5s;
-  animation-timing-function: steps(4);
+  animation-timing-function: steps(1);
 }
 
 .Player1.GohanSSJ3.loose{
   background-image: url(../images/sprites/gohanSSJ3/loose/4.png);
   animation: looseGohanSSJ3 3s;
-  animation-timing-function: steps(4);
+  animation-timing-function: steps(1);
 }
 
 .Player2.GohanSSJ3{
@@ -823,13 +835,13 @@ body{
 .Player2.GohanSSJ3.win{
   background-image: url(../images/sprites/gohanSSJ3/win/3.png);
   animation: winGohanSSJ3 5s;
-  animation-timing-function: steps(4);
+  animation-timing-function: steps(1);
 }
 
 .Player2.GohanSSJ3.loose{
   background-image: url(../images/sprites/gohanSSJ3/loose/4.png);
   animation: looseGohanSSJ3 3s;
-  animation-timing-function: steps(4);
+  animation-timing-function: steps(1);
 }
 
 @keyframes comingGohanSSJ3 {
@@ -1272,6 +1284,18 @@ body{
 /***************************MainMenu*******************************/
 /**********************************************************/
 
+.gradient{
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/ui/gradient.png);
+  background-size: cover;
+  opacity: 75%;
+  mix-blend-mode: color;
+}
+
 .mainTitle{
   position: absolute;
   width: 50%;
@@ -1285,19 +1309,9 @@ body{
 
 @keyframes animTitle{
   0%{
-    background-image: url(../images/title/anim1.png);
     transform: translateY(-25vh);
-  }15%{
-    background-image: url(../images/title/anim2.png);
-  }30%{
-    background-image: url(../images/title/anim3.png);
-  }45%{
-    background-image: url(../images/title/anim4.png);
   }60%{
-    background-image: url(../images/title/anim5.png);
     transform: translateY(0px);
-  }75%{
-    background-image: url(../images/title/dragonballomegatapper.png);
   }
 }
 
@@ -1382,4 +1396,20 @@ body{
 
 /**********************************************************/
 /***************************MainMenu*******************************/
+/**********************************************************/
+
+/**********************************************************/
+/***************************CAMPAIGNMENU*******************************/
+/**********************************************************/
+
+.campaignMenu{
+  display: none;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+/**********************************************************/
+/***************************CAMPAIGNMENU*******************************/
 /**********************************************************/
