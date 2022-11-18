@@ -1221,6 +1221,14 @@ body{
   background-image: url(../images/sprites/buutenks/buutenksPortrait.png);
 }
 
+.portraitP1.GohanSSJ3{
+  background-image: url(../images/sprites/gohanSSJ3/gohanSSJ3portrait.png);
+}
+
+.portraitP2.GohanSSJ3{
+  background-image: url(../images/sprites/gohanSSJ3/gohanSSJ3portrait.png);
+}
+
 /******************PORTRAITSET*****************/
 
 /**********************************************************/
