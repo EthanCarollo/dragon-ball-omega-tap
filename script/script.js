@@ -107,7 +107,11 @@ let tabPerso = [
         version: ["Buutenks"]
     },{
         name: "GohanSSJ3",
-        ID: 5,
+        ID: 6,
+        version: []
+    },{
+        name: "Venom",
+        ID: 7,
         version: []
     }
 ];
@@ -227,6 +231,10 @@ const startingCount = () => {
 }
 
 const returnMainMenu = () => {
+    player1DOM.classList.remove(player1perso);
+    player2DOM.classList.remove(player2perso);
+    player1perso = null;
+    player2perso = null;
     gameIsIa= false;
     divSelection.style.display = "none";
     divMenu.style.display = "initial";

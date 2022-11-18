@@ -130,6 +130,14 @@ body{
   background-image: url(../images/sprites/gohanSSJ3/gohanSSJ3portrait.png);
 }
 
+#selectedPlayer1.Venom{
+  background-image: url(../images/sprites/Venom/venomPortrait.png);
+}
+
+#selectedPlayer2.Venom{
+  background-image: url(../images/sprites/Venom/venomPortrait.png);
+}
+
 /***********************************/
 
 #choosePerso{
@@ -182,6 +190,10 @@ body{
 
 .perso.GohanSSJ3{
   background-image: url(../images/slotCharacter/gohanSSJ3Portrait.png);
+}
+
+.perso.Venom{
+  background-image: url(../images/slotCharacter/venomSlot.png);
 }
 
 /**********************************************************/
@@ -890,6 +902,46 @@ body{
   }
 }
 
+.Player1.Venom{
+  background-image: url(../images/sprites/Venom/venomKamehaDo.png);
+  animation: comingVenom 3s;
+  animation-timing-function: steps(1);
+}
+
+.Player1.Venom.win{
+  background-image: url(../images/sprites/Venom/win/1.png);
+}
+
+.Player1.Venom.loose{
+  background-image: url(../images/sprites/Venom/loose/1.png);
+}
+
+.Player2.Venom{
+  background-image: url(../images/sprites/Venom/venomKamehaDo.png);
+  animation: comingVenom 3s;
+  animation-timing-function: steps(1);
+}
+
+.Player2.Venom.win{
+  background-image: url(../images/sprites/Venom/win/1.png);
+}
+
+.Player2.Venom.loose{
+  background-image: url(../images/sprites/Venom/loose/1.png);
+}
+
+@keyframes comingVenom {
+  0%{
+    background-image: url(../images/sprites/Venom/comingInFight/1.png);
+  }15%{
+    background-image: url(../images/sprites/Venom/comingInFight/2.png);
+  }40%{
+    background-image: url(../images/sprites/Venom/comingInFight/3.png);
+  }55%{
+    background-image: url(../images/sprites/Venom/win/1.png);
+  }
+}
+
 /***************PLAYERSET********************/
 
 /*KamehaP1*/
@@ -1239,6 +1291,14 @@ body{
 
 .portraitP2.GohanSSJ3{
   background-image: url(../images/sprites/gohanSSJ3/gohanSSJ3portrait.png);
+}
+
+.portraitP1.Venom{
+  background-image: url(../images/sprites/Venom/venomPortrait.png);
+}
+
+.portraitP2.Venom{
+  background-image: url(../images/sprites/Venom/venomPortrait.png);
 }
 
 /******************PORTRAITSET*****************/
