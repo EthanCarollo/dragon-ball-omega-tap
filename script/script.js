@@ -196,6 +196,7 @@ const startingCount = () => {
 }
 
 const returnMainMenu = () => {
+    gameIsIa= false;
     divSelection.style.display = "none";
     divMenu.style.display = "initial";
 }
