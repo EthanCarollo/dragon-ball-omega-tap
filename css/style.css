@@ -232,6 +232,10 @@ body{
   background-image: url(../images/slotCharacter/goldenCoolerSlot.png);
 }
 
+.perso.SpiderMan{
+  background-image: url(../images/slotCharacter/spiderManPortrait.png);
+}
+
 /**********************************************************/
 /***************************CHOOSEPERSO*******************************/
 /**********************************************************/
@@ -1128,6 +1132,42 @@ body{
   }
 }
 
+.Player1.SpiderMan{
+  background-image: url(../images/sprites/SpiderMan/spidermanKamehaDo.png);
+  animation: comingSpiderMan 3s;
+  animation-timing-function: steps(1);
+}
+
+.Player1.SpiderMan.win{
+  background-image: url(../images/sprites/SpiderMan/win/1.png);
+}
+
+.Player1.SpiderMan.loose{
+  background-image: url(../images/sprites/SpiderMan/loose/1.png);
+}
+
+.Player2.SpiderMan{
+  background-image: url(../images/sprites/SpiderMan/spidermanKamehaDo.png);
+  animation: comingSpiderMan 3s;
+  animation-timing-function: steps(1);
+}
+
+.Player2.SpiderMan.win{
+  background-image: url(../images/sprites/SpiderMan/win/1.png);
+}
+
+.Player2.SpiderMan.loose{
+  background-image: url(../images/sprites/SpiderMan/loose/1.png);
+}
+
+@keyframes comingSpiderMan{
+  0%{
+    background-image: url(../images/sprites/SpiderMan/ComingInFight/1.png);
+  }100%{
+    background-image: url(../images/sprites/SpiderMan/ComingInFight/1.png);
+  }
+}
+
 /***************PLAYERSET********************/
 
 /*KamehaP1*/
@@ -1511,6 +1551,14 @@ body{
   background-image: url(../images/sprites/goldenCooler/goldenCoolerportrait.png);
 }
 
+.portraitP1.SpiderMan{
+  background-image: url(../images/sprites/SpiderMan/spiderManPortrait.png);
+}
+
+.portraitP2.SpiderMan{
+  background-image: url(../images/sprites/SpiderMan/spiderManPortrait.png);
+}
+
 /******************PORTRAITSET*****************/
 
 /**********************************************************/
@@ -1705,7 +1753,7 @@ body{
   align-items: center;
   margin: 1vh;
   width: 60vh;
-  height: 12.5vh;
+  height: 12.45vh;
   background-image: url(../images/ui/dragonballZCampaignButton.png);
   background-size: cover;
 }
@@ -1720,7 +1768,7 @@ body{
   display: none;
   margin: 0.75vh;
   width: 50vh;
-  height: 10.5vh;
+  height: 10.45vh;
   background-color: aliceblue;
   z-index: 0;
 }
@@ -1752,16 +1800,28 @@ body{
 }
 
 #campaign4{
-  background-image: url(../images/ui/WhoTheFuckCampaignButton.png);
+  background-image: url(../images/ui/FriezaIsBackCampaignButton.png);
 }
 
 #campaign4.locked{
+  background-image: url(../images/ui/FriezaIsBackLockedCampaignButton.png);
+}
+
+#campaign5{
+  background-image: url(../images/ui/WhoTheFuckCampaignButton.png);
+}
+
+#campaign5.locked{
   background-image: url(../images/ui/WhoTheFuckLockedCampaignButton.png);
 }
 
 #campaignBTM1{
   background-image: url(../images/ui/WhatIsGoingOnCampaignButton.png);
   height: 10.25vh;
+}
+
+.campaignMenu{
+  overflow-y: auto;
 }
 
 /**********************************************************/

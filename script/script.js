@@ -76,6 +76,26 @@ let listCampaignDBZ = [
         level : 4,
         isLocked: true,
         altReward:{
+            name: "GokuSSJ3",
+            ID: 542,
+            version: []
+        },
+        reward: {
+            name: "GoldenFrieza",
+            ID: 79,
+            version: []
+        },
+        player:{
+            name: "GokuSSJ3",
+            ID: 542,
+            version: []
+        }
+    },{
+        div : document.getElementById("campaign5"),
+        campaign : "DBZ",
+        level : 5,
+        isLocked: true,
+        altReward:{
             name: "GohanSSJ3",
             ID: 54,
             version: []
@@ -86,8 +106,8 @@ let listCampaignDBZ = [
             version: []
         },
         player:{
-            name: "BlackGoku",
-            ID: 1,
+            name: "GohanSSJ3",
+            ID: 54,
             version: []
         }
     }
@@ -109,7 +129,7 @@ let listCampaignBTM = [
             version: []
         },
         player: {
-            name: "Spiderman",
+            name: "SpiderMan",
             ID: 102,
             version: []
         }
