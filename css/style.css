@@ -1508,12 +1508,13 @@ body{
   width: 50vh;
   height: 10.5vh;
   background-color: aliceblue;
-  z-index: -1;
+  z-index: 0;
 }
 
 .campaign.exist{
-  display: initial;
+  display:block;
   animation: appearButton 1s;
+  cursor: pointer;
 }
 
 #campaign1{

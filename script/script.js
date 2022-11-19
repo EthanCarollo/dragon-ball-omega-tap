@@ -26,6 +26,11 @@ let listCampaign1 = [
             name: "GoldenCooler",
             ID: 8,
             version: []
+        },
+        player: {
+            name: "VegitoSSJ",
+            ID: 1,
+            version: []
         }
     },
     {
@@ -35,6 +40,11 @@ let listCampaign1 = [
             name: "Buu",
             ID: 5,
             version: ["Buutenks"]
+        },
+        player:{
+            name: "VegitoSSJ",
+            ID: 1,
+            version: []
         }
     }
 ]
@@ -51,6 +61,7 @@ const startCampaign = () =>
 }
 
 const startChoosePerso = () => {
+    createTablePerso();
     actualCampaign = null;
     gameIsIa = false;
     divMenu.style.display = "none";
@@ -58,6 +69,7 @@ const startChoosePerso = () => {
 }
 
 const startChoosePersoIA = () => {
+    createTablePerso();
     actualCampaign = null;
     gameIsIa = true;
     divMenu.style.display = "none";
@@ -96,9 +108,19 @@ const rollCampaignSlide = (campaignSlide) => {
     }
 }
 
-const chooseCampaign = () => {
-
+const chooseCampaign = (campaign) => {
+    actualCampaign = campaign;
+    player1perso = campaign.player.name;
+    player2perso = campaign.reward.name;
+    gameIsIa = true;
+    startGame();
 }
+
+
+listCampaign1[0].div.addEventListener("click", () => {
+    console.log("app");
+    chooseCampaign(listCampaign1[0]);
+})
 
 document.getElementById("returnMainAsCampaign").addEventListener("click", returnToMainMenuAsCampaign)
 document.getElementById("campaignSlide1").addEventListener("click", ()=>{
@@ -171,11 +193,10 @@ let txtStarting = document.getElementById("txtStart");
 const createTablePerso = () => {
 
     //Boucle sur l'array d'objet des personnages pour créer le visuel de choix des personnages
-
+    tabPersoDOM.innerHTML = "";
     for(let i = 0;   i<tabPerso.length;   i++){
 
         //Manipulation du DOM
-
         let perso = tabPersoDOM.appendChild(document.createElement("div"));
         perso.classList.add("perso");
         if(tabPerso[i].version.length > 0){
@@ -235,7 +256,7 @@ const startGame = () => {
     console.log("gameStart");
     startingCount();
     setVisual();
-    divCampaign.style.display = "none":
+    divCampaign.style.display = "none";
     divSelection.style.display = "none";
     divGame.style.display = "initial";
     numberClickP1 = 0;
@@ -274,8 +295,6 @@ const returnMainMenu = () => {
     divSelection.style.display = "none";
     divMenu.style.display = "initial";
 }
-
-createTablePerso();
 
 buttonStart.addEventListener("click", () =>
 {
@@ -455,6 +474,9 @@ const finishGame = () => {
         kamehaPlayer1.style.width = "110%";
         kamehaPlayer2.style.width = "0%";
         kamehaPlayer2.style.opacity = "0";
+        if(actualCampaign!==null){
+            endCampaign();
+        }
     }else if(whoWin === "player2"){
         console.log("test2");
         kamehaPlayer1.style.width = "0%";
@@ -462,6 +484,18 @@ const finishGame = () => {
         kamehaPlayer1.style.opacity = "0";
     }
     callbackDisapearKameAndWin();
+}
+
+const endCampaign= () => {
+    let tempTapDoublon=false;
+    for(let k = 0; k < tabPerso.length;k++){
+        if(tabPerso[k]===actualCampaign.reward){
+            tempTapDoublon = true;
+        }
+    }
+    if(tempTapDoublon===false){
+        tabPerso.push(actualCampaign.reward);
+    }
 }
 
 const callbackDisapearKameAndWin = () => {
