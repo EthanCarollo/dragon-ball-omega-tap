@@ -11,13 +11,82 @@ const divCampaign = document.getElementById("menuCampaign");
 const divSelection = document.getElementById("panelPerso");
 const divGame = document.getElementById("gameTable");
 
-//! MAIN MENU*********************************
-//! MAIN MENU*********************************
-//! MAIN MENU*********************************
+// TODO VAR SECTION
 
 const fightButton = document.getElementById("fightButton");
 const underFightButton = document.querySelectorAll(".underFightButton");
 let gameIsIa = false;
+let actualCampaign = null;
+let tabPersoDOM = document.getElementById("choosePerso");
+let tabPerso = [
+    {
+        name: "Gogeta",
+        ID: 0,
+        version: []
+    },
+    {
+        name: "VegitoSSJ",
+        ID: 1,
+        version: []
+    },
+    {
+        name: "GokuSSJ3",
+        ID: 2,
+        version: []
+    },
+    {
+        name: "GoldenFrieza",
+        ID: 3,
+        version: []
+    },
+    {
+        name: "BlackGoku",
+        ID: 4,
+        version: []
+    },{
+        name: "GohanSSJ3",
+        ID: 6,
+        version: []
+    },{
+        name: "Venom",
+        ID: 7,
+        version: []
+    }
+];
+let tabPersoDiv = [];
+let player1perso = null;
+let player2perso = null;
+let numberClickP1 = 0;
+let numberClickP2 = 0;
+let player1DOM = document.getElementById("selectedPlayer1");
+let player2DOM = document.getElementById("selectedPlayer2");
+let p1DOM = document.getElementById("P1");
+let p2DOM = document.getElementById("P2");
+let auraP1 = document.getElementById("auraP1");
+let auraP2 = document.getElementById("auraP2");
+let auraP1starting = document.getElementById("auraP1Starting");
+let auraP2starting = document.getElementById("auraP2Starting");
+let portgame1DOM = document.getElementById("port1");
+let portgame2DOM = document.getElementById("port2");
+let buttonStart = document.getElementById("buttonStart");
+let txtStarting = document.getElementById("txtStart");
+let kamehaPlayer1 = document.getElementById("kamehaP1");
+let kamehaPlayer2 = document.getElementById("kamehaP2");
+let normalKamehaWidth = 43.75;
+let player1KamehaWidth = normalKamehaWidth;
+let player2KamehaWidth = normalKamehaWidth;
+let maxClick = 50;
+let gameStarted = true;
+let canClick = false;
+let TimeOutClickP1 = 2;
+let TimeOutClickP2 = 2;
+let whoWin;
+
+//! MAIN MENU*********************************
+//! MAIN MENU*********************************
+//! MAIN MENU*********************************
+
+
 let listCampaign1 = [
     {
         div : document.getElementById("campaign1"),
@@ -90,8 +159,6 @@ document.getElementById("campaignButton").addEventListener("click", startCampaig
 //? CAMPAIGN MENU*********************************
 //? CAMPAIGN MENU*********************************
 
-let actualCampaign = null;
-
 const returnToMainMenuAsCampaign = () => {
     divCampaign.style.display = "none";
     divMenu.style.display = "initial";
@@ -135,65 +202,14 @@ document.getElementById("campaignSlide1").addEventListener("click", ()=>{
 //*SELECT PERSO*********************************
 //*SELECT PERSO*********************************
 
-let tabPersoDOM = document.getElementById("choosePerso");
-let tabPerso = [
-    {
-        name: "Gogeta",
-        ID: 0,
-        version: []
-    },
-    {
-        name: "VegitoSSJ",
-        ID: 1,
-        version: []
-    },
-    {
-        name: "GokuSSJ3",
-        ID: 2,
-        version: []
-    },
-    {
-        name: "GoldenFrieza",
-        ID: 3,
-        version: []
-    },
-    {
-        name: "BlackGoku",
-        ID: 4,
-        version: []
-    },{
-        name: "GohanSSJ3",
-        ID: 6,
-        version: []
-    },{
-        name: "Venom",
-        ID: 7,
-        version: []
-    }
-];
-let tabPersoDiv = [];
-let player1perso = null;
-let player2perso = null;
-let numberClickP1 = 0;
-let numberClickP2 = 0;
-let player1DOM = document.getElementById("selectedPlayer1");
-let player2DOM = document.getElementById("selectedPlayer2");
-let p1DOM = document.getElementById("P1");
-let p2DOM = document.getElementById("P2");
-let auraP1 = document.getElementById("auraP1");
-let auraP2 = document.getElementById("auraP2");
-let auraP1starting = document.getElementById("auraP1Starting");
-let auraP2starting = document.getElementById("auraP2Starting");
-let portgame1DOM = document.getElementById("port1");
-let portgame2DOM = document.getElementById("port2");
-let buttonStart = document.getElementById("buttonStart");
-let txtStarting = document.getElementById("txtStart");
-
-
 const createTablePerso = () => {
 
-    //Boucle sur l'array d'objet des personnages pour créer le visuel de choix des personnages
+    //Reset array
+
     tabPersoDOM.innerHTML = "";
+
+    //Boucle sur l'array d'objet des personnages pour créer le visuel de choix des personnages
+    
     for(let i = 0;   i<tabPerso.length;   i++){
 
         //Manipulation du DOM
@@ -315,18 +331,6 @@ document.getElementById("returnMain").addEventListener("click", () =>
 //?GAME*********************************
 //?GAME*********************************
 //?GAME*********************************
-
-let kamehaPlayer1 = document.getElementById("kamehaP1");
-let kamehaPlayer2 = document.getElementById("kamehaP2");
-let normalKamehaWidth = 43.75;
-let player1KamehaWidth = normalKamehaWidth;
-let player2KamehaWidth = normalKamehaWidth;
-let maxClick = 50;
-let gameStarted = true;
-let canClick = false;
-let TimeOutClickP1 = 2;
-let TimeOutClickP2 = 2;
-let whoWin;
 
 document.addEventListener('keyup', (e) => {
     console.log("key e");
