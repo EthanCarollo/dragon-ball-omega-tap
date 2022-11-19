@@ -51,11 +51,14 @@ const startCampaign = () =>
 }
 
 const startChoosePerso = () => {
+    actualCampaign = null;
+    gameIsIa = false;
     divMenu.style.display = "none";
     divSelection.style.display = "initial"
 }
 
 const startChoosePersoIA = () => {
+    actualCampaign = null;
     gameIsIa = true;
     divMenu.style.display = "none";
     divSelection.style.display = "initial"
@@ -75,6 +78,8 @@ document.getElementById("campaignButton").addEventListener("click", startCampaig
 //? CAMPAIGN MENU*********************************
 //? CAMPAIGN MENU*********************************
 
+let actualCampaign = null;
+
 const returnToMainMenuAsCampaign = () => {
     divCampaign.style.display = "none";
     divMenu.style.display = "initial";
@@ -89,6 +94,10 @@ const rollCampaignSlide = (campaignSlide) => {
             campaignSlide[i].div.classList.remove("locked");
         }
     }
+}
+
+const chooseCampaign = () => {
+
 }
 
 document.getElementById("returnMainAsCampaign").addEventListener("click", returnToMainMenuAsCampaign)
@@ -226,6 +235,7 @@ const startGame = () => {
     console.log("gameStart");
     startingCount();
     setVisual();
+    divCampaign.style.display = "none":
     divSelection.style.display = "none";
     divGame.style.display = "initial";
     numberClickP1 = 0;
