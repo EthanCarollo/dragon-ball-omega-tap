@@ -18,6 +18,26 @@ const divGame = document.getElementById("gameTable");
 const fightButton = document.getElementById("fightButton");
 const underFightButton = document.querySelectorAll(".underFightButton");
 let gameIsIa = false;
+let listCampaign1 = [
+    {
+        div : document.getElementById("campaign1"),
+        isLocked: false,
+        reward: {
+            name: "GoldenCooler",
+            ID: 8,
+            version: []
+        }
+    },
+    {
+        div : document.getElementById("campaign2"),
+        isLocked: true,
+        reward: {
+            name: "Buu",
+            ID: 5,
+            version: ["Buutenks"]
+        }
+    }
+]
 
 const rollFightMenu = () => {
     underFightButton[0].classList.toggle("exist");
@@ -55,15 +75,25 @@ document.getElementById("campaignButton").addEventListener("click", startCampaig
 //? CAMPAIGN MENU*********************************
 //? CAMPAIGN MENU*********************************
 
-
 const returnToMainMenuAsCampaign = () => {
     divCampaign.style.display = "none";
     divMenu.style.display = "initial";
 }
 
-document.getElementById("returnMainAsCampaign").addEventListener("click", () =>
-{
-    returnToMainMenuAsCampaign();
+const rollCampaignSlide = (campaignSlide) => {
+    for(let i =0;i<campaignSlide.length;i++){
+        campaignSlide[i].div.classList.toggle("exist");
+        if(campaignSlide[i].isLocked === true){
+            campaignSlide[i].div.classList.toggle("locked");
+        }else{
+            campaignSlide[i].div.classList.remove("locked");
+        }
+    }
+}
+
+document.getElementById("returnMainAsCampaign").addEventListener("click", returnToMainMenuAsCampaign)
+document.getElementById("campaignSlide1").addEventListener("click", ()=>{
+    rollCampaignSlide(listCampaign1);
 })
 
 //? CAMPAIGN MENU*********************************
@@ -100,11 +130,6 @@ let tabPerso = [
         name: "BlackGoku",
         ID: 4,
         version: []
-    },
-    {
-        name: "Buu",
-        ID: 5,
-        version: ["Buutenks"]
     },{
         name: "GohanSSJ3",
         ID: 6,

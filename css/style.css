@@ -1473,3 +1473,61 @@ body{
 /**********************************************************/
 /***************************CAMPAIGNMENU*******************************/
 /**********************************************************/
+
+/**********************************************************/
+/***************************CAMPAIGNLIST*******************************/
+/**********************************************************/
+
+.campaignList{
+  display: flex;
+  position: absolute;
+  top:10%;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.campaignSlider{
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  margin: 1vh;
+  width: 60vh;
+  height: 12.5vh;
+  background-image: url(../images/ui/dragonballZCampaignButton.png);
+  background-size: cover;
+}
+
+.campaign{
+  cursor: pointer;
+  background-size: cover;
+  display: none;
+  margin: 0.75vh;
+  width: 50vh;
+  height: 10.5vh;
+  background-color: aliceblue;
+  z-index: -1;
+}
+
+.campaign.exist{
+  display: initial;
+  animation: appearButton 1s;
+}
+
+#campaign1{
+  background-image: url(../images/ui/TheAveningOfGoldenCoolerCampaignButton.png);
+}
+
+#campaign2{
+  background-image: url(../images/ui/TheEndOfTheWorldCampaignButton.png);
+}
+
+#campaign2.locked{
+  background-image: url(../images/ui/TheEndOfTheWorldLockedButton.png);
+}
+
+/**********************************************************/
+/***************************CAMPAIGNLIST*******************************/
+/**********************************************************/
