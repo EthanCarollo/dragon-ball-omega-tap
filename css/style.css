@@ -138,6 +138,30 @@ body{
   background-image: url(../images/sprites/Venom/venomPortrait.png);
 }
 
+#selectedPlayer1.Frieza{
+  background-image: url(../images/sprites/normalFrieza/FriezaPortrait.png);
+}
+
+#selectedPlayer2.Frieza{
+  background-image: url(../images/sprites/normalFrieza/FriezaPortrait.png);
+}
+
+#selectedPlayer1.GokuSSJ{
+  background-image: url(../images/sprites/GokuSSJ/GokuSSJPortrait.png);
+}
+
+#selectedPlayer2.GokuSSJ{
+  background-image: url(../images/sprites/GokuSSJ/GokuSSJPortrait.png);
+}
+
+#selectedPlayer1.GoldenCooler{
+  background-image: url(../images/sprites/goldenCooler/goldenCoolerportrait.png);
+}
+
+#selectedPlayer2.GoldenCooler{
+  background-image: url(../images/sprites/goldenCooler/goldenCoolerportrait.png);
+}
+
 /***********************************/
 
 #choosePerso{
@@ -194,6 +218,18 @@ body{
 
 .perso.Venom{
   background-image: url(../images/slotCharacter/venomSlot.png);
+}
+
+.perso.Frieza{
+  background-image: url(../images/slotCharacter/FriezaSlot.png);
+}
+
+.perso.GokuSSJ{
+  background-image: url(../images/slotCharacter/gokuSSJSlot.png);
+}
+
+.perso.GoldenCooler{
+  background-image: url(../images/slotCharacter/goldenCoolerSlot.png);
 }
 
 /**********************************************************/
@@ -942,6 +978,156 @@ body{
   }
 }
 
+.Player1.Frieza{
+  background-image: url(../images/sprites/normalFrieza/FriezaDoingKameha.png);
+  animation: comingFrieza 3s;
+  animation-timing-function: steps(1);
+}
+
+.Player1.Frieza.win{
+  background-image: url(../images/sprites/normalFrieza/win/3.png);
+  animation: winFrieza 3s;
+  animation-timing-function: steps(1);
+}
+
+.Player1.Frieza.loose{
+  background-image: none;
+}
+
+.Player2.Frieza{
+  background-image: url(../images/sprites/normalFrieza/FriezaDoingKameha.png);
+  animation: comingFrieza 3s;
+  animation-timing-function: steps(1);
+}
+
+.Player2.Frieza.win{
+  background-image: url(../images/sprites/normalFrieza/win/3.png);
+  animation: winFrieza 3s;
+  animation-timing-function: steps(1);
+}
+
+.Player2.Frieza.loose{
+  background-image: none;
+}
+
+@keyframes comingFrieza {
+  0%{
+    background-image: url(../images/sprites/normalFrieza/comingInFight/1.png);
+  }15%{
+    background-image: url(../images/sprites/normalFrieza/comingInFight/2.png);
+  }40%{
+    background-image: url(../images/sprites/normalFrieza/comingInFight/3.png);
+  }55%{
+    background-image: url(../images/sprites/normalFrieza/comingInFight/4.png);
+  }
+}
+
+@keyframes winFrieza {
+  0%{
+    background-image: url(../images/sprites/normalFrieza/win/1.png);
+  }50%{
+    background-image: url(../images/sprites/normalFrieza/win/2.png);
+  }100%{
+    background-image: url(../images/sprites/normalFrieza/win/3.png);
+  }
+}
+
+.Player1.GokuSSJ{
+  background-image: url(../images/sprites/GokuSSJ/GokuSSJDoingKameha.png);
+  animation: comingGokuSSJ 3s;
+  animation-timing-function: steps(1);
+}
+
+.Player1.GokuSSJ.win{
+  background-image: url(../images/sprites/GokuSSJ/win/1.png);
+}
+
+.Player1.GokuSSJ.loose{
+  background-image: url(../images/sprites/GokuSSJ/loose/3.png);
+  animation: looseGokuSSJ 3s;
+  animation-timing-function: steps(10);
+}
+
+.Player2.GokuSSJ{
+  background-image: url(../images/sprites/GokuSSJ/GokuSSJDoingKameha.png);
+  animation: comingGokuSSJ 3s;
+  animation-timing-function: steps(1);
+}
+
+.Player2.GokuSSJ.win{
+  background-image: url(../images/sprites/GokuSSJ/win/1.png);
+}
+
+.Player2.GokuSSJ.loose{
+  background-image: url(../images/sprites/GokuSSJ/loose/3.png);
+  animation: looseGokuSSJ 3s;
+  animation-timing-function: steps(10);
+}
+
+@keyframes comingGokuSSJ {
+  0%{
+    background-image: url(../images/sprites/GokuSSJ/comingInFight/1.png);
+  }33%{
+    background-image: url(../images/sprites/GokuSSJ/comingInFight/2.png);
+  }66%{
+    background-image: url(../images/sprites/GokuSSJ/comingInFight/3.png);
+  }100%{
+    background-image: url(../images/sprites/GokuSSJ/comingInFight/4.png);
+  }
+}
+
+@keyframes looseGokuSSJ {
+  0%{
+    background-image: url(../images/sprites/GokuSSJ/loose/1.png);
+  }50%{
+    background-image: url(../images/sprites/GokuSSJ/loose/2.png);
+  }100%{
+    background-image: url(../images/sprites/GokuSSJ/loose/3.png);
+  }
+}
+
+.Player1.GoldenCooler{
+  background-image: url(../images/sprites/goldenCooler/goldenCoolerKamehaDo.png);
+  animation: comingGoldenCoolder 3s;
+  animation-timing-function: steps(1);
+}
+
+.Player1.GoldenCooler.loose{
+  background-image: url(../images/sprites/goldenCooler/loose/1.png);
+}
+
+.Player1.GoldenCooler.win{
+  background-image: url(../images/sprites/goldenCooler/win/1.png);
+}
+
+.Player2.GoldenCooler{
+  background-image: url(../images/sprites/goldenCooler/goldenCoolerKamehaDo.png);
+  animation: comingGoldenCoolder 3s;
+  animation-timing-function: steps(1);
+}
+
+.Player2.GoldenCooler.loose{
+  background-image: url(../images/sprites/goldenCooler/loose/1.png);
+}
+
+.Player2.GoldenCooler.win{
+  background-image: url(../images/sprites/goldenCooler/win/1.png);
+}
+
+@keyframes comingGoldenCoolder {
+  0%{
+    background-image: url(../images/sprites/goldenCooler/comingInFight/1.png);
+  }25%{
+    background-image: url(../images/sprites/goldenCooler/comingInFight/2.png);
+  }50%{
+    background-image: url(../images/sprites/goldenCooler/comingInFight/3.png);
+  }75%{
+    background-image: url(../images/sprites/goldenCooler/comingInFight/4.png);
+  }100%{
+    background-image: url(../images/sprites/goldenCooler/comingInFight/5.png);
+  }
+}
+
 /***************PLAYERSET********************/
 
 /*KamehaP1*/
@@ -1301,6 +1487,30 @@ body{
   background-image: url(../images/sprites/Venom/venomPortrait.png);
 }
 
+.portraitP1.Frieza{
+  background-image: url(../images/sprites/normalFrieza/FriezaPortrait.png);
+}
+
+.portraitP2.Frieza{
+  background-image: url(../images/sprites/normalFrieza/FriezaPortrait.png);
+}
+
+.portraitP1.GokuSSJ{
+  background-image: url(../images/sprites/GokuSSJ/GokuSSJPortrait.png);
+}
+
+.portraitP2.GokuSSJ{
+  background-image: url(../images/sprites/GokuSSJ/GokuSSJPortrait.png);
+}
+
+.portraitP1.GoldenCooler{
+  background-image: url(../images/sprites/goldenCooler/goldenCoolerportrait.png);
+}
+
+.portraitP2.GoldenCooler{
+  background-image: url(../images/sprites/goldenCooler/goldenCoolerportrait.png);
+}
+
 /******************PORTRAITSET*****************/
 
 /**********************************************************/
@@ -1500,6 +1710,10 @@ body{
   background-size: cover;
 }
 
+#campaignSlide2{
+  background-image: url(../images/ui/BreakingTheMultiverseCampaignButton.png);
+}
+
 .campaign{
   cursor: pointer;
   background-size: cover;
@@ -1518,7 +1732,7 @@ body{
 }
 
 #campaign1{
-  background-image: url(../images/ui/TheAveningOfGoldenCoolerCampaignButton.png);
+  background-image: url(../images/ui/WarOnNamekCampaignButton.png);
 }
 
 #campaign2{
@@ -1527,6 +1741,27 @@ body{
 
 #campaign2.locked{
   background-image: url(../images/ui/TheEndOfTheWorldLockedButton.png);
+}
+
+#campaign3{
+  background-image: url(../images/ui/TheAveningOfGoldenCoolerCampaignButton.png);
+}
+
+#campaign3.locked{
+  background-image: url(../images/ui/TheAveningOfGoldenCoolerLockedCampaignButton.png);
+}
+
+#campaign4{
+  background-image: url(../images/ui/WhoTheFuckCampaignButton.png);
+}
+
+#campaign4.locked{
+  background-image: url(../images/ui/WhoTheFuckLockedCampaignButton.png);
+}
+
+#campaignBTM1{
+  background-image: url(../images/ui/WhatIsGoingOnCampaignButton.png);
+  height: 10.25vh;
 }
 
 /**********************************************************/

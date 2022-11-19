@@ -16,6 +16,105 @@ const divGame = document.getElementById("gameTable");
 const fightButton = document.getElementById("fightButton");
 const underFightButton = document.querySelectorAll(".underFightButton");
 let gameIsIa = false;
+let listCampaignDBZ = [
+    {
+        div : document.getElementById("campaign1"),
+        campaign : "DBZ",
+        level : 1,
+        isLocked: false,
+        altReward:{
+            name: "GokuSSJ",
+            ID: 10,
+            version: []
+        },
+        reward: {
+            name: "Frieza",
+            ID: 8,
+            version: []
+        },
+        player: {
+            name: "GokuSSJ",
+            ID: 10,
+            version: []
+        }
+    },
+    {
+        div : document.getElementById("campaign2"),
+        campaign : "DBZ",
+        level : 2,
+        isLocked: true,
+        altReward:null,
+        reward: {
+            name: "Buutenks",
+            ID: 5,
+            version: []
+        },
+        player:{
+            name: "VegitoSSJ",
+            ID: 1,
+            version: []
+        }
+    },{
+        div : document.getElementById("campaign3"),
+        campaign : "DBZ",
+        level : 3,
+        isLocked: true,
+        altReward:null,
+        reward: {
+            name: "GoldenCooler",
+            ID: 5,
+            version: []
+        },
+        player:{
+            name: "VegitoSSJ",
+            ID: 1,
+            version: []
+        }
+    },{
+        div : document.getElementById("campaign4"),
+        campaign : "DBZ",
+        level : 4,
+        isLocked: true,
+        altReward:{
+            name: "GohanSSJ3",
+            ID: 54,
+            version: []
+        },
+        reward: {
+            name: "BlackGoku",
+            ID: 5,
+            version: []
+        },
+        player:{
+            name: "BlackGoku",
+            ID: 1,
+            version: []
+        }
+    }
+]
+let listCampaignBTM = [
+    {
+        div : document.getElementById("campaignBTM1"),
+        campaign : "BTM",
+        level : 1,
+        isLocked: false,
+        altReward:{
+            name: "SpiderMan",
+            ID: 102,
+            version: []
+        },
+        reward: {
+            name: "Venom",
+            ID: 81,
+            version: []
+        },
+        player: {
+            name: "Spiderman",
+            ID: 102,
+            version: []
+        }
+    }
+]
 let actualCampaign = null;
 let tabPersoDOM = document.getElementById("choosePerso");
 let tabPerso = [
@@ -27,29 +126,6 @@ let tabPerso = [
     {
         name: "VegitoSSJ",
         ID: 1,
-        version: []
-    },
-    {
-        name: "GokuSSJ3",
-        ID: 2,
-        version: []
-    },
-    {
-        name: "GoldenFrieza",
-        ID: 3,
-        version: []
-    },
-    {
-        name: "BlackGoku",
-        ID: 4,
-        version: []
-    },{
-        name: "GohanSSJ3",
-        ID: 6,
-        version: []
-    },{
-        name: "Venom",
-        ID: 7,
         version: []
     }
 ];
@@ -87,37 +163,6 @@ let whoWin;
 //! MAIN MENU*********************************
 
 
-let listCampaign1 = [
-    {
-        div : document.getElementById("campaign1"),
-        isLocked: false,
-        reward: {
-            name: "GoldenCooler",
-            ID: 8,
-            version: []
-        },
-        player: {
-            name: "VegitoSSJ",
-            ID: 1,
-            version: []
-        }
-    },
-    {
-        div : document.getElementById("campaign2"),
-        isLocked: true,
-        reward: {
-            name: "Buu",
-            ID: 5,
-            version: ["Buutenks"]
-        },
-        player:{
-            name: "VegitoSSJ",
-            ID: 1,
-            version: []
-        }
-    }
-]
-
 const rollFightMenu = () => {
     underFightButton[0].classList.toggle("exist");
     underFightButton[1].classList.toggle("exist");
@@ -125,6 +170,7 @@ const rollFightMenu = () => {
 
 const startCampaign = () =>
 {
+    setVisualCampaignMenu(listCampaignDBZ);
     divCampaign.style.display = "initial";
     divMenu.style.display = "none";
 }
@@ -143,6 +189,16 @@ const startChoosePersoIA = () => {
     gameIsIa = true;
     divMenu.style.display = "none";
     divSelection.style.display = "initial"
+}
+
+const setVisualCampaignMenu = (campaignSlide) => {
+    for(let i =0;i<campaignSlide.length;i++){
+        if(campaignSlide[i].isLocked === true){
+            campaignSlide[i].div.classList.add("locked");
+        }else{
+            campaignSlide[i].div.classList.remove("locked");
+        }
+    }
 }
 
 fightButton.addEventListener("click", rollFightMenu);
@@ -168,7 +224,7 @@ const rollCampaignSlide = (campaignSlide) => {
     for(let i =0;i<campaignSlide.length;i++){
         campaignSlide[i].div.classList.toggle("exist");
         if(campaignSlide[i].isLocked === true){
-            campaignSlide[i].div.classList.toggle("locked");
+            campaignSlide[i].div.classList.add("locked");
         }else{
             campaignSlide[i].div.classList.remove("locked");
         }
@@ -176,23 +232,38 @@ const rollCampaignSlide = (campaignSlide) => {
 }
 
 const chooseCampaign = (campaign) => {
-    actualCampaign = campaign;
-    player1perso = campaign.player.name;
-    player2perso = campaign.reward.name;
-    gameIsIa = true;
-    startGame();
+    if(campaign.isLocked === false){
+        actualCampaign = campaign;
+        player1perso = campaign.player.name;
+        player2perso = campaign.reward.name;
+        gameIsIa = true;
+        startGame();
+    }
 }
 
+const setCampaignEvent = () => {
+    for(let i = 0;i<listCampaignDBZ.length;i++){
+        listCampaignDBZ[i].div.addEventListener("click", () => {
+            chooseCampaign(listCampaignDBZ[i]);
+        })
+    }
+    for(let j = 0;j<listCampaignBTM.length;j++){
+        listCampaignBTM[j].div.addEventListener("click", () => {
+            chooseCampaign(listCampaignBTM[j]);
+        })
+    }
+}
 
-listCampaign1[0].div.addEventListener("click", () => {
-    console.log("app");
-    chooseCampaign(listCampaign1[0]);
-})
+setCampaignEvent();
 
 document.getElementById("returnMainAsCampaign").addEventListener("click", returnToMainMenuAsCampaign)
 document.getElementById("campaignSlide1").addEventListener("click", ()=>{
-    rollCampaignSlide(listCampaign1);
+    rollCampaignSlide(listCampaignDBZ);
 })
+document.getElementById("campaignSlide2").addEventListener("click", ()=>{
+    rollCampaignSlide(listCampaignBTM);
+})
+
 
 //? CAMPAIGN MENU*********************************
 //? CAMPAIGN MENU*********************************
@@ -270,8 +341,8 @@ let startCount = 3;
 const startGame = () => {
     startCount = 3;
     console.log("gameStart");
-    startingCount();
     setVisual();
+    startingCount();
     divCampaign.style.display = "none";
     divSelection.style.display = "none";
     divGame.style.display = "initial";
@@ -497,8 +568,27 @@ const endCampaign= () => {
             tempTapDoublon = true;
         }
     }
+    let tempAltTapDoublon=false;
+    if(actualCampaign.altReward !== null){
+        for(let o = 0;o<tabPerso.length;o++){
+            if(tabPerso[o]===actualCampaign.altReward){
+                tempAltTapDoublon = true;
+            }
+        }
+    }
     if(tempTapDoublon===false){
         tabPerso.push(actualCampaign.reward);
+    }
+    if(tempAltTapDoublon===false && actualCampaign.altReward !== null){
+        tabPerso.push(actualCampaign.altReward);
+    }
+    unlockNextLevel();
+}
+
+const unlockNextLevel = () => {
+    if(actualCampaign.campaign === "DBZ" && actualCampaign.level<listCampaignDBZ.length){
+        let tempNextLVL = actualCampaign.level;
+        listCampaignDBZ[tempNextLVL].isLocked = false;
     }
 }
 
