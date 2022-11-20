@@ -162,6 +162,14 @@ body{
   background-image: url(../images/sprites/goldenCooler/goldenCoolerportrait.png);
 }
 
+#selectedPlayer1.SpiderMan{
+  background-image: url(../images/sprites/SpiderMan/spiderManPortrait.png);
+}
+
+#selectedPlayer2.SpiderMan{
+  background-image: url(../images/sprites/SpiderMan/spiderManPortrait.png);
+}
+
 /***********************************/
 
 #choosePerso{
@@ -1822,6 +1830,32 @@ body{
 
 .campaignMenu{
   overflow-y: auto;
+}
+
+.ranking{
+  height: 10vh;
+  width: 10vh;
+  background-image: url(../images/ui/D-Tier.png);
+  background-size: cover;
+  position: relative;
+  bottom: -3.5vh;
+  margin-left: 44vh;
+}
+
+.ranking.D{
+  background-image: url(../images/ui/D-Tier.png);
+}
+
+.ranking.C{
+  background-image: url(../images/ui/C-Tier.png);
+}
+
+.ranking.B{
+  background-image: url(../images/ui/B-Tier.png);
+}
+
+.ranking.A{
+  background-image: url(../images/ui/A-Tier.png);
 }
 
 /**********************************************************/

@@ -15,12 +15,31 @@ const divGame = document.getElementById("gameTable");
 
 const fightButton = document.getElementById("fightButton");
 const underFightButton = document.querySelectorAll(".underFightButton");
+let player1DOM = document.getElementById("selectedPlayer1");
+let player2DOM = document.getElementById("selectedPlayer2");
+let p1DOM = document.getElementById("P1");
+let p2DOM = document.getElementById("P2");
+let auraP1 = document.getElementById("auraP1");
+let auraP2 = document.getElementById("auraP2");
+let auraP1starting = document.getElementById("auraP1Starting");
+let auraP2starting = document.getElementById("auraP2Starting");
+let portgame1DOM = document.getElementById("port1");
+let portgame2DOM = document.getElementById("port2");
+let buttonStart = document.getElementById("buttonStart");
+let txtStarting = document.getElementById("txtStart");
+let kamehaPlayer1 = document.getElementById("kamehaP1");
+let kamehaPlayer2 = document.getElementById("kamehaP2");
+let player1KamehaWidth = normalKamehaWidth;
+let player2KamehaWidth = normalKamehaWidth;
+let tabPersoDOM = document.getElementById("choosePerso");
+
 let gameIsIa = false;
 let listCampaignDBZ = [
     {
         div : document.getElementById("campaign1"),
         campaign : "DBZ",
         level : 1,
+        difficulty : "D",
         isLocked: false,
         altReward:{
             name: "GokuSSJ",
@@ -42,6 +61,7 @@ let listCampaignDBZ = [
         div : document.getElementById("campaign2"),
         campaign : "DBZ",
         level : 2,
+        difficulty : "D",
         isLocked: true,
         altReward:null,
         reward: {
@@ -58,6 +78,7 @@ let listCampaignDBZ = [
         div : document.getElementById("campaign3"),
         campaign : "DBZ",
         level : 3,
+        difficulty : "D",
         isLocked: true,
         altReward:null,
         reward: {
@@ -74,6 +95,7 @@ let listCampaignDBZ = [
         div : document.getElementById("campaign4"),
         campaign : "DBZ",
         level : 4,
+        difficulty : "D",
         isLocked: true,
         altReward:{
             name: "GokuSSJ3",
@@ -95,6 +117,7 @@ let listCampaignDBZ = [
         campaign : "DBZ",
         level : 5,
         isLocked: true,
+        difficulty : "D",
         altReward:{
             name: "GohanSSJ3",
             ID: 54,
@@ -117,6 +140,7 @@ let listCampaignBTM = [
         div : document.getElementById("campaignBTM1"),
         campaign : "BTM",
         level : 1,
+        difficulty : "D",
         isLocked: false,
         altReward:{
             name: "SpiderMan",
@@ -136,7 +160,6 @@ let listCampaignBTM = [
     }
 ]
 let actualCampaign = null;
-let tabPersoDOM = document.getElementById("choosePerso");
 let tabPerso = [
     {
         name: "Gogeta",
@@ -154,23 +177,7 @@ let player1perso = null;
 let player2perso = null;
 let numberClickP1 = 0;
 let numberClickP2 = 0;
-let player1DOM = document.getElementById("selectedPlayer1");
-let player2DOM = document.getElementById("selectedPlayer2");
-let p1DOM = document.getElementById("P1");
-let p2DOM = document.getElementById("P2");
-let auraP1 = document.getElementById("auraP1");
-let auraP2 = document.getElementById("auraP2");
-let auraP1starting = document.getElementById("auraP1Starting");
-let auraP2starting = document.getElementById("auraP2Starting");
-let portgame1DOM = document.getElementById("port1");
-let portgame2DOM = document.getElementById("port2");
-let buttonStart = document.getElementById("buttonStart");
-let txtStarting = document.getElementById("txtStart");
-let kamehaPlayer1 = document.getElementById("kamehaP1");
-let kamehaPlayer2 = document.getElementById("kamehaP2");
 let normalKamehaWidth = 43.75;
-let player1KamehaWidth = normalKamehaWidth;
-let player2KamehaWidth = normalKamehaWidth;
 let maxClick = 50;
 let gameStarted = true;
 let canClick = false;
@@ -217,6 +224,10 @@ const setVisualCampaignMenu = (campaignSlide) => {
             campaignSlide[i].div.classList.add("locked");
         }else{
             campaignSlide[i].div.classList.remove("locked");
+            campaignSlide[i].div.innerHTML ="";
+            let rankTier = campaignSlide[i].div.appendChild(document.createElement("div"));
+            rankTier.classList.add("ranking");
+            rankTier.classList.add(campaignSlide[i].difficulty);
         }
     }
 }
