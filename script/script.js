@@ -378,6 +378,7 @@ let startCount = 3;
 const startGame = () => {
     startCount = 3;
     console.log("gameStart");
+    setDifficulty();
     setVisual();
     startingCount();
     divCampaign.style.display = "none";
