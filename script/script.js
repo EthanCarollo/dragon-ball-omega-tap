@@ -33,6 +33,7 @@ let player1KamehaWidth = normalKamehaWidth;
 let player2KamehaWidth = normalKamehaWidth;
 let tabPersoDOM = document.getElementById("choosePerso");
 
+
 let gameIsIa = false;
 let listCampaignDBZ = [
     {
@@ -175,6 +176,8 @@ let tabPerso = [
 let tabPersoDiv = [];
 let player1perso = null;
 let player2perso = null;
+let difficultyRank = "D";
+let timeOutIa = 350;
 let numberClickP1 = 0;
 let numberClickP2 = 0;
 let normalKamehaWidth = 43.75;
@@ -184,6 +187,9 @@ let canClick = false;
 let TimeOutClickP1 = 2;
 let TimeOutClickP2 = 2;
 let whoWin;
+
+
+// TODO VAR SECTION
 
 //! MAIN MENU*********************************
 //! MAIN MENU*********************************
@@ -464,7 +470,7 @@ const callbackFunctionDelay = () => {
         if(gameStarted===true){
             callbackFunctionDelay();
         }
-    },200)
+    },timeOutIa)
 }
 
 const iaAgainstPlayer = () => {
@@ -507,6 +513,18 @@ const setVisual = () => {
     kamehaPlayer2.classList.toggle(player2perso);
     document.getElementById("player1txt").innerHTML = player1perso;
     document.getElementById("player2txt").innerHTML = player2perso;
+}
+
+const setDifficulty = () => {
+    if(difficultyRank === "D"){
+
+    }else if(difficultyRank === "C"){
+
+    }else if(difficultyRank === "B"){
+
+    }else if(difficultyRank === "A"){
+
+    }
 }
 
 const addPlayer1Click = () => {
