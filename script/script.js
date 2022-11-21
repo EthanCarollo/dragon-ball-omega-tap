@@ -29,8 +29,6 @@ let buttonStart = document.getElementById("buttonStart");
 let txtStarting = document.getElementById("txtStart");
 let kamehaPlayer1 = document.getElementById("kamehaP1");
 let kamehaPlayer2 = document.getElementById("kamehaP2");
-let player1KamehaWidth = normalKamehaWidth;
-let player2KamehaWidth = normalKamehaWidth;
 let tabPersoDOM = document.getElementById("choosePerso");
 
 
@@ -62,7 +60,7 @@ let listCampaignDBZ = [
         div : document.getElementById("campaign2"),
         campaign : "DBZ",
         level : 2,
-        difficulty : "D",
+        difficulty : "C",
         isLocked: true,
         altReward:null,
         reward: {
@@ -79,7 +77,7 @@ let listCampaignDBZ = [
         div : document.getElementById("campaign3"),
         campaign : "DBZ",
         level : 3,
-        difficulty : "D",
+        difficulty : "C",
         isLocked: true,
         altReward:null,
         reward: {
@@ -96,7 +94,7 @@ let listCampaignDBZ = [
         div : document.getElementById("campaign4"),
         campaign : "DBZ",
         level : 4,
-        difficulty : "D",
+        difficulty : "B",
         isLocked: true,
         altReward:{
             name: "GokuSSJ3",
@@ -118,7 +116,7 @@ let listCampaignDBZ = [
         campaign : "DBZ",
         level : 5,
         isLocked: true,
-        difficulty : "D",
+        difficulty : "A",
         altReward:{
             name: "GohanSSJ3",
             ID: 54,
@@ -141,7 +139,7 @@ let listCampaignBTM = [
         div : document.getElementById("campaignBTM1"),
         campaign : "BTM",
         level : 1,
-        difficulty : "D",
+        difficulty : "A",
         isLocked: false,
         altReward:{
             name: "SpiderMan",
@@ -156,6 +154,27 @@ let listCampaignBTM = [
         player: {
             name: "SpiderMan",
             ID: 102,
+            version: []
+        }
+    },{
+        div : document.getElementById("campaignBTM2"),
+        campaign : "BTM",
+        level : 2,
+        difficulty : "S",
+        isLocked: true,
+        altReward:{
+            name: "Sasuke",
+            ID: 1042,
+            version: []
+        },
+        reward: {
+            name: "Itachi",
+            ID: 811,
+            version: []
+        },
+        player: {
+            name: "Sasuke",
+            ID: 1042,
             version: []
         }
     }
@@ -181,6 +200,8 @@ let timeOutIa = 350;
 let numberClickP1 = 0;
 let numberClickP2 = 0;
 let normalKamehaWidth = 43.75;
+let player1KamehaWidth = normalKamehaWidth;
+let player2KamehaWidth = normalKamehaWidth;
 let maxClick = 50;
 let gameStarted = true;
 let canClick = false;
@@ -204,6 +225,7 @@ const rollFightMenu = () => {
 const startCampaign = () =>
 {
     setVisualCampaignMenu(listCampaignDBZ);
+    setVisualCampaignMenu(listCampaignBTM);
     divCampaign.style.display = "initial";
     divMenu.style.display = "none";
 }
@@ -273,6 +295,7 @@ const chooseCampaign = (campaign) => {
         actualCampaign = campaign;
         player1perso = campaign.player.name;
         player2perso = campaign.reward.name;
+        difficultyRank = campaign.difficulty;
         gameIsIa = true;
         startGame();
     }
@@ -398,7 +421,7 @@ const startingCount = () => {
             document.getElementById("kameha").style.display = "initial";
             gameStarted = true;
             canClick = true;
-            callbackFunctionDelay();
+            callbackFunctionDelay(timeOutIa);
             setWidthKameha();
             iaAgainstPlayer();
         }else{
@@ -471,7 +494,7 @@ const callbackFunctionDelay = () => {
         if(gameStarted===true){
             callbackFunctionDelay();
         }
-    },timeOutIa)
+    },250)
 }
 
 const iaAgainstPlayer = () => {
@@ -482,7 +505,7 @@ const iaAgainstPlayer = () => {
             }
             iaAgainstPlayer();
         }
-    }, 125)
+    }, timeOutIa)
 }
 
 const isNotClickingP1 =() => {
@@ -518,13 +541,17 @@ const setVisual = () => {
 
 const setDifficulty = () => {
     if(difficultyRank === "D"){
-
+        timeOutIa = 325;
     }else if(difficultyRank === "C"){
-
+        timeOutIa = 275;
     }else if(difficultyRank === "B"){
-
+        timeOutIa = 250;
     }else if(difficultyRank === "A"){
-
+        timeOutIa = 225;
+    }else if(difficultyRank === "S"){
+        timeOutIa = 200;
+    }else if(difficultyRank === "SS"){
+        timeOutIa = 150;
     }
 }
 
@@ -551,21 +578,21 @@ const addPlayer2Click = () => {
 const setWidthKameha = () => {
     // ! midwidth of a kameha is 43.75
         if(gameStarted === true){
-        kamehaPlayer1.style.opacity = "100";
-        kamehaPlayer2.style.opacity = "100";
-        let tempWidth1 = 43.75 + (numberClickP1-numberClickP2)/2.25;
-        let tempWidth2 = 43.75 + (numberClickP2-numberClickP1)/2.25;
+            kamehaPlayer1.style.opacity = "100";
+            kamehaPlayer2.style.opacity = "100";
+            let tempWidth1 = 43.75 + (numberClickP1-numberClickP2)/2.25;
+            let tempWidth2 = 43.75 + (numberClickP2-numberClickP1)/2.25;
 
-        kamehaPlayer1.style.width = tempWidth1 + "%";
-        kamehaPlayer2.style.width = tempWidth2 + "%";
-        if(tempWidth1 < 32.4){
-            document.getElementById("mid1").style.backgroundSize = "cover";
-        }else{
-            document.getElementById("mid1").style.backgroundSize = "contain";
-        }
-        if(tempWidth2 < 32.4){
-            document.getElementById("mid2").style.backgroundSize = "cover";
-        }else{
+            kamehaPlayer1.style.width = tempWidth1 + "%";
+            kamehaPlayer2.style.width = tempWidth2 + "%";
+            if(tempWidth1 < 31.31){
+                document.getElementById("mid1").style.backgroundSize = "cover";
+            }else{
+                document.getElementById("mid1").style.backgroundSize = "contain";
+            }
+            if(tempWidth2 < 31.31){
+                document.getElementById("mid2").style.backgroundSize = "cover";
+            }else{
             document.getElementById("mid2").style.backgroundSize = "contain";
         }
     }
@@ -639,6 +666,12 @@ const unlockNextLevel = () => {
     if(actualCampaign.campaign === "DBZ" && actualCampaign.level<listCampaignDBZ.length){
         let tempNextLVL = actualCampaign.level;
         listCampaignDBZ[tempNextLVL].isLocked = false;
+        listCampaignDBZ[tempNextLVL].div.classList.remove("locked");
+    }
+    if(actualCampaign.campaign === "BTM" && actualCampaign.level<listCampaignBTM.length){
+        let tempNextLVL = actualCampaign.level;
+        listCampaignBTM[tempNextLVL].isLocked = false;
+        listCampaignBTM[tempNextLVL].div.classList.remove("locked");
     }
 }
 

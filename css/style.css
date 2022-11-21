@@ -170,6 +170,22 @@ body{
   background-image: url(../images/sprites/SpiderMan/spiderManPortrait.png);
 }
 
+#selectedPlayer1.Sasuke{
+  background-image: url(../images/sprites/sasuke/sasukeportrait.png);
+}
+
+#selectedPlayer2.Sasuke{
+  background-image: url(../images/sprites/sasuke/sasukeportrait.png);
+}
+
+#selectedPlayer1.Itachi{
+  background-image: url(../images/sprites/itachi/itachiportrait.png);
+}
+
+#selectedPlayer2.Itachi{
+  background-image: url(../images/sprites/itachi/itachiportrait.png);
+}
+
 /***********************************/
 
 #choosePerso{
@@ -242,6 +258,14 @@ body{
 
 .perso.SpiderMan{
   background-image: url(../images/slotCharacter/spiderManPortrait.png);
+}
+
+.perso.Sasuke{
+  background-image: url(../images/slotCharacter/sasukeSlot.png);
+}
+
+.perso.Itachi{
+  background-image: url(../images/slotCharacter/Itachiportrait.png);
 }
 
 /**********************************************************/
@@ -1176,6 +1200,78 @@ body{
   }
 }
 
+.Player1.Sasuke{
+  background-image: url(../images/sprites/sasuke/sasukeKamehaDo.png);
+  animation: comingSasuke 3s;
+  animation-timing-function: steps(1);
+}
+
+.Player1.Sasuke.win{
+  background-image: url(../images/sprites/sasuke/win\ &\ coming/1.png);
+}
+
+.Player1.Sasuke.loose{
+  background-image: url(../images/sprites/sasuke/loose/1.png);
+}
+
+.Player2.Sasuke{
+  background-image: url(../images/sprites/sasuke/sasukeKamehaDo.png);
+  animation: comingSasuke 3s;
+  animation-timing-function: steps(1);
+}
+
+.Player2.Sasuke.win{
+  background-image: url(../images/sprites/sasuke/win\ &\ coming/1.png);
+}
+
+.Player2.Sasuke.loose{
+  background-image: url(../images/sprites/sasuke/loose/1.png);
+}
+
+@keyframes comingSasuke{
+  0%{
+    background-image: url(../images/sprites/sasuke/win\ &\ coming/1.png);
+  }100%{
+    background-image: url(../images/sprites/sasuke/win\ &\ coming/1.png);
+  }
+}
+
+.Player1.Itachi{
+  background-image: url(../images/sprites/itachi/ItachiKamehaDo.png);
+  animation: comingItachi 3s;
+  animation-timing-function: steps(1);
+}
+
+.Player1.Itachi.win{
+  background-image: url(../images/sprites/itachi/win\ &\ coming/1.png);
+}
+
+.Player1.Itachi.loose{
+  background-image: url(../images/sprites/itachi/loose/1.png);
+}
+
+.Player2.Itachi{
+  background-image: url(../images/sprites/itachi/ItachiKamehaDo.png);
+  animation: comingItachi 3s;
+  animation-timing-function: steps(1);
+}
+
+.Player2.Itachi.win{
+  background-image: url(../images/sprites/itachi/win\ &\ coming/1.png);
+}
+
+.Player2.Itachi.loose{
+  background-image: url(../images/sprites/itachi/loose/1.png);
+}
+
+@keyframes comingItachi{
+  0%{
+    background-image: url(../images/sprites/itachi/win\ &\ coming/1.png);
+  }100%{
+    background-image: url(../images/sprites/itachi/win\ &\ coming/1.png);
+  }
+}
+
 /***************PLAYERSET********************/
 
 /*KamehaP1*/
@@ -1372,6 +1468,84 @@ body{
 
 /* ! endregion Buutenks */
 
+/* ! region Spiderman */
+
+/*KamehaP1*/
+
+.KamehaPlayer1.SpiderMan .startPlayer1{
+  background-image:url(../images/sprites/kameha/spiderStartKameha.png);
+}
+
+.KamehaPlayer1.SpiderMan .midPlayer1{
+  background-image:url(../images/sprites/kameha/spiderMidKameha.png);
+}
+
+.KamehaPlayer1.SpiderMan .endPlayer1{
+  background-image: url(../images/sprites/kameha/spiderEndKameha.png);
+  animation: none;
+}
+
+/*KamehaP1*/
+
+/*KamehaP2*/
+
+.KamehaPlayer2.SpiderMan .startPlayer2{
+  background-image:url(../images/sprites/kameha/spiderStartKameha.png);
+}
+
+.KamehaPlayer2.SpiderMan .midPlayer2{
+  background-image:url(../images/sprites/kameha/spiderMidKameha.png);
+}
+
+.KamehaPlayer2.SpiderMan .endPlayer2{
+  background-image: url(../images/sprites/kameha/spiderEndKameha.png);
+  animation: none;
+}
+
+/*KamehaP2*/
+
+
+/* ! endregion Spiderman */
+
+/* ! region Spiderman */
+
+/*KamehaP1*/
+
+.KamehaPlayer1.Venom .startPlayer1{
+  background-image:url(../images/sprites/kameha/slimeStartKameha.png);
+}
+
+.KamehaPlayer1.Venom .midPlayer1{
+  background-image:url(../images/sprites/kameha/slimeMidKameha.png);
+}
+
+.KamehaPlayer1.Venom .endPlayer1{
+  background-image: url(../images/sprites/kameha/slimeEndKameha.png);
+  animation: none;
+}
+
+/*KamehaP1*/
+
+/*KamehaP2*/
+
+.KamehaPlayer2.Venom .startPlayer2{
+  background-image:url(../images/sprites/kameha/slimeStartKameha.png);
+}
+
+.KamehaPlayer2.Venom .midPlayer2{
+  background-image:url(../images/sprites/kameha/slimeMidKameha.png);
+}
+
+.KamehaPlayer2.Venom .endPlayer2{
+  background-image: url(../images/sprites/kameha/slimeEndKameha.png);
+  animation: none;
+}
+
+/*KamehaP2*/
+
+
+/* ! endregion Spiderman */
+
 /***************KAMEHASET********************/
 
 .floorP1{
@@ -1565,6 +1739,22 @@ body{
 
 .portraitP2.SpiderMan{
   background-image: url(../images/sprites/SpiderMan/spiderManPortrait.png);
+}
+
+.portraitP1.Sasuke{
+  background-image: url(../images/sprites/sasuke/sasukeportrait.png);
+}
+
+.portraitP2.Sasuke{
+  background-image: url(../images/sprites/sasuke/sasukeportrait.png);
+}
+
+.portraitP1.Itachi{
+  background-image: url(../images/sprites/itachi/itachiportrait.png);
+}
+
+.portraitP2.Itachi{
+  background-image: url(../images/sprites/itachi/itachiportrait.png);
 }
 
 /******************PORTRAITSET*****************/
@@ -1828,6 +2018,16 @@ body{
   height: 10.25vh;
 }
 
+#campaignBTM2{
+  background-image: url(../images/ui/RevengeTimeCampaignButton.png);
+  height: 10.25vh;
+}
+
+#campaignBTM2.locked{
+  background-image: url(../images/ui/RevengeTimeLockedCampaignButton.png);
+  height: 10.25vh;
+}
+
 .campaignMenu{
   overflow-y: auto;
 }
@@ -1856,6 +2056,14 @@ body{
 
 .ranking.A{
   background-image: url(../images/ui/A-Tier.png);
+}
+
+.ranking.S{
+  background-image: url(../images/ui/S-Tier.png);
+}
+
+.ranking.SS{
+  background-image: url(../images/ui/SS-Tier.png);
 }
 
 /**********************************************************/
