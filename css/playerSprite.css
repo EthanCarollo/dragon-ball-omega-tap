@@ -137,6 +137,14 @@
   #selectedPlayer2.FinalCooler{
     background-image: url(../images/sprites/FinalCooler/FinalCoolerPortrait.png);
   }
+
+  #selectedPlayer1.GohanSSJ{
+    background-image: url(../images/sprites/GohanSSJ2/gohanSSJ2Coolerportrait.png);
+  }
+
+  #selectedPlayer2.GohanSSJ{
+    background-image: url(../images/sprites/GohanSSJ2/gohanSSJ2Coolerportrait.png);
+  }
   
   /***********************************/
   /***********************************/
@@ -208,6 +216,10 @@
 
   .perso.FinalCooler{
     background-image: url(../images/slotCharacter/FinalCoolerPortrait.png);
+  }
+
+  .perso.GohanSSJ{
+    background-image: url(../images/slotCharacter/gohanSSJportrait.png);
   }
   
   /**********************************************************/
@@ -1159,6 +1171,80 @@
         background-image: url(../images/sprites/FinalCooler/win\ &\ coming/1.png);
     }
   }
+
+  .Player1.GohanSSJ{
+    background-image: url(../images/sprites/GohanSSJ2/gohanSSJ2DoingKameha.png);
+    animation: comingGohanSSJ 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.GohanSSJ.win{
+    background-image: url(../images/sprites/GohanSSJ2/win/4.png);
+    animation: winGohanSSJ 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.GohanSSJ.loose{
+    background-image: url(../images/sprites/GohanSSJ2/loose/1.png);
+    animation: looseGohanSSJ 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.GohanSSJ{
+    background-image: url(../images/sprites/GohanSSJ2/gohanSSJ2DoingKameha.png);
+    animation: comingGohanSSJ 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.GohanSSJ.win{
+    background-image: url(../images/sprites/GohanSSJ2/win/4.png);
+    animation: winGohanSSJ 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.GohanSSJ.loose{
+    background-image: url(../images/sprites/GohanSSJ2/loose/1.png);
+    animation: looseGohanSSJ 3s;
+    animation-timing-function: steps(1);
+  }
+
+  @keyframes comingGohanSSJ{
+    0%{
+        background-image: url(../images/sprites/GohanSSJ2/comingInFight/1.png);
+    }25%{
+      background-image: url(../images/sprites/GohanSSJ2/comingInFight/2.png);
+    }50%{
+      background-image: url(../images/sprites/GohanSSJ2/comingInFight/3.png);
+    }75%{
+      background-image: url(../images/sprites/GohanSSJ2/comingInFight/4.png);
+    }100%{
+      background-image: url(../images/sprites/GohanSSJ2/comingInFight/5.png);
+    }
+  }
+
+  @keyframes winGohanSSJ{
+    0%{
+      background-image: url(../images/sprites/GohanSSJ2/win/1.png);
+    }33%{
+      background-image: url(../images/sprites/GohanSSJ2/win/2.png);
+    }66%{
+      background-image: url(../images/sprites/GohanSSJ2/win/3.png);
+    }100%{
+      background-image: url(../images/sprites/GohanSSJ2/win/4.png);
+    }
+  }
+
+  @keyframes looseGohanSSJ{
+    0%{
+      background-image: url(../images/sprites/GohanSSJ2/loose/1.png);
+    }33%{
+      background-image: url(../images/sprites/GohanSSJ2/loose/2.png);
+    }66%{
+      background-image: url(../images/sprites/GohanSSJ2/loose/3.png);
+    }100%{
+      background-image: url(../images/sprites/GohanSSJ2/loose/4.png);
+    }
+  }
   
   /***************PLAYERSET********************/
 
@@ -1299,6 +1385,14 @@
   .portraitP2.FinalCooler{
     background-image: url(../images/sprites/FinalCooler/FinalCoolerPortrait.png);
   }
+
+  .portraitP1.GohanSSJ{
+    background-image: url(../images/sprites/GohanSSJ2/gohanSSJ2Coolerportrait.png);
+  }
+
+  .portraitP2.GohanSSJ{
+    background-image: url(../images/sprites/GohanSSJ2/gohanSSJ2Coolerportrait.png);
+  }
   
   
   /******************PORTRAITSET*****************/
@@ -1369,5 +1463,9 @@
 
   .subPerso.FinalCooler{
     background-image: url(../images/slotCharacter/FinalCoolerPortrait.png);
+  }
+
+  .subPerso.GohanSSJ{
+    background-image: url(../images/slotCharacter/gohanSSJPortrait.png);
   }
   

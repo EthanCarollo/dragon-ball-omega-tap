@@ -187,11 +187,14 @@ let listCampaignBTM = [
 let actualCampaign = null;
 let tabPerso = [
     {
+        name: "Goku",
+        ID: 10,
+        version: ["Goku"]
+    },{
         name: "Gogeta",
         ID: 0,
         version: []
-    },
-    {
+    },{
         name: "VegitoSSJ",
         ID: 1,
         version: []
@@ -200,9 +203,9 @@ let tabPerso = [
         ID: 666,
         version: ["KidBuu"]
     },{
-        name: "Goku",
-        ID: 10,
-        version: ["Goku"]
+        name: "GohanSSJ",
+        ID: 54,
+        version: ["GohanSSJ"]
     }
 ];
 let tabPersoDiv = [];
@@ -257,6 +260,7 @@ const startChoosePersoIA = () => {
     divChooseDiff.style.display = "flex";
     actualCampaign = null;
     gameIsIa = true;
+    setDifficultyInTab("D", 0);
     divMenu.style.display = "none";
     divSelection.style.display = "initial"
 }
@@ -442,8 +446,8 @@ const startGame = () => {
     setVisual();
     startingCount();
     
-    kamehaPlayer1.style.transition = "all 0.25s";
-    kamehaPlayer2.style.transition = "all 0.25s";
+    kamehaPlayer1.style.transition = "all 0s";
+    kamehaPlayer2.style.transition = "all 0s";
     divCampaign.style.display = "none";
     divSelection.style.display = "none";
     divGame.style.display = "initial";
@@ -805,46 +809,30 @@ document.getElementById("buttonMainMenu").addEventListener("click", goToMainMenu
 //SET DIFFICULTY WITH EVENT
 
 document.getElementById("D").addEventListener("click", ()=>{
-    difficultyRank = "D";
-    for(let i =0; i< document.getElementById("divIAdiff").children.length;i++){
-        document.getElementById("divIAdiff").children[i].classList.remove("active");
-    }
-    document.getElementById("divIAdiff").children[0].classList.add("active");
+    setDifficultyInTab("D", 0);
 });
 document.getElementById("C").addEventListener("click", ()=>{
-    difficultyRank = "C";
-    for(let i =0; i< document.getElementById("divIAdiff").children.length;i++){
-        document.getElementById("divIAdiff").children[i].classList.remove("active");
-    }
-    document.getElementById("divIAdiff").children[1].classList.add("active");
+    setDifficultyInTab("C", 1);
 });
 document.getElementById("B").addEventListener("click", ()=>{
-    difficultyRank = "B";
-    for(let i =0; i< document.getElementById("divIAdiff").children.length;i++){
-        document.getElementById("divIAdiff").children[i].classList.remove("active");
-    }
-    document.getElementById("divIAdiff").children[2].classList.add("active");
+    setDifficultyInTab("B", 2);
 });
 document.getElementById("A").addEventListener("click", ()=>{
-    difficultyRank = "A";
-    for(let i =0; i< document.getElementById("divIAdiff").children.length;i++){
-        document.getElementById("divIAdiff").children[i].classList.remove("active");
-    }
-    document.getElementById("divIAdiff").children[3].classList.add("active");
+    setDifficultyInTab("A", 3);
 });
 document.getElementById("S").addEventListener("click", ()=>{
-    difficultyRank = "S";
-    for(let i =0; i< document.getElementById("divIAdiff").children.length;i++){
-        document.getElementById("divIAdiff").children[i].classList.remove("active");
-    }
-    document.getElementById("divIAdiff").children[4].classList.add("active");
+    setDifficultyInTab("S", 4);
 });
 document.getElementById("SS").addEventListener("click", ()=>{
-    difficultyRank = "SS";
+    setDifficultyInTab("SS", 5);
+});
+
+const setDifficultyInTab = (rank, div) => {
+    difficultyRank = rank;
     for(let i =0; i< document.getElementById("divIAdiff").children.length;i++){
         document.getElementById("divIAdiff").children[i].classList.remove("active");
     }
-    document.getElementById("divIAdiff").children[5].classList.add("active");
-});
+    document.getElementById("divIAdiff").children[div].classList.add("active");
+}
 
 //SET DIFFICULTY WITH EVENT
