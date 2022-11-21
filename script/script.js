@@ -30,6 +30,7 @@ let txtStarting = document.getElementById("txtStart");
 let kamehaPlayer1 = document.getElementById("kamehaP1");
 let kamehaPlayer2 = document.getElementById("kamehaP2");
 let tabPersoDOM = document.getElementById("choosePerso");
+let divChooseDiff = document.getElementById("divIAdiff");
 
 
 let gameIsIa = false;
@@ -43,12 +44,12 @@ let listCampaignDBZ = [
         altReward:{
             name: "GokuSSJ",
             ID: 10,
-            version: []
+            version: ["GokuSSJ"]
         },
         reward: {
             name: "Frieza",
             ID: 8,
-            version: []
+            version: ["Frieza"]
         },
         player: {
             name: "GokuSSJ",
@@ -65,7 +66,7 @@ let listCampaignDBZ = [
         altReward:null,
         reward: {
             name: "Buutenks",
-            ID: 5,
+            ID: 666,
             version: []
         },
         player:{
@@ -79,11 +80,15 @@ let listCampaignDBZ = [
         level : 3,
         difficulty : "C",
         isLocked: true,
-        altReward:null,
-        reward: {
+        altReward:{
             name: "GoldenCooler",
-            ID: 5,
+            ID: 896,
             version: []
+        },
+        reward: {
+            name: "FinalCooler",
+            ID: 896,
+            version: ["FinalCooler"]
         },
         player:{
             name: "VegitoSSJ",
@@ -98,12 +103,12 @@ let listCampaignDBZ = [
         isLocked: true,
         altReward:{
             name: "GokuSSJ3",
-            ID: 542,
+            ID: 10,
             version: []
         },
         reward: {
             name: "GoldenFrieza",
-            ID: 79,
+            ID: 8,
             version: []
         },
         player:{
@@ -124,7 +129,7 @@ let listCampaignDBZ = [
         },
         reward: {
             name: "BlackGoku",
-            ID: 5,
+            ID: 679,
             version: []
         },
         player:{
@@ -190,6 +195,14 @@ let tabPerso = [
         name: "VegitoSSJ",
         ID: 1,
         version: []
+    },{
+        name: "KidBuu",
+        ID: 666,
+        version: ["KidBuu"]
+    },{
+        name: "Goku",
+        ID: 10,
+        version: ["Goku"]
     }
 ];
 let tabPersoDiv = [];
@@ -232,6 +245,7 @@ const startCampaign = () =>
 
 const startChoosePerso = () => {
     createTablePerso();
+    divChooseDiff.style.display = "none";
     actualCampaign = null;
     gameIsIa = false;
     divMenu.style.display = "none";
@@ -240,6 +254,7 @@ const startChoosePerso = () => {
 
 const startChoosePersoIA = () => {
     createTablePerso();
+    divChooseDiff.style.display = "flex";
     actualCampaign = null;
     gameIsIa = true;
     divMenu.style.display = "none";
@@ -346,18 +361,34 @@ const createTablePerso = () => {
         //Manipulation du DOM
         let perso = tabPersoDOM.appendChild(document.createElement("div"));
         perso.classList.add("perso");
-        if(tabPerso[i].version.length > 0){
+        if(tabPerso[i].version.length > 1){
             perso.classList.toggle(tabPerso[i].version[0]);
+            let tempSubPersoArray = []
+            let subFleche = perso.appendChild(document.createElement("div"));
+            subFleche.classList.add("FlechePerso"); 
+            for(let k =0; k<tabPerso[i].version.length; k++){
+                console.log(tabPerso[i].version[k]);
+                let subPerso = tabPersoDOM.appendChild(document.createElement("div"));
+                subPerso.classList.add("subPerso");
+                subPerso.classList.add(tabPerso[i].version[k]);
+                subPerso.addEventListener("click", () =>
+                {
+                    selectPlayer(i, k);
+                })
+                tempSubPersoArray.push(subPerso);
+            }
+            perso.addEventListener("click", () =>
+            {
+                subFleche.classList.toggle("active");
+                rollPersoVersion(tempSubPersoArray);
+            })
         }else{
             perso.classList.toggle(tabPerso[i].name);
+            perso.addEventListener("click", () =>
+            {
+                selectPlayer(i);
+            })
         }
-
-        //Ajoute la fonction qui a pour argument l'ID du personnage pour le selectionner au click
-
-        perso.addEventListener("click", () =>
-        {
-            selectPlayer(i);
-        })
 
         //Ajout de l'object qui contient le personage et l'ID dans le tableau des div des persos
 
@@ -371,11 +402,17 @@ const createTablePerso = () => {
 
 }
 
-const selectPlayer = (ID) => {
+const rollPersoVersion = (listVersions) => {
+    for(let o = 0; o<listVersions.length;o++){
+        listVersions[o].classList.toggle("exist");
+    }
+}
+
+const selectPlayer = (ID, NumberOfVersion = 0) => {
     if(player1perso === null){
-        if(tabPerso[ID].version.length > 0){
+        if(tabPerso[ID].version.length > 1){
             console.log(ID + "version");
-            player1perso = tabPerso[ID].version[0];
+            player1perso = tabPerso[ID].version[NumberOfVersion];
             player1DOM.classList.toggle(player1perso);
         }else{
             console.log(ID);
@@ -383,9 +420,9 @@ const selectPlayer = (ID) => {
             player1DOM.classList.toggle(tabPerso[ID].name);
         }
     }else if(player2perso===null){
-        if(tabPerso[ID].version.length > 0){
+        if(tabPerso[ID].version.length > 1){
             console.log(ID);
-            player2perso = tabPerso[ID].version[0];
+            player2perso = tabPerso[ID].version[NumberOfVersion];
             player2DOM.classList.toggle(player2perso);
         }else{
             console.log(ID);
@@ -404,6 +441,9 @@ const startGame = () => {
     setDifficulty();
     setVisual();
     startingCount();
+    
+    kamehaPlayer1.style.transition = "all 0.25s";
+    kamehaPlayer2.style.transition = "all 0.25s";
     divCampaign.style.display = "none";
     divSelection.style.display = "none";
     divGame.style.display = "initial";
@@ -464,14 +504,14 @@ document.getElementById("returnMain").addEventListener("click", () =>
 //?GAME*********************************
 //?GAME*********************************
 
-document.addEventListener('keyup', (e) => {
+document.addEventListener('keydown', (e) => {
     console.log("key e");
     if(gameStarted === true && canClick === true){
-        if(e.code === "KeyQ"){
+        if(e.key === " "){
             addPlayer1Click();
             console.log(player2KamehaWidth);
         }
-        if(e.code === "KeyE" && gameIsIa === false){
+        if(e.code === "Numpad0" && gameIsIa === false){
             addPlayer2Click();
         }
     }
@@ -547,11 +587,12 @@ const setDifficulty = () => {
     }else if(difficultyRank === "B"){
         timeOutIa = 250;
     }else if(difficultyRank === "A"){
-        timeOutIa = 225;
+        timeOutIa = 210;
     }else if(difficultyRank === "S"){
-        timeOutIa = 200;
+        timeOutIa = 160;
     }else if(difficultyRank === "SS"){
-        timeOutIa = 150;
+        console.log("lessgui");
+        timeOutIa = 110;
     }
 }
 
@@ -626,6 +667,8 @@ const finishGame = () => {
         kamehaPlayer1.style.width = "110%";
         kamehaPlayer2.style.width = "0%";
         kamehaPlayer2.style.opacity = "0";
+        kamehaPlayer1.style.transition = "all 1s";
+        kamehaPlayer2.style.transition = "all 1s";
         if(actualCampaign!==null){
             endCampaign();
         }
@@ -634,27 +677,50 @@ const finishGame = () => {
         kamehaPlayer1.style.width = "0%";
         kamehaPlayer2.style.width = "110%";
         kamehaPlayer1.style.opacity = "0";
+        kamehaPlayer2.style.transition = "all 1s";
+        kamehaPlayer1.style.transition = "all 1s";
     }
     callbackDisapearKameAndWin();
 }
 
 const endCampaign= () => {
     let tempTapDoublon=false;
+    let canAddDoublonInVersion = true;
     for(let k = 0; k < tabPerso.length;k++){
-        if(tabPerso[k]===actualCampaign.reward){
+        if(tabPerso[k].ID===actualCampaign.reward.ID){
             tempTapDoublon = true;
-        }
-    }
-    let tempAltTapDoublon=false;
-    if(actualCampaign.altReward !== null){
-        for(let o = 0;o<tabPerso.length;o++){
-            if(tabPerso[o]===actualCampaign.altReward){
-                tempAltTapDoublon = true;
+            for(let y = 0; y<tabPerso[k].version.length;y++){
+                if(tabPerso[k].version[y]===actualCampaign.reward.name){
+                    canAddDoublonInVersion = false;
+                }
+            }
+            if(canAddDoublonInVersion=== true){
+                tabPerso[k].version.push(actualCampaign.reward.name);
             }
         }
     }
+    let tempAltTapDoublon=false;
+    let canAddAltDoublonInVersion = true;
     if(tempTapDoublon===false){
         tabPerso.push(actualCampaign.reward);
+    }
+    if(actualCampaign.altReward !== null){
+        for(let o = 0;o<tabPerso.length;o++){
+            if(tabPerso[o].ID===actualCampaign.altReward.ID){
+                tempAltTapDoublon = true;
+            
+
+                for(let y = 0; y<tabPerso[o].version.length;y++){
+                    if(tabPerso[o].version[y]===actualCampaign.altReward.name){
+                        console.log("cant add");
+                        canAddAltDoublonInVersion = false;
+                    }
+                }
+                if(canAddAltDoublonInVersion=== true){
+                    tabPerso[o].version.push(actualCampaign.altReward.name);
+                }
+            }
+        }
     }
     if(tempAltTapDoublon===false && actualCampaign.altReward !== null){
         tabPerso.push(actualCampaign.altReward);
@@ -735,3 +801,50 @@ document.getElementById("buttonMainMenu").addEventListener("click", goToMainMenu
 //?GAME*********************************
 //?GAME*********************************
 //?GAME*********************************
+
+//SET DIFFICULTY WITH EVENT
+
+document.getElementById("D").addEventListener("click", ()=>{
+    difficultyRank = "D";
+    for(let i =0; i< document.getElementById("divIAdiff").children.length;i++){
+        document.getElementById("divIAdiff").children[i].classList.remove("active");
+    }
+    document.getElementById("divIAdiff").children[0].classList.add("active");
+});
+document.getElementById("C").addEventListener("click", ()=>{
+    difficultyRank = "C";
+    for(let i =0; i< document.getElementById("divIAdiff").children.length;i++){
+        document.getElementById("divIAdiff").children[i].classList.remove("active");
+    }
+    document.getElementById("divIAdiff").children[1].classList.add("active");
+});
+document.getElementById("B").addEventListener("click", ()=>{
+    difficultyRank = "B";
+    for(let i =0; i< document.getElementById("divIAdiff").children.length;i++){
+        document.getElementById("divIAdiff").children[i].classList.remove("active");
+    }
+    document.getElementById("divIAdiff").children[2].classList.add("active");
+});
+document.getElementById("A").addEventListener("click", ()=>{
+    difficultyRank = "A";
+    for(let i =0; i< document.getElementById("divIAdiff").children.length;i++){
+        document.getElementById("divIAdiff").children[i].classList.remove("active");
+    }
+    document.getElementById("divIAdiff").children[3].classList.add("active");
+});
+document.getElementById("S").addEventListener("click", ()=>{
+    difficultyRank = "S";
+    for(let i =0; i< document.getElementById("divIAdiff").children.length;i++){
+        document.getElementById("divIAdiff").children[i].classList.remove("active");
+    }
+    document.getElementById("divIAdiff").children[4].classList.add("active");
+});
+document.getElementById("SS").addEventListener("click", ()=>{
+    difficultyRank = "SS";
+    for(let i =0; i< document.getElementById("divIAdiff").children.length;i++){
+        document.getElementById("divIAdiff").children[i].classList.remove("active");
+    }
+    document.getElementById("divIAdiff").children[5].classList.add("active");
+});
+
+//SET DIFFICULTY WITH EVENT

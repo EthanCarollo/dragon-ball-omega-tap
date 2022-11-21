@@ -13,6 +13,7 @@
 body{
   background-image: url(../images/background/namek.webp);
   background-size: cover;
+  background-repeat: none;
   overflow:hidden;
 }
 
@@ -72,134 +73,23 @@ body{
   z-index: 0;
 }
 
-/***********************************/
-
-#selectedPlayer1.Gogeta{
-  background-image: url(../images/sprites/gogetablue/gogetaportrait.png);
-}
-
-#selectedPlayer2.Gogeta{
-  background-image: url(../images/sprites/gogetablue/gogetaportrait.png);
-}
-
-#selectedPlayer1.VegitoSSJ{
-  background-image: url(../images/sprites/gogetasayan/vegetoPortrait.png);
-}
-
-#selectedPlayer2.VegitoSSJ{
-  background-image: url(../images/sprites/gogetasayan/vegetoPortrait.png);
-}
-
-#selectedPlayer1.GokuSSJ3{
-  background-image: url(../images/sprites/gokuSSJ3/gokuSSJ3portrait.png);
-}
-
-#selectedPlayer2.GokuSSJ3{
-  background-image: url(../images/sprites/gokuSSJ3/gokuSSJ3portrait.png);
-}
-
-#selectedPlayer1.GoldenFrieza{
-  background-image: url(../images/sprites/goldenFrieza/goldenFriezaPortrait.png);
-}
-
-#selectedPlayer2.GoldenFrieza{
-  background-image: url(../images/sprites/goldenFrieza/goldenFriezaPortrait.png);
-}
-
-#selectedPlayer1.BlackGoku{
-  background-image: url(../images/sprites/blackgoku/blackGokuPortrait.png);
-}
-
-#selectedPlayer2.BlackGoku{
-  background-image: url(../images/sprites/blackgoku/blackGokuPortrait.png);
-}
-
-#selectedPlayer1.Buutenks{
-  background-image: url(../images/sprites/buutenks/buutenksPortrait.png);
-}
-
-#selectedPlayer2.Buutenks{
-  background-image: url(../images/sprites/buutenks/buutenksPortrait.png);
-}
-
-#selectedPlayer1.GohanSSJ3{
-  background-image: url(../images/sprites/gohanSSJ3/gohanSSJ3portrait.png);
-}
-
-#selectedPlayer2.GohanSSJ3{
-  background-image: url(../images/sprites/gohanSSJ3/gohanSSJ3portrait.png);
-}
-
-#selectedPlayer1.Venom{
-  background-image: url(../images/sprites/Venom/venomPortrait.png);
-}
-
-#selectedPlayer2.Venom{
-  background-image: url(../images/sprites/Venom/venomPortrait.png);
-}
-
-#selectedPlayer1.Frieza{
-  background-image: url(../images/sprites/normalFrieza/FriezaPortrait.png);
-}
-
-#selectedPlayer2.Frieza{
-  background-image: url(../images/sprites/normalFrieza/FriezaPortrait.png);
-}
-
-#selectedPlayer1.GokuSSJ{
-  background-image: url(../images/sprites/GokuSSJ/GokuSSJPortrait.png);
-}
-
-#selectedPlayer2.GokuSSJ{
-  background-image: url(../images/sprites/GokuSSJ/GokuSSJPortrait.png);
-}
-
-#selectedPlayer1.GoldenCooler{
-  background-image: url(../images/sprites/goldenCooler/goldenCoolerportrait.png);
-}
-
-#selectedPlayer2.GoldenCooler{
-  background-image: url(../images/sprites/goldenCooler/goldenCoolerportrait.png);
-}
-
-#selectedPlayer1.SpiderMan{
-  background-image: url(../images/sprites/SpiderMan/spiderManPortrait.png);
-}
-
-#selectedPlayer2.SpiderMan{
-  background-image: url(../images/sprites/SpiderMan/spiderManPortrait.png);
-}
-
-#selectedPlayer1.Sasuke{
-  background-image: url(../images/sprites/sasuke/sasukeportrait.png);
-}
-
-#selectedPlayer2.Sasuke{
-  background-image: url(../images/sprites/sasuke/sasukeportrait.png);
-}
-
-#selectedPlayer1.Itachi{
-  background-image: url(../images/sprites/itachi/itachiportrait.png);
-}
-
-#selectedPlayer2.Itachi{
-  background-image: url(../images/sprites/itachi/itachiportrait.png);
-}
-
-/***********************************/
 
 #choosePerso{
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: flex-start;
   position: absolute;
   width: 100%;
   height: 60%;
   top:22.5%;
+  transition: all 1s;
 }
 
 .perso{
-  width: 10vh;
-  height: 10vh;
+  width: 9vh;
+  height: 9vh;
   margin: 1vh;
   cursor: pointer;
   background-size: cover;
@@ -212,65 +102,52 @@ body{
   z-index: 10;
 }
 
-.perso.Gogeta{
-  background-image: url(../images/slotCharacter/gogetaSlot.png);
+.subPerso{
+  background-size: cover;
+  transition: all 1s;
+  cursor: pointer;
+  display: none;
 }
 
-.perso.VegitoSSJ{
-  background-image: url(../images/slotCharacter/vegetoSlot.png);
+.subPerso.exist{
+  display: initial;
+  width: 8vh;
+  height: 8vh;
+  margin: 1vh;
+  transition: all 1s;
+  animation: SpawnSub 1s;
 }
 
-.perso.GokuSSJ3{
-  background-image: url(../images/slotCharacter/gokuSSJ3Portrait.png);
+@keyframes SpawnSub{
+  0%{
+    transform: translateX(-2.5vh);
+    opacity: 0%;
+  }100%{
+    transform: translateX(0vh);
+    opacity: 100%;
+  }
 }
 
-.perso.GoldenFrieza{
-  background-image: url(../images/slotCharacter/goldenFriezaSlot.png);
+.subPerso:hover{
+  transition: all 1s;
+  transform: scale(1.25);
+  z-index: 0;
 }
 
-.perso.BlackGoku{
-  background-image: url(../images/slotCharacter/gokuSlot.png);
+.FlechePerso{
+  background-size: cover;
+  background-image: url(../images/ui/FlechMore.png);
+  margin-left: 6.5vh;
+  margin-top: 6.5vh;
+  z-index: 1;
+  width: 3vh;
+  height: 3vh;
 }
 
-.perso.Buutenks{
-  background-image: url(../images/slotCharacter/buutenksSlot.png);
+.FlechePerso.active{
+  transform: rotateY(180deg);
+  transition: all 0.5s;
 }
-
-.perso.GohanSSJ3{
-  background-image: url(../images/slotCharacter/gohanSSJ3Portrait.png);
-}
-
-.perso.Venom{
-  background-image: url(../images/slotCharacter/venomSlot.png);
-}
-
-.perso.Frieza{
-  background-image: url(../images/slotCharacter/FriezaSlot.png);
-}
-
-.perso.GokuSSJ{
-  background-image: url(../images/slotCharacter/gokuSSJSlot.png);
-}
-
-.perso.GoldenCooler{
-  background-image: url(../images/slotCharacter/goldenCoolerSlot.png);
-}
-
-.perso.SpiderMan{
-  background-image: url(../images/slotCharacter/spiderManPortrait.png);
-}
-
-.perso.Sasuke{
-  background-image: url(../images/slotCharacter/sasukeSlot.png);
-}
-
-.perso.Itachi{
-  background-image: url(../images/slotCharacter/Itachiportrait.png);
-}
-
-/**********************************************************/
-/***************************CHOOSEPERSO*******************************/
-/**********************************************************/
 
 .buttonStartGame{
   background-image: url(../images/ui/start\ game.png);
@@ -486,801 +363,13 @@ body{
 
 /***************STARTINGAURASET********************/
 
-/***************PLAYERSET********************/
-
-.Player1{
-  background-image: url(../images/sprites/gogetablue/gogetaKamehaDo.png);
-}
-
-.Player2{
-  background-image: url(../images/sprites/gogetablue/gogetaKamehaDo.png);
-}
-
-.Player1.Gogeta{
-  background-image: url(../images/sprites/gogetablue/gogetaKamehaDo.png);
-  animation: comingGogetaSSJ 3s;
-}
-
-.Player1.Gogeta.win{
-  background-image: url(../images/sprites/gogetablue/win/3.png);
-  animation: winGogeta 3s;
-}
-
-.Player1.Gogeta.loose{
-  background-image: url(../images/sprites/gogetablue/loose/3.png);
-  animation: LoosingGogeta 3s;
-  animation-timing-function: steps(3);
-}
-
-.Player2.Gogeta{
-  background-image: url(../images/sprites/gogetablue/gogetaKamehaDo.png);
-  animation: comingGogetaSSJ 3s;
-}
-
-.Player2.Gogeta.win{
-  background-image: url(../images/sprites/gogetablue/win/3.png);
-  animation: winGogeta 3s;
-}
-
-.Player2.Gogeta.loose{
-  background-image: url(../images/sprites/gogetablue/loose/3.png);
-  animation: LoosingGogeta 3s;
-  animation-timing-function: steps(3);
-}
-
-@keyframes winGogeta{
-  0%{
-    background-image: url(../images/sprites/gogetablue/win/1.png);
-  }79%{
-    background-image: url(../images/sprites/gogetablue/win/2.png);
-  }80%{
-    background-image: url(../images/sprites/gogetablue/win/3.png);
-  }
-}
-
-@keyframes comingGogetaSSJ {
-  0%{
-    background-image: url(../images/sprites/gogetablue/comingInFight/1.png);
-  }19%{
-    background-image: url(../images/sprites/gogetablue/comingInFight/1.png);
-  }20%{
-    background-image: url(../images/sprites/gogetablue/comingInFight/2.png);
-  }39%{
-    background-image: url(../images/sprites/gogetablue/comingInFight/2.png);
-  }40%{
-    background-image: url(../images/sprites/gogetablue/comingInFight/3.png);
-  }59%{
-    background-image: url(../images/sprites/gogetablue/comingInFight/3.png);
-  }60%{
-    background-image: url(../images/sprites/gogetablue/comingInFight/4.png);
-  }79%{
-    background-image: url(../images/sprites/gogetablue/comingInFight/4.png);
-  }80%{
-    background-image: url(../images/sprites/gogetablue/comingInFight/5.png);
-  }100%{
-    background-image: url(../images/sprites/gogetablue/comingInFight/5.png);
-  }
-}
-
-@keyframes LoosingGogeta{
-  0%{
-    background-image: url(../images/sprites/gogetablue/loose/1.png);
-  }33%{
-    background-image: url(../images/sprites/gogetablue/loose/1.png);
-  }66%{
-    background-image: url(../images/sprites/gogetablue/loose/2.png);
-  }80%{
-    background-image: url(../images/sprites/gogetablue/loose/3.png);
-  }
-}
-
-.Player1.VegitoSSJ{
-  background-image: url(../images/sprites/gogetasayan/vegetoKamehaDo.png);
-  animation: comingVegitoSSJ 3s;
-}
-
-.Player1.VegitoSSJ.win{
-  background-image: url(../images/sprites/gogetasayan/win/5.png);
-  animation: winVegito 3s;
-}
-
-.Player1.VegitoSSJ.loose{
-  background-image: url(../images/sprites/gogetasayan/loose/1.png);
-}
-
-.Player2.VegitoSSJ{
-  background-image: url(../images/sprites/gogetasayan/vegetoKamehaDo.png);
-  animation: comingVegitoSSJ 3s;
-}
-
-.Player2.VegitoSSJ.win{
-  background-image: url(../images/sprites/gogetasayan/win/5.png);
-  animation: winVegito 3s;
-}
-
-.Player2.VegitoSSJ.loose{
-  background-image: url(../images/sprites/gogetasayan/loose/1.png);
-}
-
-@keyframes winVegito {
-  0%{
-    background-image: url(../images/sprites/gogetasayan/win/1.png);
-  }19%{
-    background-image: url(../images/sprites/gogetasayan/win/1.png);
-  }20%{
-    background-image: url(../images/sprites/gogetasayan/win/2.png);
-  }39%{
-    background-image: url(../images/sprites/gogetasayan/win/2.png);
-  }40%{
-    background-image: url(../images/sprites/gogetasayan/win/3.png);
-  }59%{
-    background-image: url(../images/sprites/gogetasayan/win/3.png);
-  }60%{
-    background-image: url(../images/sprites/gogetasayan/win/4.png);
-  }79%{
-    background-image: url(../images/sprites/gogetasayan/win/4.png);
-  }80%{
-    background-image: url(../images/sprites/gogetasayan/win/5.png);
-  }100%{
-    background-image: url(../images/sprites/gogetasayan/win/5.png);
-  }
-}
-
-@keyframes comingVegitoSSJ {
-  0%{
-    background-image: url(../images/sprites/gogetasayan/comingInFight/1.png);
-  }19%{
-    background-image: url(../images/sprites/gogetasayan/comingInFight/1.png);
-  }20%{
-    background-image: url(../images/sprites/gogetasayan/comingInFight/2.png);
-  }39%{
-    background-image: url(../images/sprites/gogetasayan/comingInFight/2.png);
-  }40%{
-    background-image: url(../images/sprites/gogetasayan/comingInFight/3.png);
-  }59%{
-    background-image: url(../images/sprites/gogetasayan/comingInFight/3.png);
-  }60%{
-    background-image: url(../images/sprites/gogetasayan/comingInFight/4.png);
-  }79%{
-    background-image: url(../images/sprites/gogetasayan/comingInFight/4.png);
-  }80%{
-    background-image: url(../images/sprites/gogetasayan/comingInFight/5.png);
-  }100%{
-    background-image: url(../images/sprites/gogetasayan/comingInFight/5.png);
-  }
-}
-
-.Player1.GokuSSJ3{
-  background-image: url(../images/sprites/gokuSSJ3/gokuSSJ3KamehaDo.png);
-  animation: comingGokuSSJ3 3s;
-}
-
-.Player1.GokuSSJ3.loose{
-  background-image: url(../images/sprites/gokuSSJ3/loose/5.png);
-  animation: LoosingGoku 3s;
-}
-
-.Player1.GokuSSJ3.win{
-  background-image: url(../images/sprites/gokuSSJ3/win/3.png);
-  animation: winGoku 3s;
-}
-
-.Player2.GokuSSJ3{
-  background-image: url(../images/sprites/gokuSSJ3/gokuSSJ3KamehaDo.png);
-  animation: comingGokuSSJ3 3s;
-}
-
-.Player2.GokuSSJ3.loose{
-  background-image: url(../images/sprites/gokuSSJ3/loose/5.png);
-  animation: LoosingGoku 3s;
-}
-
-.Player2.GokuSSJ3.win{
-  background-image: url(../images/sprites/gokuSSJ3/win/3.png);
-  animation: winGoku 3s;
-}
-
-@keyframes comingGokuSSJ3 {
-  0%{
-    background-image: url(../images/sprites/gokuSSJ3/comingInFight/1.png);
-  }19%{
-    background-image: url(../images/sprites/gokuSSJ3/comingInFight/1.png);
-  }20%{
-    background-image: url(../images/sprites/gokuSSJ3/comingInFight/2.png);
-  }39%{
-    background-image: url(../images/sprites/gokuSSJ3/comingInFight/2.png);
-  }40%{
-    background-image: url(../images/sprites/gokuSSJ3/comingInFight/3.png);
-  }59%{
-    background-image: url(../images/sprites/gokuSSJ3/comingInFight/3.png);
-  }60%{
-    background-image: url(../images/sprites/gokuSSJ3/comingInFight/4.png);
-  }79%{
-    background-image: url(../images/sprites/gokuSSJ3/comingInFight/4.png);
-  }80%{
-    background-image: url(../images/sprites/gokuSSJ3/comingInFight/5.png);
-  }100%{
-    background-image: url(../images/sprites/gokuSSJ3/comingInFight/5.png);
-  }
-}
-
-@keyframes winGoku{
-  0%{
-    background-image: url(../images/sprites/gokuSSJ3/win/1.png);
-  }79%{
-    background-image: url(../images/sprites/gokuSSJ3/win/2.png);
-  }80%{
-    background-image: url(../images/sprites/gokuSSJ3/win/3.png);
-  }
-}
-
-@keyframes LoosingGoku {
-  0%{
-    background-image: url(../images/sprites/gokuSSJ3/loose/1.png);
-  }19%{
-    background-image: url(../images/sprites/gokuSSJ3/loose/1.png);
-  }20%{
-    background-image: url(../images/sprites/gokuSSJ3/loose/2.png);
-  }39%{
-    background-image: url(../images/sprites/gokuSSJ3/loose/2.png);
-  }40%{
-    background-image: url(../images/sprites/gokuSSJ3/loose/3.png);
-  }59%{
-    background-image: url(../images/sprites/gokuSSJ3/loose/3.png);
-  }60%{
-    background-image: url(../images/sprites/gokuSSJ3/loose/4.png);
-  }79%{
-    background-image: url(../images/sprites/gokuSSJ3/loose/4.png);
-  }80%{
-    background-image: url(../images/sprites/gokuSSJ3/loose/5.png);
-  }100%{
-    background-image: url(../images/sprites/gokuSSJ3/loose/5.png);
-  }
-}
-
-.Player1.GoldenFrieza{
-  background-image: url(../images/sprites/goldenFrieza/goldenFriezaDoingKameha.png);
-  animation: comingFrieza 3s;
-}
-
-.Player1.GoldenFrieza.win{
-  background-image: url(../images/sprites/goldenFrieza/win/3.png);
-  animation: winFrieza 2s;
-}
-
-.Player1.GoldenFrieza.loose{
-  background-image: url(../images/sprites/goldenFrieza/loose/1.png);
-}
-
-.Player2.GoldenFrieza{
-  background-image: url(../images/sprites/goldenFrieza/goldenFriezaDoingKameha.png);
-  animation: comingFrieza 3s;
-}
-
-.Player2.GoldenFrieza.win{
-  background-image: url(../images/sprites/goldenFrieza/win/3.png);
-  animation: winFrieza 2s;
-}
-
-.Player2.GoldenFrieza.loose{
-  background-image: url(../images/sprites/goldenFrieza/loose/1.png);
-}
-
-@keyframes winFrieza{
-  0%{
-    background-image: url(../images/sprites/goldenFrieza/win/1.png);
-  }50%{
-    background-image: url(../images/sprites/goldenFrieza/win/2.png);
-  }100%{
-    background-image: url(../images/sprites/goldenFrieza/win/3.png);
-  }
-}
-
-@keyframes comingFrieza {
-  0%{
-    background-image: url(../images/sprites/goldenFrieza/comingInFight/1.png);
-  }19%{
-    background-image: url(../images/sprites/goldenFrieza/comingInFight/1.png);
-  }20%{
-    background-image: url(../images/sprites/goldenFrieza/comingInFight/2.png);
-  }39%{
-    background-image: url(../images/sprites/goldenFrieza/comingInFight/2.png);
-  }40%{
-    background-image: url(../images/sprites/goldenFrieza/comingInFight/3.png);
-  }59%{
-    background-image: url(../images/sprites/goldenFrieza/comingInFight/3.png);
-  }60%{
-    background-image: url(../images/sprites/goldenFrieza/comingInFight/4.png);
-  }79%{
-    background-image: url(../images/sprites/goldenFrieza/comingInFight/4.png);
-  }80%{
-    background-image: url(../images/sprites/goldenFrieza/comingInFight/5.png);
-  }100%{
-    background-image: url(../images/sprites/goldenFrieza/comingInFight/5.png);
-  }
-}
-
-.Player1.BlackGoku{
-  background-image: url(../images/sprites/blackgoku/blackGokuKamehaDo.png);
-  animation: comingBlackGoku 3s;
-}
-
-.Player1.BlackGoku.win{
-  background-image: none;
-  animation: winBlackGoku 1s;
-}
-
-.Player1.BlackGoku.loose{
-  background-image: url(../images/sprites/blackgoku/loose/1.png);
-}
-
-.Player2.BlackGoku{
-  background-image: url(../images/sprites/blackgoku/blackGokuKamehaDo.png);
-  animation: comingBlackGoku 3s;
-}
-
-.Player2.BlackGoku.win{
-  background-image: none;
-  animation: winBlackGoku 1s;
-}
-
-.Player2.BlackGoku.loose{
-  background-image: url(../images/sprites/blackgoku/loose/1.png);
-}
-
-@keyframes winBlackGoku{
-  0%{
-    background-image: url(../images/sprites/blackgoku/win/1.png);
-  }49%{
-    background-image: url(../images/sprites/blackgoku/win/1.png);
-  }50%{
-    background-image: url(../images/sprites/blackgoku/win/2.png);
-  }100%{
-    background-image: url(../images/sprites/blackgoku/win/2.png);
-  }
-}
-
-@keyframes comingBlackGoku {
-  0%{
-    background-image: none;
-  }39%{
-    background-image: none;
-  }40%{
-    background-image: url(../images/sprites/blackgoku/comingInFight/3.png);
-  }59%{
-    background-image: url(../images/sprites/blackgoku/comingInFight/3.png);
-  }60%{
-    background-image: url(../images/sprites/blackgoku/comingInFight/4.png);
-  }79%{
-    background-image: url(../images/sprites/blackgoku/comingInFight/4.png);
-  }80%{
-    background-image: url(../images/sprites/blackgoku/comingInFight/5.png);
-  }100%{
-    background-image: url(../images/sprites/blackgoku/comingInFight/5.png);
-  }
-}
-
-.Player1.Buutenks{
-  background-image: url(../images/sprites/buutenks/buutenksKamehaDo.png);
-  animation: comingBuutenks 3s;
-}
-
-.Player1.Buutenks.win{
-  background-image: url(../images/sprites/buutenks/comingInFight/1.png);
-}
-
-.Player1.Buutenks.loose{
-  background-image: url(../images/sprites/buutenks/loose/1.png);
-}
-
-.Player2.Buutenks{
-  background-image: url(../images/sprites/buutenks/buutenksKamehaDo.png);
-  animation: comingBuutenks 3s;
-}
-
-.Player2.Buutenks.win{
-  background-image: url(../images/sprites/buutenks/comingInFight/1.png);
-}
-
-.Player2.Buutenks.loose{
-  background-image: url(../images/sprites/buutenks/loose/1.png);
-}
-
-@keyframes comingBuutenks {
-  0%{
-    background-image: url(../images/sprites/buutenks/comingInFight/1.png);
-  }100%{
-    background-image: url(../images/sprites/buutenks/comingInFight/1.png);
-  }
-}
-
-.Player1.GohanSSJ3{
-  background-image: url(../images/sprites/gohanSSJ3/gohanSSJ3KamehaDo.png);
-  animation: comingGohanSSJ3 3s;
-}
-
-.Player1.GohanSSJ3.win{
-  background-image: url(../images/sprites/gohanSSJ3/win/3.png);
-  animation: winGohanSSJ3 5s;
-  animation-timing-function: steps(1);
-}
-
-.Player1.GohanSSJ3.loose{
-  background-image: url(../images/sprites/gohanSSJ3/loose/4.png);
-  animation: looseGohanSSJ3 3s;
-  animation-timing-function: steps(1);
-}
-
-.Player2.GohanSSJ3{
-  background-image: url(../images/sprites/gohanSSJ3/gohanSSJ3KamehaDo.png);
-  animation: comingGohanSSJ3 3s;
-}
-
-.Player2.GohanSSJ3.win{
-  background-image: url(../images/sprites/gohanSSJ3/win/3.png);
-  animation: winGohanSSJ3 5s;
-  animation-timing-function: steps(1);
-}
-
-.Player2.GohanSSJ3.loose{
-  background-image: url(../images/sprites/gohanSSJ3/loose/4.png);
-  animation: looseGohanSSJ3 3s;
-  animation-timing-function: steps(1);
-}
-
-@keyframes comingGohanSSJ3 {
-  0%{
-    background-image: url(../images/sprites/gohanSSJ3/comingInFight/1.png);
-  }19%{
-    background-image: url(../images/sprites/gohanSSJ3/comingInFight/1.png);
-  }20%{
-    background-image: url(../images/sprites/gohanSSJ3/comingInFight/2.png);
-  }39%{
-    background-image: url(../images/sprites/gohanSSJ3/comingInFight/2.png);
-  }40%{
-    background-image: url(../images/sprites/gohanSSJ3/comingInFight/3.png);
-  }59%{
-    background-image: url(../images/sprites/gohanSSJ3/comingInFight/3.png);
-  }60%{
-    background-image: url(../images/sprites/gohanSSJ3/comingInFight/4.png);
-  }79%{
-    background-image: url(../images/sprites/gohanSSJ3/comingInFight/4.png);
-  }80%{
-    background-image: url(../images/sprites/gohanSSJ3/comingInFight/5.png);
-  }100%{
-    background-image: url(../images/sprites/gohanSSJ3/comingInFight/5.png);
-  }
-}
-
-@keyframes looseGohanSSJ3{
-  0%{
-    background-image: url(../images/sprites/gohanSSJ3/loose/1.png);
-  }25%{
-    background-image: url(../images/sprites/gohanSSJ3/loose/2.png);
-  }50%{
-    background-image: url(../images/sprites/gohanSSJ3/loose/3.png);
-  }75%{
-    background-image: url(../images/sprites/gohanSSJ3/loose/4.png);
-  }
-}
-
-@keyframes winGohanSSJ3{
-  0%{
-    background-image: url(../images/sprites/gohanSSJ3/win/1.png);
-  }25%{
-    background-image: url(../images/sprites/gohanSSJ3/win/2.png);
-  }50%{
-    background-image: url(../images/sprites/gohanSSJ3/win/3.png);
-  }
-}
-
-.Player1.Venom{
-  background-image: url(../images/sprites/Venom/venomKamehaDo.png);
-  animation: comingVenom 3s;
-  animation-timing-function: steps(1);
-}
-
-.Player1.Venom.win{
-  background-image: url(../images/sprites/Venom/win/1.png);
-}
-
-.Player1.Venom.loose{
-  background-image: url(../images/sprites/Venom/loose/1.png);
-}
-
-.Player2.Venom{
-  background-image: url(../images/sprites/Venom/venomKamehaDo.png);
-  animation: comingVenom 3s;
-  animation-timing-function: steps(1);
-}
-
-.Player2.Venom.win{
-  background-image: url(../images/sprites/Venom/win/1.png);
-}
-
-.Player2.Venom.loose{
-  background-image: url(../images/sprites/Venom/loose/1.png);
-}
-
-@keyframes comingVenom {
-  0%{
-    background-image: url(../images/sprites/Venom/comingInFight/1.png);
-  }15%{
-    background-image: url(../images/sprites/Venom/comingInFight/2.png);
-  }40%{
-    background-image: url(../images/sprites/Venom/comingInFight/3.png);
-  }55%{
-    background-image: url(../images/sprites/Venom/win/1.png);
-  }
-}
-
-.Player1.Frieza{
-  background-image: url(../images/sprites/normalFrieza/FriezaDoingKameha.png);
-  animation: comingFrieza 3s;
-  animation-timing-function: steps(1);
-}
-
-.Player1.Frieza.win{
-  background-image: url(../images/sprites/normalFrieza/win/3.png);
-  animation: winFrieza 3s;
-  animation-timing-function: steps(1);
-}
-
-.Player1.Frieza.loose{
-  background-image: none;
-}
-
-.Player2.Frieza{
-  background-image: url(../images/sprites/normalFrieza/FriezaDoingKameha.png);
-  animation: comingFrieza 3s;
-  animation-timing-function: steps(1);
-}
-
-.Player2.Frieza.win{
-  background-image: url(../images/sprites/normalFrieza/win/3.png);
-  animation: winFrieza 3s;
-  animation-timing-function: steps(1);
-}
-
-.Player2.Frieza.loose{
-  background-image: none;
-}
-
-@keyframes comingFrieza {
-  0%{
-    background-image: url(../images/sprites/normalFrieza/comingInFight/1.png);
-  }15%{
-    background-image: url(../images/sprites/normalFrieza/comingInFight/2.png);
-  }40%{
-    background-image: url(../images/sprites/normalFrieza/comingInFight/3.png);
-  }55%{
-    background-image: url(../images/sprites/normalFrieza/comingInFight/4.png);
-  }
-}
-
-@keyframes winFrieza {
-  0%{
-    background-image: url(../images/sprites/normalFrieza/win/1.png);
-  }50%{
-    background-image: url(../images/sprites/normalFrieza/win/2.png);
-  }100%{
-    background-image: url(../images/sprites/normalFrieza/win/3.png);
-  }
-}
-
-.Player1.GokuSSJ{
-  background-image: url(../images/sprites/GokuSSJ/GokuSSJDoingKameha.png);
-  animation: comingGokuSSJ 3s;
-  animation-timing-function: steps(1);
-}
-
-.Player1.GokuSSJ.win{
-  background-image: url(../images/sprites/GokuSSJ/win/1.png);
-}
-
-.Player1.GokuSSJ.loose{
-  background-image: url(../images/sprites/GokuSSJ/loose/3.png);
-  animation: looseGokuSSJ 3s;
-  animation-timing-function: steps(10);
-}
-
-.Player2.GokuSSJ{
-  background-image: url(../images/sprites/GokuSSJ/GokuSSJDoingKameha.png);
-  animation: comingGokuSSJ 3s;
-  animation-timing-function: steps(1);
-}
-
-.Player2.GokuSSJ.win{
-  background-image: url(../images/sprites/GokuSSJ/win/1.png);
-}
-
-.Player2.GokuSSJ.loose{
-  background-image: url(../images/sprites/GokuSSJ/loose/3.png);
-  animation: looseGokuSSJ 3s;
-  animation-timing-function: steps(10);
-}
-
-@keyframes comingGokuSSJ {
-  0%{
-    background-image: url(../images/sprites/GokuSSJ/comingInFight/1.png);
-  }33%{
-    background-image: url(../images/sprites/GokuSSJ/comingInFight/2.png);
-  }66%{
-    background-image: url(../images/sprites/GokuSSJ/comingInFight/3.png);
-  }100%{
-    background-image: url(../images/sprites/GokuSSJ/comingInFight/4.png);
-  }
-}
-
-@keyframes looseGokuSSJ {
-  0%{
-    background-image: url(../images/sprites/GokuSSJ/loose/1.png);
-  }50%{
-    background-image: url(../images/sprites/GokuSSJ/loose/2.png);
-  }100%{
-    background-image: url(../images/sprites/GokuSSJ/loose/3.png);
-  }
-}
-
-.Player1.GoldenCooler{
-  background-image: url(../images/sprites/goldenCooler/goldenCoolerKamehaDo.png);
-  animation: comingGoldenCoolder 3s;
-  animation-timing-function: steps(1);
-}
-
-.Player1.GoldenCooler.loose{
-  background-image: url(../images/sprites/goldenCooler/loose/1.png);
-}
-
-.Player1.GoldenCooler.win{
-  background-image: url(../images/sprites/goldenCooler/win/1.png);
-}
-
-.Player2.GoldenCooler{
-  background-image: url(../images/sprites/goldenCooler/goldenCoolerKamehaDo.png);
-  animation: comingGoldenCoolder 3s;
-  animation-timing-function: steps(1);
-}
-
-.Player2.GoldenCooler.loose{
-  background-image: url(../images/sprites/goldenCooler/loose/1.png);
-}
-
-.Player2.GoldenCooler.win{
-  background-image: url(../images/sprites/goldenCooler/win/1.png);
-}
-
-@keyframes comingGoldenCoolder {
-  0%{
-    background-image: url(../images/sprites/goldenCooler/comingInFight/1.png);
-  }25%{
-    background-image: url(../images/sprites/goldenCooler/comingInFight/2.png);
-  }50%{
-    background-image: url(../images/sprites/goldenCooler/comingInFight/3.png);
-  }75%{
-    background-image: url(../images/sprites/goldenCooler/comingInFight/4.png);
-  }100%{
-    background-image: url(../images/sprites/goldenCooler/comingInFight/5.png);
-  }
-}
-
-.Player1.SpiderMan{
-  background-image: url(../images/sprites/SpiderMan/spidermanKamehaDo.png);
-  animation: comingSpiderMan 3s;
-  animation-timing-function: steps(1);
-}
-
-.Player1.SpiderMan.win{
-  background-image: url(../images/sprites/SpiderMan/win/1.png);
-}
-
-.Player1.SpiderMan.loose{
-  background-image: url(../images/sprites/SpiderMan/loose/1.png);
-}
-
-.Player2.SpiderMan{
-  background-image: url(../images/sprites/SpiderMan/spidermanKamehaDo.png);
-  animation: comingSpiderMan 3s;
-  animation-timing-function: steps(1);
-}
-
-.Player2.SpiderMan.win{
-  background-image: url(../images/sprites/SpiderMan/win/1.png);
-}
-
-.Player2.SpiderMan.loose{
-  background-image: url(../images/sprites/SpiderMan/loose/1.png);
-}
-
-@keyframes comingSpiderMan{
-  0%{
-    background-image: url(../images/sprites/SpiderMan/ComingInFight/1.png);
-  }100%{
-    background-image: url(../images/sprites/SpiderMan/ComingInFight/1.png);
-  }
-}
-
-.Player1.Sasuke{
-  background-image: url(../images/sprites/sasuke/sasukeKamehaDo.png);
-  animation: comingSasuke 3s;
-  animation-timing-function: steps(1);
-}
-
-.Player1.Sasuke.win{
-  background-image: url(../images/sprites/sasuke/win\ &\ coming/1.png);
-}
-
-.Player1.Sasuke.loose{
-  background-image: url(../images/sprites/sasuke/loose/1.png);
-}
-
-.Player2.Sasuke{
-  background-image: url(../images/sprites/sasuke/sasukeKamehaDo.png);
-  animation: comingSasuke 3s;
-  animation-timing-function: steps(1);
-}
-
-.Player2.Sasuke.win{
-  background-image: url(../images/sprites/sasuke/win\ &\ coming/1.png);
-}
-
-.Player2.Sasuke.loose{
-  background-image: url(../images/sprites/sasuke/loose/1.png);
-}
-
-@keyframes comingSasuke{
-  0%{
-    background-image: url(../images/sprites/sasuke/win\ &\ coming/1.png);
-  }100%{
-    background-image: url(../images/sprites/sasuke/win\ &\ coming/1.png);
-  }
-}
-
-.Player1.Itachi{
-  background-image: url(../images/sprites/itachi/ItachiKamehaDo.png);
-  animation: comingItachi 3s;
-  animation-timing-function: steps(1);
-}
-
-.Player1.Itachi.win{
-  background-image: url(../images/sprites/itachi/win\ &\ coming/1.png);
-}
-
-.Player1.Itachi.loose{
-  background-image: url(../images/sprites/itachi/loose/1.png);
-}
-
-.Player2.Itachi{
-  background-image: url(../images/sprites/itachi/ItachiKamehaDo.png);
-  animation: comingItachi 3s;
-  animation-timing-function: steps(1);
-}
-
-.Player2.Itachi.win{
-  background-image: url(../images/sprites/itachi/win\ &\ coming/1.png);
-}
-
-.Player2.Itachi.loose{
-  background-image: url(../images/sprites/itachi/loose/1.png);
-}
-
-@keyframes comingItachi{
-  0%{
-    background-image: url(../images/sprites/itachi/win\ &\ coming/1.png);
-  }100%{
-    background-image: url(../images/sprites/itachi/win\ &\ coming/1.png);
-  }
-}
-
-/***************PLAYERSET********************/
-
 /*KamehaP1*/
 
 .KamehaPlayer1{
   position: absolute;
   top: 32%;
   width: 43.75%;
-  transition: all 1s;
+  transition: all 0s;
   height: 30%;
   left: 12.5vh;
   display: flex;
@@ -1320,7 +409,7 @@ body{
   top: 32%;
   width: 43.75%;
   height: 30%;
-  transition: all 1s;
+  transition: all 0s;
   right: 12.5vh;
   display: flex;
   transform: rotate(180deg);
@@ -1643,122 +732,6 @@ body{
   z-index: 0;
 }
 
-/***************PORTRAITSET********************/
-
-.portraitP1.Gogeta{
-  background-image: url(../images/sprites/gogetablue/gogetaportrait.png);
-}
-
-.portraitP2.Gogeta{
-  background-image: url(../images/sprites/gogetablue/gogetaportrait.png);
-}
-
-.portraitP1.VegitoSSJ{
-  background-image: url(../images/sprites/gogetasayan/vegetoPortrait.png);
-}
-
-.portraitP2.VegitoSSJ{
-  background-image: url(../images/sprites/gogetasayan/vegetoPortrait.png);
-}
-
-.portraitP1.GokuSSJ3{
-  background-image: url(../images/sprites/gokuSSJ3/gokuSSJ3portrait.png);
-}
-
-.portraitP2.GokuSSJ3{
-  background-image: url(../images/sprites/gokuSSJ3/gokuSSJ3portrait.png);
-}
-
-.portraitP1.GoldenFrieza{
-  background-image: url(../images/sprites/goldenFrieza/goldenFriezaPortrait.png);
-}
-
-.portraitP2.GoldenFrieza{
-  background-image: url(../images/sprites/goldenFrieza/goldenFriezaPortrait.png);
-}
-
-.portraitP1.BlackGoku{
-  background-image: url(../images/sprites/blackgoku/blackGokuPortrait.png);
-}
-
-.portraitP2.BlackGoku{
-  background-image: url(../images/sprites/blackgoku/blackGokuPortrait.png);
-}
-
-.portraitP1.Buutenks{
-  background-image: url(../images/sprites/buutenks/buutenksPortrait.png);
-}
-
-.portraitP2.Buutenks{
-  background-image: url(../images/sprites/buutenks/buutenksPortrait.png);
-}
-
-.portraitP1.GohanSSJ3{
-  background-image: url(../images/sprites/gohanSSJ3/gohanSSJ3portrait.png);
-}
-
-.portraitP2.GohanSSJ3{
-  background-image: url(../images/sprites/gohanSSJ3/gohanSSJ3portrait.png);
-}
-
-.portraitP1.Venom{
-  background-image: url(../images/sprites/Venom/venomPortrait.png);
-}
-
-.portraitP2.Venom{
-  background-image: url(../images/sprites/Venom/venomPortrait.png);
-}
-
-.portraitP1.Frieza{
-  background-image: url(../images/sprites/normalFrieza/FriezaPortrait.png);
-}
-
-.portraitP2.Frieza{
-  background-image: url(../images/sprites/normalFrieza/FriezaPortrait.png);
-}
-
-.portraitP1.GokuSSJ{
-  background-image: url(../images/sprites/GokuSSJ/GokuSSJPortrait.png);
-}
-
-.portraitP2.GokuSSJ{
-  background-image: url(../images/sprites/GokuSSJ/GokuSSJPortrait.png);
-}
-
-.portraitP1.GoldenCooler{
-  background-image: url(../images/sprites/goldenCooler/goldenCoolerportrait.png);
-}
-
-.portraitP2.GoldenCooler{
-  background-image: url(../images/sprites/goldenCooler/goldenCoolerportrait.png);
-}
-
-.portraitP1.SpiderMan{
-  background-image: url(../images/sprites/SpiderMan/spiderManPortrait.png);
-}
-
-.portraitP2.SpiderMan{
-  background-image: url(../images/sprites/SpiderMan/spiderManPortrait.png);
-}
-
-.portraitP1.Sasuke{
-  background-image: url(../images/sprites/sasuke/sasukeportrait.png);
-}
-
-.portraitP2.Sasuke{
-  background-image: url(../images/sprites/sasuke/sasukeportrait.png);
-}
-
-.portraitP1.Itachi{
-  background-image: url(../images/sprites/itachi/itachiportrait.png);
-}
-
-.portraitP2.Itachi{
-  background-image: url(../images/sprites/itachi/itachiportrait.png);
-}
-
-/******************PORTRAITSET*****************/
-
 /**********************************************************/
 /***************************Game*******************************/
 /**********************************************************/
@@ -2068,4 +1041,74 @@ body{
 
 /**********************************************************/
 /***************************CAMPAIGNLIST*******************************/
+/**********************************************************/
+
+/**********************************************************/
+/***************************CHOOSE DIFFICULTY*******************************/
+/**********************************************************/
+
+.chooseDifficulty{
+  display: flex;
+  position: absolute;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  bottom:15vh;
+}
+
+.difficultyRank{
+  background-size: cover;
+  border-radius: 10vh;
+  background-color: rgba(0, 0, 0, 0.308);
+  margin: 1vh;
+  margin-top: 0vh;
+  margin-bottom: 0vh;
+  box-shadow: 0px 0px 10px black;
+  width: 8vh;
+  height: 8vh;
+  cursor: pointer;
+  z-index: 1;
+  transition:all 1s;
+}
+
+.difficultyRank:hover{
+  background-color: rgb(0, 0, 0);
+  transition:all 1s;
+  transform: translateY(-1vh);
+  box-shadow: 0px 7px 15px black;
+}
+
+.difficultyRank.active{
+  background-color: rgb(0, 0, 0);
+  transition:all 1s;
+  transform: translateY(-1vh);
+  box-shadow: 0px 7px 15px black;
+}
+
+#D{
+  background-image: url(../images/ui/D-Tier.png);
+}
+
+#C{
+  background-image: url(../images/ui/C-Tier.png);
+}
+
+#B{
+  background-image: url(../images/ui/B-Tier.png);
+}
+
+#A{
+  background-image: url(../images/ui/A-Tier.png);
+}
+
+#S{
+  background-image: url(../images/ui/S-Tier.png);
+}
+
+#SS{
+  background-image: url(../images/ui/SS-Tier.png);
+}
+
+/**********************************************************/
+/***************************CHOOSE DIFFICULTY*******************************/
 /**********************************************************/
