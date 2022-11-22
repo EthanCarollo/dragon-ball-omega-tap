@@ -191,6 +191,10 @@ let tabPerso = [
         ID: 10,
         version: ["Goku"]
     },{
+        name: "Vegeta",
+        ID: 1123,
+        version: ["Vegeta"]
+    },{
         name: "Gogeta",
         ID: 0,
         version: []
@@ -198,6 +202,10 @@ let tabPerso = [
         name: "VegitoSSJ",
         ID: 1,
         version: []
+    },{
+        name: "FirstFrieza",
+        ID: 8,
+        version: ["FirstFrieza"]
     },{
         name: "KidBuu",
         ID: 666,
@@ -284,6 +292,22 @@ document.getElementById("agIA").addEventListener("click", startChoosePersoIA);
 document.getElementById("agPvP").addEventListener("click", startChoosePerso);
 document.getElementById("campaignButton").addEventListener("click", startCampaign);
 
+// FANCY MAIN MENU
+
+let clientHeight = document.documentElement.clientHeight;
+let clientWidth = document.documentElement.clientWidth;
+
+let logMovement = (e) => {
+    let mouseX = e.clientX / clientWidth *100;
+    let mouseY = (e.clientY / clientHeight) *100;
+    let rotateYString = "rotateY("+mouseY/3.5+"deg)"
+    let rotateXString = "rotateX("+mouseX/3.5+"deg)"
+    document.getElementById("backgroundSpecial").style.transform = rotateYString + rotateXString;
+}
+
+document.addEventListener('mousemove', logMovement);
+
+// FANCY MAIN MENU
 
 //! MAIN MENU*********************************
 //! MAIN MENU*********************************
@@ -836,3 +860,7 @@ const setDifficultyInTab = (rank, div) => {
 }
 
 //SET DIFFICULTY WITH EVENT
+
+document.getElementById("exitButton").addEventListener("click", ()=>{
+    window.close();
+})

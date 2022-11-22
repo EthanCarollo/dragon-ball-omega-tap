@@ -1233,7 +1233,7 @@
   }
 
   .Player1.GohanSSJ.loose{
-    background-image: url(../images/sprites/GohanSSJ2/loose/1.png);
+    background-image: url(../images/sprites/GohanSSJ2/loose/4.png);
     animation: looseGohanSSJ 3s;
     animation-timing-function: steps(1);
   }
@@ -1251,7 +1251,7 @@
   }
 
   .Player2.GohanSSJ.loose{
-    background-image: url(../images/sprites/GohanSSJ2/loose/1.png);
+    background-image: url(../images/sprites/GohanSSJ2/loose/4.png);
     animation: looseGohanSSJ 3s;
     animation-timing-function: steps(1);
   }

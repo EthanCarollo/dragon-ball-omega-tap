@@ -11,7 +11,7 @@
 }
 
 body{
-  background-image: url(../images/background/namek.webp);
+  background-image: url(../images/background/background\ main.png);
   background-size: cover;
   background-repeat: none;
   overflow:hidden;
@@ -19,6 +19,10 @@ body{
 
 #panelPerso{
   display: none;
+  background-image: url(../images/background/background\ main.png);
+  background-size: cover;
+  background-repeat: none;
+  overflow:hidden;
 }
 
 /**********************************************************/
@@ -172,6 +176,8 @@ body{
 }
 
 #txtStart{
+  color: white;
+  text-shadow:  0px 0.5vh 0px rgba(255, 255, 255, 0.3);
   font-size: 15vh;
   animation: startinText 3.5s;
 }
@@ -186,6 +192,17 @@ body{
 
 #gameTable{
   display: none;
+}
+
+.gameBG{
+  top: 0%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url(../images/ui/bgfight.png);
+  background-size: cover;
+  background-repeat: none;
+  overflow:hidden;
 }
 
 .Player1{
@@ -781,17 +798,19 @@ body{
   height: 100%;
   background-image: url(../images/ui/gradient.png);
   background-size: cover;
-  opacity: 75%;
+  opacity: 65%;
   mix-blend-mode: color;
 }
 
 .mainTitle{
   position: absolute;
-  width: 50%;
-  height: 25%;
-  left:22.5%;
+  top:0%;
+  width: 35%;
+  height: 40%;
+  left:60%;
   background-image: url(../images/title/dragonballomegatapper.png);
   background-size: cover;
+  background-position: center;
   background-repeat: none;
   animation: animTitle 2.5s;
 }
@@ -807,21 +826,35 @@ body{
 .centeringMainMenu{
   position: absolute;
   top:0%;
-  width: 100%;
+  width: 90%;
   height: 100%;
+  margin-left: 2vh;
+  margin-top: 6.5vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
   flex-direction: column;
   transition: all 1s;
 }
 
 .buttonNormal{
-  margin: 2vh;
-  margin-top: 2vh;
-  width: 50vh;
-  height: 10vh;
-  background-color: aqua;
+  margin: 0.25vh;
+  width: 35vh;
+  height: 7vh;
+  cursor: pointer;
+  background-size: cover;
+  transition: all 1s;
+  z-index: 1;
+}
+
+
+.buttonNormal:hover{
+  transition: all 1s;
+  transform: translateX(1vh);
+  filter: drop-shadow(-0.5vh 0px 0.5vh rgba(0, 0, 0, 0.7));
+  margin: 0.25vh;
+  width: 35vh;
+  height: 7vh;
   cursor: pointer;
   background-size: cover;
   transition: all 1s;
@@ -830,13 +863,18 @@ body{
 
 .underFightButton{
   margin: 0.5vh;
-  width: 40vh;
+  margin-left: 5vh;
+  width: 20vh;
   transition: all 1s;
-  height: 8vh;
-  background-color: aqua;
+  height: 4vh;
   cursor: pointer;
   background-size: cover;
   display: none;
+}
+
+.underFightButton:hover{
+  transition: all 1s;
+  transform: translateX(1vh);
 }
 
 .underFightButton.exist{
@@ -868,6 +906,11 @@ body{
   }
 }
 
+#gatchaButton{
+  background-image: url(../images/ui/SummonButton.png);
+  transition: all 1s;
+}
+
 #campaignButton{
   background-image: url(../images/ui/campaign\ button.png);
   transition: all 1s;
@@ -881,6 +924,68 @@ body{
 #exitButton{
   background-image: url(../images/ui/exitButton.png);
   transition: all 1s;
+}
+
+.particle{
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/ui/backgroundFlare.png);
+  mix-blend-mode:screen;
+  background-size: cover;
+  opacity: 100%;
+}
+
+.particleAnim{
+  position: absolute;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/ui/particleEZ.png);
+  mix-blend-mode:screen;
+  background-size: cover;
+  opacity: 100%;
+  animation: animParticle 12s infinite;
+}
+
+.BGFORPAINT{
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  perspective: 900px;
+}
+
+.bgOverMain{
+  position: absolute;
+  top: -10%;
+  width: 120%;
+  height: 120%;
+  left:-10%;
+  background-image: url(../images/ui/bgover.png);
+  background-size: cover;
+}
+
+#p1pa{
+  animation-delay: 2.2s;
+}
+#p2pa{
+  animation-delay: 3.9s;
+}
+#p3pa{
+  animation-delay: 6s;
+}
+#p4pa{
+  animation-delay: 8s;
+}
+
+@keyframes animParticle {
+  0%{
+    
+  }100%{
+    transform: translateY(250%);
+  }
 }
 
 /**********************************************************/
