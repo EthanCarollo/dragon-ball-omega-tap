@@ -178,6 +178,14 @@
     background-image: url(../images/sprites/MajinVegeta/VegetaPortrait.png);
   }
   
+  #selectedPlayer1.DrGero{
+    background-image: url(../images/sprites/Dr.Gero/DrGeroPortrait.png);
+  }
+
+  #selectedPlayer2.DrGero{
+    background-image: url(../images/sprites/Dr.Gero/DrGeroPortrait.png);
+  }
+
   /***********************************/
   /***********************************/
   /***********************************/
@@ -268,6 +276,10 @@
   
   .perso.MajinVegeta{
     background-image: url(../images/slotCharacter/majinVegetaSlot.png);
+  }
+
+  .perso.DrGero{
+    background-image: url(../images/slotCharacter/DrGeroSlot.png);
   }
 
   /**********************************************************/
@@ -1466,6 +1478,42 @@
     }
   }
 
+  .Player1.DrGero{
+    background-image: url(../images/sprites/Dr.Gero/DrGeroDoingKameha.png);
+    animation: comingDrGero 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.DrGero.win{
+    background-image: url(../images/sprites/Dr.Gero/coming\ &\ win/1.png);
+  }
+
+  .Player1.DrGero.loose{
+    background-image: url(../images/sprites/Dr.Gero/loose/1.png);
+  }
+
+  .Player2.DrGero{
+    background-image: url(../images/sprites/Dr.Gero/DrGeroDoingKameha.png);
+    animation: comingDrGero 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.DrGero.win{
+    background-image: url(../images/sprites/Dr.Gero/coming\ &\ win/1.png);
+  }
+
+  .Player2.DrGero.loose{
+    background-image: url(../images/sprites/Dr.Gero/loose/1.png);
+  }
+
+  @keyframes comingDrGero{
+    0%{
+        background-image: url(../images/sprites/Dr.Gero/coming\ &\ win/1.png);
+    }100%{
+      background-image: url(../images/sprites/Dr.Gero/coming\ &\ win/1.png);
+    }
+  }
+
   /***************PLAYERSET********************/
 
   /***************PORTRAITSET********************/
@@ -1645,6 +1693,14 @@
   .portraitP2.MajinVegeta{
     background-image: url(../images/sprites/MajinVegeta/VegetaPortrait.png);
   }
+
+  .portraitP1.DrGero{
+    background-image: url(../images/sprites/Dr.Gero/DrGeroPortrait.png);
+  }
+
+  .portraitP2.DrGero{
+    background-image: url(../images/sprites/Dr.Gero/DrGeroPortrait.png);
+  }
   
   
   /******************PORTRAITSET*****************/
@@ -1735,4 +1791,8 @@
 
   .subPerso.MajinVegeta{
     background-image: url(../images/slotCharacter/majinVegetaSlot.png);
+  }
+
+  .subPerso.DrGero{
+    background-image: url(../images/slotCharacter/DrGeroSlot.png);
   }

@@ -1,4 +1,5 @@
 # Listes Persos et avancement sur les animations
+
 # Gogeta = ++
 # Vegito = ++
 
@@ -29,3 +30,5 @@
 # SpiderMan = ++
 # Itachi = ++
 # Sasuke = ++
+
+# Perso à add pour le menu summon : Buumasu, MajinVegeta

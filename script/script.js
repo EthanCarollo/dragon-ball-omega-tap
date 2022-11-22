@@ -298,11 +298,15 @@ let clientHeight = document.documentElement.clientHeight;
 let clientWidth = document.documentElement.clientWidth;
 
 let logMovement = (e) => {
+    window.scroll(0,0);
     let mouseX = e.clientX / clientWidth *100;
     let mouseY = (e.clientY / clientHeight) *100;
-    let rotateYString = "rotateY("+mouseY/3.5+"deg)"
-    let rotateXString = "rotateX("+mouseX/3.5+"deg)"
+    mouseX = mouseX - 50;
+    mouseY = mouseY - 50;
+    let rotateYString = "rotateY("+mouseY/10+"deg)"
+    let rotateXString = "rotateX("+mouseX/10+"deg)"
     document.getElementById("backgroundSpecial").style.transform = rotateYString + rotateXString;
+    //document.getElementById("backgroundSpecialFog").style.transform = rotateYString + rotateXString;
 }
 
 document.addEventListener('mousemove', logMovement);
