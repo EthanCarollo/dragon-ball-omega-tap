@@ -1,14 +1,31 @@
 # Listes Persos et avancement sur les animations
 # Gogeta = ++
 # Vegito = ++
+
+# Goku = ++
+# GokuSSJ = ++
 # GokuSSJ3 = ++
-# BlackGoku = ++
-# GoldenFrieza = ++
-# Buutenks = ++
+
+# Vegeta = ++
+# MajinVegeta = ++
+
+# GohanSSJ = ++
 # GohanSSJ3 = ++
-# Venom = ++ (LET ME BREAK THE MULTIVERSE)
 
+# BlackGoku = ++
 
-# Perso a rajouté = Baby Vegeta, Cell, Buu
+# FirstFrieza = ++
+# Frieza = ++
+# GoldenFrieza = ++
 
-# Campagne = ---
+# FinalCooler = ++
+# GoldenCooler = ++
+
+# KidBuu = ++
+# Buumasu = ++
+# Buutenks = ++
+
+# Venom = ++
+# SpiderMan = ++
+# Itachi = ++
+# Sasuke = ++

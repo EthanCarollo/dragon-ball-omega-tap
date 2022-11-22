@@ -145,6 +145,38 @@
   #selectedPlayer2.GohanSSJ{
     background-image: url(../images/sprites/GohanSSJ2/gohanSSJ2Coolerportrait.png);
   }
+
+  #selectedPlayer1.Vegeta{
+    background-image: url(../images/sprites/Vegeta/VegetaPortrait.png);
+  }
+
+  #selectedPlayer2.Vegeta{
+    background-image: url(../images/sprites/Vegeta/VegetaPortrait.png);
+  }
+
+  #selectedPlayer1.FirstFrieza{
+    background-image: url(../images/sprites/FriezaFirstForm/FirstFriezaPortrait.png);
+  }
+
+  #selectedPlayer2.FirstFrieza{
+    background-image: url(../images/sprites/FriezaFirstForm/FirstFriezaPortrait.png);
+  }
+
+  #selectedPlayer1.Buumasu{
+    background-image: url(../images/sprites/Buumasu/buumasuCoolerportrait.png);
+  }
+
+  #selectedPlayer2.Buumasu{
+    background-image: url(../images/sprites/Buumasu/buumasuCoolerportrait.png);
+  }
+
+  #selectedPlayer1.MajinVegeta{
+    background-image: url(../images/sprites/MajinVegeta/VegetaPortrait.png);
+  }
+
+  #selectedPlayer2.MajinVegeta{
+    background-image: url(../images/sprites/MajinVegeta/VegetaPortrait.png);
+  }
   
   /***********************************/
   /***********************************/
@@ -221,7 +253,23 @@
   .perso.GohanSSJ{
     background-image: url(../images/slotCharacter/gohanSSJportrait.png);
   }
+
+  .perso.Vegeta{
+    background-image: url(../images/slotCharacter/VegetaSlot.png);
+  }
+
+  .perso.FirstFrieza{
+    background-image: url(../images/slotCharacter/FriezaFirstSlot.png);
+  }
+
+  .perso.Buumasu{
+    background-image: url(../images/slotCharacter/BuumasuSlot.png);
+  }
   
+  .perso.MajinVegeta{
+    background-image: url(../images/slotCharacter/majinVegetaSlot.png);
+  }
+
   /**********************************************************/
   /***************************CHOOSEPERSO*******************************/
   /**********************************************************/
@@ -1245,7 +1293,179 @@
       background-image: url(../images/sprites/GohanSSJ2/loose/4.png);
     }
   }
+
+  .Player1.Vegeta{
+    background-image: url(../images/sprites/Vegeta/VegetaDoingKameha.png);
+    animation: comingVegeta 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.Vegeta.win{
+    background-image: url(../images/sprites/Vegeta/win/1.png);
+  }
+
+  .Player1.Vegeta.loose{
+    background-image: url(../images/sprites/Vegeta/loose/1.png);
+  }
+
+  .Player2.Vegeta{
+    background-image: url(../images/sprites/Vegeta/VegetaDoingKameha.png);
+    animation: comingVegeta 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.Vegeta.win{
+    background-image: url(../images/sprites/Vegeta/win/1.png);
+  }
+
+  .Player2.Vegeta.loose{
+    background-image: url(../images/sprites/Vegeta/loose/1.png);
+  }
+
+  @keyframes comingVegeta{
+    0%{
+        background-image: url(../images/sprites/Vegeta/comingInFight/1.png);
+    }50%{
+      background-image: url(../images/sprites/Vegeta/comingInFight/2.png);
+    }100%{
+      background-image: url(../images/sprites/Vegeta/comingInFight/3.png);
+    }
+  }
   
+  .Player1.FirstFrieza{
+    background-image: url(../images/sprites/FriezaFirstForm/FirstFriezaDoingKameha.png);
+    animation: comingFirstFrieza 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.FirstFrieza.win{
+    background-image: url(../images/sprites/FriezaFirstForm/win/1.png);
+  }
+
+  .Player1.FirstFrieza.loose{
+    background-image: url(../images/sprites/FriezaFirstForm/loose/1.png);
+  }
+
+  .Player2.FirstFrieza{
+    background-image: url(../images/sprites/FriezaFirstForm/FirstFriezaDoingKameha.png);
+    animation: comingFirstFrieza 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.FirstFrieza.win{
+    background-image: url(../images/sprites/FriezaFirstForm/win/1.png);
+  }
+
+  .Player2.FirstFrieza.loose{
+    background-image: url(../images/sprites/FriezaFirstForm/loose/1.png);
+  }
+
+  @keyframes comingFirstFrieza{
+    0%{
+        background-image: url(../images/sprites/FriezaFirstForm/coming/1.png);
+    }33%{
+      background-image: url(../images/sprites/FriezaFirstForm/coming/2.png);
+    }66%{
+      background-image: url(../images/sprites/FriezaFirstForm/coming/3.png);
+    }100%{
+      background-image: url(../images/sprites/FriezaFirstForm/coming/4.png);
+    }
+  }
+
+  .Player1.Buumasu{
+    background-image: url(../images/sprites/Buumasu/BuumasuDoingKameha.png);
+    animation: comingBuumasu 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.Buumasu.win{
+    background-image: url(../images/sprites/Buumasu/win/3.png);
+    animation: winBuumasu 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.Buumasu.loose{
+    background-image: url(../images/sprites/Buumasu/loose/1.png);
+  }
+
+  .Player2.Buumasu{
+    background-image: url(../images/sprites/Buumasu/BuumasuDoingKameha.png);
+    animation: comingBuumasu 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.Buumasu.win{
+    background-image: url(../images/sprites/Buumasu/win/3.png);
+    animation: winBuumasu 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.Buumasu.loose{
+    background-image: url(../images/sprites/Buumasu/loose/1.png);
+  }
+
+  @keyframes comingBuumasu{
+    0%{
+        background-image: url(../images/sprites/Buumasu/comingInFight/1.png);
+    }50%{
+      background-image: url(../images/sprites/Buumasu/comingInFight/2.png);
+    }100%{
+      background-image: url(../images/sprites/Buumasu/comingInFight/3.png);
+    }
+  }
+
+  @keyframes winBuumasu{
+    0%{
+        background-image: url(../images/sprites/Buumasu/win/1.png);
+    }50%{
+      background-image: url(../images/sprites/Buumasu/win/2.png);
+    }100%{
+      background-image: url(../images/sprites/Buumasu/win/3.png);
+    }
+  }
+
+  .Player1.MajinVegeta{
+    background-image: url(../images/sprites/MajinVegeta/VegetaDoingKameha.png);
+    animation: comingMajinV 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.MajinVegeta.loose{
+    background-image: url(../images/sprites/MajinVegeta/loose\ &\ win/1.png);
+  }
+
+  .Player1.MajinVegeta.win{
+    background-image: url(../images/sprites/MajinVegeta/loose\ &\ win/1.png);
+  }
+
+  .Player2.MajinVegeta{
+    background-image: url(../images/sprites/MajinVegeta/VegetaDoingKameha.png);
+    animation: comingMajinV 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.MajinVegeta.loose{
+    background-image: url(../images/sprites/MajinVegeta/loose\ &\ win/1.png);
+  }
+
+  .Player2.MajinVegeta.win{
+    background-image: url(../images/sprites/MajinVegeta/loose\ &\ win/1.png);
+  }
+
+  @keyframes comingMajinV{
+    0%{
+        background-image: url(../images/sprites/MajinVegeta/comingInFight/1.png);
+    }25%{
+      background-image: url(../images/sprites/MajinVegeta/comingInFight/2.png);
+    }50%{
+      background-image: url(../images/sprites/MajinVegeta/comingInFight/3.png);
+    }75%{
+      background-image: url(../images/sprites/MajinVegeta/comingInFight/4.png);
+    }100%{
+      background-image: url(../images/sprites/MajinVegeta/comingInFight/5.png);
+    }
+  }
+
   /***************PLAYERSET********************/
 
   /***************PORTRAITSET********************/
@@ -1393,6 +1613,38 @@
   .portraitP2.GohanSSJ{
     background-image: url(../images/sprites/GohanSSJ2/gohanSSJ2Coolerportrait.png);
   }
+
+  .portraitP1.Vegeta{
+    background-image: url(../images/sprites/Vegeta/VegetaPortrait.png);
+  }
+
+  .portraitP2.Vegeta{
+    background-image: url(../images/sprites/Vegeta/VegetaPortrait.png);
+  }
+
+  .portraitP1.FirstFrieza{
+    background-image: url(../images/sprites/FriezaFirstForm/FirstFriezaPortrait.png);
+  }
+
+  .portraitP2.FirstFrieza{
+    background-image: url(../images/sprites/FriezaFirstForm/FirstFriezaPortrait.png);
+  }
+
+  .portraitP1.Buumasu{
+    background-image: url(../images/sprites/Buumasu/buumasuCoolerportrait.png);
+  }
+
+  .portraitP2.Buumasu{
+    background-image: url(../images/sprites/Buumasu/buumasuCoolerportrait.png);
+  }
+
+  .portraitP1.MajinVegeta{
+    background-image: url(../images/sprites/MajinVegeta/VegetaPortrait.png);
+  }
+
+  .portraitP2.MajinVegeta{
+    background-image: url(../images/sprites/MajinVegeta/VegetaPortrait.png);
+  }
   
   
   /******************PORTRAITSET*****************/
@@ -1468,4 +1720,19 @@
   .subPerso.GohanSSJ{
     background-image: url(../images/slotCharacter/gohanSSJPortrait.png);
   }
+
+  .subPerso.Vegeta{
+    background-image: url(../images/slotCharacter/VegetaSlot.png);
+  }
   
+  .subPerso.FirstFrieza{
+    background-image: url(../images/slotCharacter/FriezaFirstSlot.png);
+  }
+
+  .subPerso.Buumasu{
+    background-image: url(../images/slotCharacter/BuumasuSlot.png);
+  }
+
+  .subPerso.MajinVegeta{
+    background-image: url(../images/slotCharacter/majinVegetaSlot.png);
+  }
