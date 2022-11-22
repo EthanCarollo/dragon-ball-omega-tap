@@ -10,6 +10,7 @@ const divMenu = document.getElementById("menuMain");
 const divCampaign = document.getElementById("menuCampaign");
 const divSelection = document.getElementById("panelPerso");
 const divGame = document.getElementById("gameTable");
+const divSummon = document.getElementById("summonMenu");
 
 // TODO VAR SECTION
 
@@ -254,6 +255,11 @@ const startCampaign = () =>
     divMenu.style.display = "none";
 }
 
+const goToSummonMenu = () => {
+    divSummon.style.display = "initial";
+    divMenu.style.display = "none";
+}
+
 const startChoosePerso = () => {
     createTablePerso();
     divChooseDiff.style.display = "none";
@@ -291,6 +297,12 @@ fightButton.addEventListener("click", rollFightMenu);
 document.getElementById("agIA").addEventListener("click", startChoosePersoIA);
 document.getElementById("agPvP").addEventListener("click", startChoosePerso);
 document.getElementById("campaignButton").addEventListener("click", startCampaign);
+document.getElementById("gatchaButton").addEventListener("click", goToSummonMenu);
+document.getElementById("returnMainAsSummon").addEventListener("click", () =>
+{
+    divSummon.style.display = "none";
+    divMenu.style.display = "initial";
+})
 
 // FANCY MAIN MENU
 
@@ -523,10 +535,7 @@ buttonStart.addEventListener("click", () =>
     }
 })
 
-document.getElementById("returnMain").addEventListener("click", () =>
-{
-    returnMainMenu();
-})
+document.getElementById("returnMain").addEventListener("click", returnMainMenu);
 
 //*SELECT PERSO*********************************
 //*SELECT PERSO*********************************
