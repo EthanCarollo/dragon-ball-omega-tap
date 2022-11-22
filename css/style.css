@@ -1288,6 +1288,143 @@ body{
 
 .summon{
   display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.gatchaOne{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  perspective: 900px;
+}
+
+.showCaseCard{
+  width: 45vh;
+  height: 60vh;
+  border-radius: 5vh;
+  background-image: url(../images/background/card/backgroundcard2.gif);
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0vh 6vh rgba(0, 0, 0, 0.7);
+  filter: drop-shadow(0 0 6vh black);
+  z-index: 10;
+}
+
+.bgShine{
+  position: absolute;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/sparkles.gif);
+  width: 45vh;
+  height: 60vh;
+  border-radius: 5vh;
+  mix-blend-mode: color-dodge;
+  z-index: 0;
+}
+
+.playerIn{
+  position: absolute;
+  width: 45vh;
+  margin-top: 3vh;
+  border-radius: 5vh;
+  height: 57vh;
+  background-image: url(../images/sprites/Buumasu/buumasuCoolerportrait.png);
+  background-size: cover;
+  background-position: center;
+  z-index: 100;
+}
+
+#returnMainAsSummon{
+  z-index: 100;
+}
+
+.showCaseCard h1{
+  margin-top: 1vh;
+  font-size: 4vh;
+  text-align: center;
+  text-shadow: 0 0.5vh 0vh rgba(0, 0, 0, 0.438);
+  color: white;
+}
+
+.showSubCaseCard{
+  margin:3vh;
+  width: 35vh;
+  height: 50vh;
+  border-radius: 5vh;
+  background-image: url(../images/background/card/fond-CARD1.webp);
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0vh 6vh rgba(0, 0, 0, 0.7)
+}
+
+#sub1{
+  transform: rotateY(20deg);
+}
+
+#sub1 .playerSubIn{
+  transform: rotateY(180deg);
+}
+
+#sub2{
+  transform: rotateY(-20deg);
+}
+
+.bgSubShine{
+  position: absolute;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/sparkles.gif);
+  width: 35vh;
+  height: 50vh;
+  border-radius: 5vh;
+  mix-blend-mode: color-dodge;
+  z-index: 0;
+}
+
+.playerSubIn{
+  position: absolute;
+  width: 35vh;
+  margin-top: 3vh;
+  border-radius: 5vh;
+  height: 47vh;
+  background-image: url(../images/sprites/Buumasu/buumasuCoolerportrait.png);
+  background-size: cover;
+  background-position: center;
+  z-index: 100;
+}
+
+.showSubCaseCard h1{
+  margin-top: 1vh;
+  font-size: 3vh;
+  text-align: center;
+  text-shadow: 0 0.5vh 0vh rgba(0, 0, 0, 0.438);
+  color: white;
+}
+
+.showSubCaseCard .playerSubIn{
+  background-image: url(../images/sprites/MajinVegeta/VegetaPortrait.png);
+}
+
+#sub2 .playerSubIn{
+  background-image: url(../images/sprites/Dr.Gero/DrGeroPortrait.png);
+}
+
+.summonButton{
+  position: absolute;
+  bottom: 5%;
+  width: 40vh;
+  height: 8vh;
+  background-color: aliceblue;
+  cursor: pointer;
+  z-index: 120;
+}
+
+.titleEvent{
+  position: absolute;
+  top: 2%;
+  height: 8vw;
+  left: 37vw;
 }
 
 /**********************************************************/

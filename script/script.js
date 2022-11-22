@@ -843,6 +843,14 @@ document.getElementById("buttonMainMenu").addEventListener("click", goToMainMenu
 //?GAME*********************************
 //?GAME*********************************
 
+//*SUMMON MENU*********************************
+//*SUMMON MENU*********************************
+//*SUMMON MENU*********************************
+
+//*SUMMON MENU*********************************
+//*SUMMON MENU*********************************
+//*SUMMON MENU*********************************
+
 //SET DIFFICULTY WITH EVENT
 
 document.getElementById("D").addEventListener("click", ()=>{
