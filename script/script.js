@@ -854,18 +854,24 @@ let summoningCharacter = [
         name: "Buumasu",
         ID: 666,
         version: ["Buumasu"]
+    },{
+        name: "GohanSSB",
+        ID: 54,
+        version: ["GohanSSB"]
     }
 ];
 let random = [summoningCharacter[(getRandomInt(summoningCharacter.length))],
             summoningCharacter[(getRandomInt(summoningCharacter.length))],
             summoningCharacter[(getRandomInt(summoningCharacter.length))]];
-
 let tirageSlot = document.getElementById("tirageSlot");
 let iterationOfRoll = 0;
 let waitCall = 25;
+let canSummon = true;
 
 const summonNewCharacter = () => {
-    if(dragonBall>=7){
+    if(dragonBall>=7 && canSummon === true){
+        tirageSlot.children[1].style.animation = "none";
+        canSummon = false;
         waitCall = 25;
         dragonBall -= 7;
         iterationOfRoll = 0;
@@ -911,6 +917,8 @@ const rollCard = () => {
 }
 
 const endRoll = () => {
+    tirageSlot.children[1].style.animation = "animationGotya 1.5s";
+    canSummon = true;
     addCharacter(random[1]);
 }
 
