@@ -886,15 +886,23 @@ const callBackForSummon = () =>{
     }, waitCall);
 }
 
+const resetRandom= () => {
+    random = [summoningCharacter[(getRandomInt(summoningCharacter.length))],
+            summoningCharacter[(getRandomInt(summoningCharacter.length))],
+            summoningCharacter[(getRandomInt(summoningCharacter.length))]];
+
+    if(random[0] === random[1] || random[0] === random[2] || random[2] === random[1]){
+        resetRandom();
+    }
+}
+
 const rollCard = () => {
     
     for(let k = 0; k <tirageSlot.children.length;k++){
         tirageSlot.children[k].children[1].classList.remove(random[k].name);
     }
 
-    random = [summoningCharacter[(getRandomInt(summoningCharacter.length))],
-            summoningCharacter[(getRandomInt(summoningCharacter.length))],
-            summoningCharacter[(getRandomInt(summoningCharacter.length))]];
+    resetRandom();
 
     for(let i = 0; i < tirageSlot.children.length;i++){
         tirageSlot.children[i].children[2].innerHTML = random[i].name;
