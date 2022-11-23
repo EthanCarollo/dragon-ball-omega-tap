@@ -34,7 +34,7 @@
             <div class ="particle" id="backgroundSpecialFog"></div>
 
             <div class ="containerCrystal">
-                <h1>10</h1>
+                <h1 id ="crystalCount">10</h1>
             </div>
 
             <div class ="mainTitle"></div>
@@ -150,22 +150,26 @@
         <div class = "summon" id ="summonMenu">
             <img src="../images/text/DragonBallSummonTime.png" class ="titleEvent">
             <div class ="returnMainMenuButton" id ="returnMainAsSummon"></div>
-            <div class ="gatchaOne">
+            <div class ="cost">cost : 7 <img src="../images/ui/Dragonball Ball.png"></div>
+            <div class ="gatchaOne" id="tirageSlot">
                 <div class="showSubCaseCard" id="sub1">
+                    <div class ="childRembourageforJs"></div>
                     <div class="playerSubIn"></div>
                     <h1>Majin Vegeta</h1>
                 </div>
-                <div class="showCaseCard">
+                <div class="showCaseCard" id="actualCard">
                     <div class ="bgShine"></div>
                     <div class="playerIn"></div>
                     <h1>Buumasu</h1>
                 </div>
                 <div class="showSubCaseCard" id="sub2">
+                    <div class ="childRembourageforJs"></div>
                     <div class="playerSubIn"></div>
                     <h1>Dr.Gero</h1>
                 </div>
-                <div class="summonButton"></div>
+                
             </div>
+            <div class="summonButton" id="summonB"></div>
         </div>
 
         <div class = "filterOver"></div>

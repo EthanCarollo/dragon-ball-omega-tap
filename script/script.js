@@ -32,6 +32,7 @@ let kamehaPlayer1 = document.getElementById("kamehaP1");
 let kamehaPlayer2 = document.getElementById("kamehaP2");
 let tabPersoDOM = document.getElementById("choosePerso");
 let divChooseDiff = document.getElementById("divIAdiff");
+let dragonBall = 50;
 
 
 let gameIsIa = false;
@@ -247,6 +248,10 @@ const rollFightMenu = () => {
     underFightButton[1].classList.toggle("exist");
 }
 
+const setCountCrystal = () => {
+    document.getElementById("crystalCount").innerHTML = dragonBall;
+}
+
 const startCampaign = () =>
 {
     setVisualCampaignMenu(listCampaignDBZ);
@@ -293,6 +298,7 @@ const setVisualCampaignMenu = (campaignSlide) => {
     }
 }
 
+setCountCrystal();
 fightButton.addEventListener("click", rollFightMenu);
 document.getElementById("agIA").addEventListener("click", startChoosePersoIA);
 document.getElementById("agPvP").addEventListener("click", startChoosePerso);
@@ -300,6 +306,7 @@ document.getElementById("campaignButton").addEventListener("click", startCampaig
 document.getElementById("gatchaButton").addEventListener("click", goToSummonMenu);
 document.getElementById("returnMainAsSummon").addEventListener("click", () =>
 {
+    setCountCrystal();
     divSummon.style.display = "none";
     divMenu.style.display = "initial";
 })
@@ -312,14 +319,14 @@ let clientWidth = document.documentElement.clientWidth;
 let logMovement = (e) => {
     window.scroll(0,0);
     let mouseX = e.clientX / clientWidth *100;
-    let mouseY = (e.clientY / clientHeight) *100;
+    let mouseY = e.clientY / clientHeight *100;
     mouseX = mouseX - 50;
     mouseY = mouseY - 50;
-    let rotateYString = "rotateY("+mouseY/10+"deg)"
-    let rotateXString = "rotateX("+mouseX/10+"deg)"
+    let rotateYString = "rotateY("+mouseY/15+"deg)"
+    let rotateXString = "rotateX("+mouseX/15+"deg)"
     document.getElementById("backgroundSpecial").style.transform = rotateYString + rotateXString;
-    //document.getElementById("backgroundSpecialFog").style.transform = rotateYString + rotateXString;
 }
+
 
 document.addEventListener('mousemove', logMovement);
 
@@ -336,6 +343,7 @@ document.addEventListener('mousemove', logMovement);
 const returnToMainMenuAsCampaign = () => {
     divCampaign.style.display = "none";
     divMenu.style.display = "initial";
+    setCountCrystal();
 }
 
 const rollCampaignSlide = (campaignSlide) => {
@@ -526,6 +534,7 @@ const returnMainMenu = () => {
     gameIsIa= false;
     divSelection.style.display = "none";
     divMenu.style.display = "initial";
+    setCountCrystal();
 }
 
 buttonStart.addEventListener("click", () =>
@@ -725,48 +734,32 @@ const finishGame = () => {
 }
 
 const endCampaign= () => {
-    let tempTapDoublon=false;
-    let canAddDoublonInVersion = true;
-    for(let k = 0; k < tabPerso.length;k++){
-        if(tabPerso[k].ID===actualCampaign.reward.ID){
-            tempTapDoublon = true;
-            for(let y = 0; y<tabPerso[k].version.length;y++){
-                if(tabPerso[k].version[y]===actualCampaign.reward.name){
-                    canAddDoublonInVersion = false;
-                }
-            }
-            if(canAddDoublonInVersion=== true){
-                tabPerso[k].version.push(actualCampaign.reward.name);
-            }
-        }
-    }
-    let tempAltTapDoublon=false;
-    let canAddAltDoublonInVersion = true;
-    if(tempTapDoublon===false){
-        tabPerso.push(actualCampaign.reward);
-    }
-    if(actualCampaign.altReward !== null){
-        for(let o = 0;o<tabPerso.length;o++){
-            if(tabPerso[o].ID===actualCampaign.altReward.ID){
-                tempAltTapDoublon = true;
-            
+    addCharacter(actualCampaign.reward);
+    addCharacter(actualCampaign.altReward);
+    unlockNextLevel();
+}
 
-                for(let y = 0; y<tabPerso[o].version.length;y++){
-                    if(tabPerso[o].version[y]===actualCampaign.altReward.name){
-                        console.log("cant add");
-                        canAddAltDoublonInVersion = false;
+const addCharacter = (Character) => {
+    if(Character !== null){
+        let tempTapDoublon=false;
+        let canAddDoublonInVersion = true;
+        for(let k = 0; k < tabPerso.length;k++){
+            if(tabPerso[k].ID===Character.ID){
+                tempTapDoublon = true;
+                for(let y = 0; y<tabPerso[k].version.length;y++){
+                    if(tabPerso[k].version[y]===Character.name){
+                        canAddDoublonInVersion = false;
                     }
                 }
-                if(canAddAltDoublonInVersion=== true){
-                    tabPerso[o].version.push(actualCampaign.altReward.name);
+                if(canAddDoublonInVersion=== true){
+                    tabPerso[k].version.push(Character.name);
                 }
             }
         }
+        if(tempTapDoublon===false){
+            tabPerso.push(Character);
+        }
     }
-    if(tempAltTapDoublon===false && actualCampaign.altReward !== null){
-        tabPerso.push(actualCampaign.altReward);
-    }
-    unlockNextLevel();
 }
 
 const unlockNextLevel = () => {
@@ -812,6 +805,7 @@ const goToMainMenu = () => {
     gameIsIa = false;
     divMenu.style.display = "initial";
     divGame.style.display = "none";
+    setCountCrystal();
     resetVisual();
     player1perso = null;
     player2perso = null;
@@ -846,6 +840,73 @@ document.getElementById("buttonMainMenu").addEventListener("click", goToMainMenu
 //*SUMMON MENU*********************************
 //*SUMMON MENU*********************************
 //*SUMMON MENU*********************************
+
+let summoningCharacter = [
+    {
+        name: "MajinVegeta",
+        ID: 1123,
+        version: ["MajinVegeta"]
+    },{
+        name: "DrGero",
+        ID: 1124,
+        version: ["DrGero"]
+    },{
+        name: "Buumasu",
+        ID: 666,
+        version: ["Buumasu"]
+    }
+];
+let random = [summoningCharacter[(getRandomInt(summoningCharacter.length))],
+            summoningCharacter[(getRandomInt(summoningCharacter.length))],
+            summoningCharacter[(getRandomInt(summoningCharacter.length))]];
+
+let tirageSlot = document.getElementById("tirageSlot");
+let iterationOfRoll = 0;
+let waitCall = 25;
+
+const summonNewCharacter = () => {
+    if(dragonBall>=7){
+        waitCall = 25;
+        dragonBall -= 7;
+        iterationOfRoll = 0;
+        callBackForSummon();
+    }
+}
+
+const callBackForSummon = () =>{
+    setTimeout(() => {
+        if(iterationOfRoll<15){
+            iterationOfRoll++;
+            waitCall +=25;
+            rollCard();
+            callBackForSummon();
+        }else{
+            endRoll();
+        }
+    }, waitCall);
+}
+
+const rollCard = () => {
+    
+    for(let k = 0; k <tirageSlot.children.length;k++){
+        tirageSlot.children[k].children[1].classList.remove(random[k].name);
+    }
+
+    random = [summoningCharacter[(getRandomInt(summoningCharacter.length))],
+            summoningCharacter[(getRandomInt(summoningCharacter.length))],
+            summoningCharacter[(getRandomInt(summoningCharacter.length))]];
+
+    for(let i = 0; i < tirageSlot.children.length;i++){
+        tirageSlot.children[i].children[2].innerHTML = random[i].name;
+        tirageSlot.children[i].children[1].classList.add(random[i].name);
+    }
+}
+
+const endRoll = () => {
+    addCharacter(random[1]);
+}
+
+document.getElementById("summonB").addEventListener("click", summonNewCharacter);
 
 //*SUMMON MENU*********************************
 //*SUMMON MENU*********************************

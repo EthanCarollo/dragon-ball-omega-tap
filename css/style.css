@@ -964,6 +964,7 @@ body{
   width: 100%;
   height: 100%;
   background-image: url(../images/background/Background\ without\ tower.png);
+  background-size: cover;
   position: absolute;
 }
 
@@ -1406,18 +1407,41 @@ body{
   background-image: url(../images/sprites/MajinVegeta/VegetaPortrait.png);
 }
 
-#sub2 .playerSubIn{
-  background-image: url(../images/sprites/Dr.Gero/DrGeroPortrait.png);
-}
-
 .summonButton{
   position: absolute;
   bottom: 5%;
+  left:76.5vh;
   width: 40vh;
   height: 8vh;
-  background-color: aliceblue;
+  background-image: url(../images/ui/summonButtonSpecial.png);
+  background-size: cover;
   cursor: pointer;
   z-index: 120;
+  filter: drop-shadow(0 0vh 1vh white);
+  transition: all 1s;
+}
+
+.summonButton:hover{
+  transition: all 1s;
+  transform: translateY(-0.5vh);
+  filter: drop-shadow(0 0.25vh 0vh white);
+}
+
+.cost{
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  bottom: 3%;
+  width: 100%;
+  font-size: 2vh;
+  color: white;
+  filter: drop-shadow(0vh 0.35vh 0 rgba(0, 0, 0, 0.295));
+}
+
+.cost img{
+  width: 2vh;
+  margin-left: 0.5vh;
 }
 
 .titleEvent{
@@ -1426,6 +1450,34 @@ body{
   height: 8vw;
   left: 37vw;
 }
+
+/**********************************************************/
+
+.playerSubIn.Buumasu{
+  background-image: url(../images/sprites/Buumasu/buumasuCoolerportrait.png);
+}
+
+.playerSubIn.MajinVegeta{
+  background-image: url(../images/sprites/MajinVegeta/VegetaPortrait.png);
+}
+
+.playerSubIn.DrGero{
+  background-image: url(../images/sprites/Dr.Gero/DrGeroPortrait.png);
+}
+
+.playerIn.Buumasu{
+  background-image: url(../images/sprites/Buumasu/buumasuCoolerportrait.png);
+}
+
+.playerIn.MajinVegeta{
+  background-image: url(../images/sprites/MajinVegeta/VegetaPortrait.png);
+}
+
+.playerIn.DrGero{
+  background-image: url(../images/sprites/Dr.Gero/DrGeroPortrait.png);
+}
+
+/**********************************************************/
 
 /**********************************************************/
 /***************************SUMMON*******************************/
