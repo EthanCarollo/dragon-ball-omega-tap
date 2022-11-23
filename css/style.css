@@ -1407,10 +1407,15 @@ body{
   background-image: url(../images/sprites/MajinVegeta/VegetaPortrait.png);
 }
 
-.summonButton{
+.summonButtonCentering{
+  display: flex;
+  justify-content: center;
   position: absolute;
+  width: 100%;
   bottom: 5%;
-  left:76.5vh;
+}
+
+.summonButton{
   width: 40vh;
   height: 8vh;
   background-image: url(../images/ui/summonButtonSpecial.png);
@@ -1451,6 +1456,17 @@ body{
   left: 37vw;
 }
 
+@keyframes animationGotya {
+  0%{
+    z-index: 100;
+  }75%{
+    transform: scale(1.15) rotateX(20deg) rotateY(20deg);
+  }100%{
+    transform: scale(1);
+    z-index: 100;
+  }
+}
+
 /**********************************************************/
 
 .playerSubIn.Buumasu{
@@ -1475,6 +1491,14 @@ body{
 
 .playerIn.DrGero{
   background-image: url(../images/sprites/Dr.Gero/DrGeroPortrait.png);
+}
+
+.playerSubIn.GohanSSB{
+  background-image: url(../images/sprites/GohanSSB/GohanSSBPortrait.png);
+}
+
+.playerIn.GohanSSB{
+  background-image: url(../images/sprites/GohanSSB/GohanSSBPortrait.png);
 }
 
 /**********************************************************/

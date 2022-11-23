@@ -186,6 +186,14 @@
     background-image: url(../images/sprites/Dr.Gero/DrGeroPortrait.png);
   }
 
+  #selectedPlayer1.GohanSSB{
+    background-image: url(../images/sprites/GohanSSB/GohanSSBPortrait.png);
+  }
+
+  #selectedPlayer2.GohanSSB{
+    background-image: url(../images/sprites/GohanSSB/GohanSSBPortrait.png);
+  }
+
   /***********************************/
   /***********************************/
   /***********************************/
@@ -280,6 +288,10 @@
 
   .perso.DrGero{
     background-image: url(../images/slotCharacter/DrGeroSlot.png);
+  }
+
+  .perso.GohanSSB{
+    background-image: url(../images/slotCharacter/GohanSSBPortrait.png);
   }
 
   /**********************************************************/
@@ -1514,6 +1526,76 @@
     }
   }
 
+  .Player1.GohanSSB{
+    background-image: url(../images/sprites/GohanSSB/GohanSSBDoingKameha.png);
+    animation: comingGohanSSB 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.GohanSSB.win{
+    background-image: url(../images/sprites/GohanSSB/win/3.png);
+    animation: winGohanSSB 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.GohanSSB.loose{
+    background-image: url(../images/sprites/GohanSSB/loose/3.png);
+    animation: looseGohanSSB 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.GohanSSB{
+    background-image: url(../images/sprites/GohanSSB/GohanSSBDoingKameha.png);
+    animation: comingGohanSSB 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.GohanSSB.win{
+    background-image: url(../images/sprites/GohanSSB/win/3.png);
+    animation: winGohanSSB 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.GohanSSB.loose{
+    background-image: url(../images/sprites/GohanSSB/loose/3.png);
+    animation: looseGohanSSB 3s;
+    animation-timing-function: steps(1);
+  }
+
+  @keyframes comingGohanSSB{
+    0%{
+        background-image: url(../images/sprites/GohanSSB/comingInFIght/1.png);
+    }25%{
+      background-image: url(../images/sprites/GohanSSB/comingInFIght/2.png);
+    }50%{
+      background-image: url(../images/sprites/GohanSSB/comingInFIght/3.png);
+    }75%{
+      background-image: url(../images/sprites/GohanSSB/comingInFIght/4.png);
+    }100%{
+      background-image: url(../images/sprites/GohanSSB/comingInFIght/5.png);
+    }
+  }
+
+  @keyframes winGohanSSB{
+    0%{
+      background-image: url(../images/sprites/GohanSSB/win/1.png);
+    }50%{
+      background-image: url(../images/sprites/GohanSSB/win/2.png);
+    }100%{
+      background-image: url(../images/sprites/GohanSSB/win/3.png);
+    }
+  }
+
+  @keyframes looseGohanSSB{
+    0%{
+      background-image: url(../images/sprites/GohanSSB/loose/1.png);
+    }50%{
+      background-image: url(../images/sprites/GohanSSB/loose/2.png);
+    }100%{
+      background-image: url(../images/sprites/GohanSSB/loose/3.png);
+    }
+  }
+
   /***************PLAYERSET********************/
 
   /***************PORTRAITSET********************/
@@ -1701,6 +1783,14 @@
   .portraitP2.DrGero{
     background-image: url(../images/sprites/Dr.Gero/DrGeroPortrait.png);
   }
+
+  .portraitP1.GohanSSB{
+    background-image: url(../images/sprites/GohanSSB/GohanSSBPortrait.png);
+  }
+
+  .portraitP2.GohanSSB{
+    background-image: url(../images/sprites/GohanSSB/GohanSSBPortrait.png);
+  }
   
   
   /******************PORTRAITSET*****************/
@@ -1795,4 +1885,8 @@
 
   .subPerso.DrGero{
     background-image: url(../images/slotCharacter/DrGeroSlot.png);
+  }
+
+  .subPerso.GohanSSB{
+    background-image: url(../images/slotCharacter/GohanSSBPortrait.png);
   }
