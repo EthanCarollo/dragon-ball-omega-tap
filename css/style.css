@@ -1208,6 +1208,14 @@ body{
   background-image: url(../images/ui/WhoTheFuckLockedCampaignButton.png);
 }
 
+#campaign6{
+  background-image: url(../images/ui/SuperJanembaButton.png);
+}
+
+#campaign6.locked{
+  background-image: url(../images/ui/SuperJanembaLockedButton.png);
+}
+
 #campaignBTM1{
   background-image: url(../images/ui/WhatIsGoingOnCampaignButton.png);
   height: 10.25vh;

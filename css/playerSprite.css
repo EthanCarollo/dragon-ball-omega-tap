@@ -218,6 +218,23 @@
     background-image: url(../images/sprites/Bardock/BardockPortrait.png);
   }
 
+  #selectedPlayer1.GogetaSSG{
+    background-image: url(../images/sprites/gogetaSSG/GogetaSSGPortrait.png);
+  }
+
+  #selectedPlayer2.GogetaSSG{
+    background-image: url(../images/sprites/gogetaSSG/GogetaSSGPortrait.png);
+  }
+
+  #selectedPlayer1.SuperJanembaXeno{
+    background-image: url(../images/sprites/SuperJanembaXeno/SuperJanembaXenoPortrait.png);
+  }
+
+  #selectedPlayer2.SuperJanembaXeno{
+    background-image: url(../images/sprites/SuperJanembaXeno/SuperJanembaXenoPortrait.png);
+  }
+
+
   /***********************************/
   /***********************************/
   /***********************************/
@@ -328,6 +345,14 @@
 
   .perso.Bardock{
     background-image: url(../images/slotCharacter/BardockSlot.png);
+  }
+
+  .perso.GogetaSSG{
+    background-image: url(../images/slotCharacter/GogetaSSGSlot.png);
+  }
+
+  .perso.SuperJanembaXeno{
+    background-image: url(../images/slotCharacter/SuperJanembaXenoSlot.png);
   }
 
   /**********************************************************/
@@ -1798,6 +1823,103 @@
     }
   }
 
+  .Player1.GogetaSSG{
+    background-image: url(../images/sprites/gogetaSSG/GogetaSSGDoingKameha.png);
+    animation: comingGogetaSSG 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.GogetaSSG.win{
+    background-image: url(../images/sprites/gogetaSSG/win/3.png);
+    animation: winGogetaSSG 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.GogetaSSG.loose{
+    background-image: url(../images/sprites/gogetaSSG/loose/1.png);
+  }
+
+  .Player2.GogetaSSG{
+    background-image: url(../images/sprites/gogetaSSG/GogetaSSGDoingKameha.png);
+    animation: comingGogetaSSG 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.GogetaSSG.win{
+    background-image: url(../images/sprites/gogetaSSG/win/3.png);
+    animation: winGogetaSSG 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.GogetaSSG.loose{
+    background-image: url(../images/sprites/gogetaSSG/loose/1.png);
+  }
+
+  @keyframes comingGogetaSSG{
+    0%{
+      background-image: url(../images/sprites/gogetaSSG/comin/1.png);
+    }33%{
+      background-image: url(../images/sprites/gogetaSSG/comin/2.png);
+    }66%{
+      background-image: url(../images/sprites/gogetaSSG/comin/3.png);
+    }100%{
+      background-image: url(../images/sprites/gogetaSSG/comin/3.png);
+    }
+  }
+
+  @keyframes winGogetaSSG{
+    0%{
+      background-image: url(../images/sprites/gogetaSSG/win/1.png);
+    }33%{
+      background-image: url(../images/sprites/gogetaSSG/win/2.png);
+    }66%{
+      background-image: url(../images/sprites/gogetaSSG/win/3.png);
+    }100%{
+      background-image: url(../images/sprites/gogetaSSG/win/3.png);
+    }
+  }
+
+  .Player1.SuperJanembaXeno{
+    background-image: url(../images/sprites/SuperJanembaXeno/SuperJanembaXenoDoingKameha.png);
+    animation: comingSuperJanembaXeno 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.SuperJanembaXeno.win{
+    background-image: url(../images/sprites/SuperJanembaXeno/comin/2.png);
+  }
+
+  .Player1.SuperJanembaXeno.loose{
+    background-image: url(../images/sprites/SuperJanembaXeno/loose/1.png);
+  }
+
+
+  .Player2.SuperJanembaXeno{
+    background-image: url(../images/sprites/SuperJanembaXeno/SuperJanembaXenoDoingKameha.png);
+    animation: comingSuperJanembaXeno 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.SuperJanembaXeno.win{
+    background-image: url(../images/sprites/SuperJanembaXeno/comin/2.png);
+  }
+
+  .Player2.SuperJanembaXeno.loose{
+    background-image: url(../images/sprites/SuperJanembaXeno/loose/1.png);
+  }
+
+  @keyframes comingSuperJanembaXeno{
+    0%{
+      background-image: url(../images/sprites/SuperJanembaXeno/comin/1.png);
+    }33%{
+      background-image: url(../images/sprites/SuperJanembaXeno/comin/2.png);
+    }66%{
+      background-image: url(../images/sprites/SuperJanembaXeno/comin/2.png);
+    }100%{
+      background-image: url(../images/sprites/SuperJanembaXeno/comin/2.png);
+    }
+  }
+
   /***************PLAYERSET********************/
 
   /***************PORTRAITSET********************/
@@ -2017,6 +2139,22 @@
   .portraitP2.Bardock{
     background-image: url(../images/sprites/Bardock/BardockPortrait.png);
   }
+
+  .portraitP1.GogetaSSG{
+    background-image: url(../images/sprites/gogetaSSG/GogetaSSGPortrait.png);
+  }
+  
+  .portraitP2.GogetaSSG{
+    background-image: url(../images/sprites/gogetaSSG/GogetaSSGPortrait.png);
+  }
+
+  .portraitP1.SuperJanembaXeno{
+    background-image: url(../images/sprites/SuperJanembaXeno/SuperJanembaXenoPortrait.png);
+  }
+  
+  .portraitP2.SuperJanembaXeno{
+    background-image: url(../images/sprites/SuperJanembaXeno/SuperJanembaXenoPortrait.png);
+  }
   
   /******************PORTRAITSET*****************/
 
@@ -2126,4 +2264,12 @@
 
   .subPerso.Bardock{
     background-image: url(../images/slotCharacter/BardockSlot.png);
+  }
+
+  .subPerso.GogetaSSG{
+    background-image: url(../images/slotCharacter/GogetaSSGSlot.png);
+  }
+
+  .subPerso.SuperJanembaXeno{
+    background-image: url(../images/slotCharacter/SuperJanembaXenoSlot.png);
   }

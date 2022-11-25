@@ -139,6 +139,27 @@ let listCampaignDBZ = [
             ID: 54,
             version: []
         }
+    },{
+        div : document.getElementById("campaign6"),
+        campaign : "DBZ",
+        level : 5,
+        isLocked: true,
+        difficulty : "S",
+        altReward:{
+            name: "GogetaSSG",
+            ID: 0,
+            version: ["GogetaSSG"]
+        },
+        reward: {
+            name: "SuperJanembaXeno",
+            ID: 678,
+            version: ["SuperJanembaXeno"]
+        },
+        player:{
+            name: "GogetaSSG",
+            ID: 0,
+            version: ["GogetaSSG"]
+        }
     }
 ]
 let listCampaignBTM = [
@@ -199,7 +220,7 @@ let tabPerso = [
     },{
         name: "Gogeta",
         ID: 0,
-        version: []
+        version: ["Gogeta"]
     },{
         name: "VegitoSSJ",
         ID: 1,
@@ -554,7 +575,7 @@ document.getElementById("returnMain").addEventListener("click", returnMainMenu);
 //?GAME*********************************
 //?GAME*********************************
 
-document.addEventListener('keydown', (e) => {
+document.addEventListener('keyup', (e) => {
     console.log("key e");
     if(gameStarted === true && canClick === true){
         if(e.key === " "){
@@ -643,6 +664,10 @@ const setDifficulty = () => {
     }else if(difficultyRank === "SS"){
         console.log("lessgui");
         timeOutIa = 110;
+    }else if(difficultyRank === "S+"){
+        timeOutIa = 90;
+    }else if(difficultyRank === "SS+"){
+        timeOutIa = 70;
     }
 }
 
