@@ -224,7 +224,7 @@ let tabPerso = [
     },{
         name: "VegitoSSJ",
         ID: 1,
-        version: ["VegitoSSJ", "VegitoXenoSSJ4"]
+        version: ["VegitoSSJ"]
     },{
         name: "FirstFrieza",
         ID: 8,
