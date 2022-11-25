@@ -242,6 +242,37 @@
     background-image: url(../images/sprites/VegitoXeno/VegitoXenoPortrait.png);
   }
 
+  #selectedPlayer1.MechaZamasu{
+    background-image: url(../images/sprites/MechaZamasu/MechaZamasuPortrait.png);
+  }
+
+  #selectedPlayer2.MechaZamasu{
+    background-image: url(../images/sprites/MechaZamasu/MechaZamasuPortrait.png);
+  }
+
+  #selectedPlayer1.SasukeRinnegan{
+    background-image: url(../images/sprites/SasukeRinnegan/SasukeRinneganPortrait.png);
+  }
+
+  #selectedPlayer2.SasukeRinnegan{
+    background-image: url(../images/sprites/SasukeRinnegan/SasukeRinneganPortrait.png);
+  }
+
+  #selectedPlayer1.NarutoDemon{
+    background-image: url(../images/sprites/narutoDemon/narutoDemonportrait.png);
+  }
+
+  #selectedPlayer2.NarutoDemon{
+    background-image: url(../images/sprites/narutoDemon/narutoDemonportrait.png);
+  }
+
+  #selectedPlayer1.ZenBuu{
+    background-image: url(../images/sprites/ZenBuu/ZenBuuPortrait.png);
+  }
+
+  #selectedPlayer2.ZenBuu{
+    background-image: url(../images/sprites/ZenBuu/ZenBuuPortrait.png);
+  }
 
   /***********************************/
   /***********************************/
@@ -365,6 +396,22 @@
 
   .perso.VegitoXenoSSJ4{
     background-image: url(../images/slotCharacter/VegitoXenoPortrait.png);
+  }
+
+  .perso.MechaZamasu{
+    background-image: url(../images/slotCharacter/MechaZamasuSlot.png);
+  }
+
+  .perso.SasukeRinnegan{
+    background-image: url(../images/slotCharacter/SasukeRinneganSlot.png);
+  }
+
+  .perso.NarutoDemon{
+    background-image: url(../images/slotCharacter/NarutoDemonSlot.png);
+  }
+
+  .perso.ZenBuu{
+    background-image: url(../images/slotCharacter/ZenBuuSlot.png);
   }
 
   /**********************************************************/
@@ -1974,6 +2021,217 @@
     }
   }
 
+  .Player1.MechaZamasu{
+    background-image: url(../images/sprites/MechaZamasu/MechaZamasuDoingKameha.png);
+    animation: comingMechaZamasu 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.MechaZamasu.win{
+    background-image: url(../images/sprites/MechaZamasu/comin/1.png);
+  }
+
+  .Player1.MechaZamasu.loose{
+    background-image: url(../images/sprites/MechaZamasu/loose/1.png);
+  }
+
+  .Player2.MechaZamasu{
+    background-image: url(../images/sprites/MechaZamasu/MechaZamasuDoingKameha.png);
+    animation: comingMechaZamasu 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.MechaZamasu.win{
+    background-image: url(../images/sprites/MechaZamasu/comin/1.png);
+  }
+
+  .Player2.MechaZamasu.loose{
+    background-image: url(../images/sprites/MechaZamasu/loose/1.png);
+  }
+
+  @keyframes comingMechaZamasu{
+    0%{
+      background-image: url(../images/sprites/MechaZamasu/comin/1.png);
+    }100%{
+      background-image: url(../images/sprites/MechaZamasu/comin/1.png);
+    }
+  }
+
+  .Player1.SasukeRinnegan{
+    background-image: url(../images/sprites/SasukeRinnegan/sasukeRinneganDoingKameha.png);
+    animation: comingSasukeRinnegan 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.SasukeRinnegan.win{
+    background-image: url(../images/sprites/SasukeRinnegan/win/4.png);
+    animation: winSasukeRinnegan 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.SasukeRinnegan.loose{
+    background-image: url(../images/sprites/SasukeRinnegan/loose/2.png);
+    animation: looseSasukeRinnegan 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.SasukeRinnegan{
+    background-image: url(../images/sprites/SasukeRinnegan/sasukeRinneganDoingKameha.png);
+    animation: comingSasukeRinnegan 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.SasukeRinnegan.win{
+    background-image: url(../images/sprites/SasukeRinnegan/win/4.png);
+    animation: winSasukeRinnegan 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.SasukeRinnegan.loose{
+    background-image: url(../images/sprites/SasukeRinnegan/loose/2.png);
+    animation: looseSasukeRinnegan 3s;
+    animation-timing-function: steps(1);
+  }
+
+  @keyframes comingSasukeRinnegan{
+    0%{
+      background-image: url(../images/sprites/SasukeRinnegan/comin/1.png);
+    }33%{
+      background-image: url(../images/sprites/SasukeRinnegan/comin/2.png);
+    }66%{
+      background-image: url(../images/sprites/SasukeRinnegan/comin/3.png);
+    }100%{
+      background-image: url(../images/sprites/SasukeRinnegan/comin/3.png);
+    }
+  }
+
+  @keyframes winSasukeRinnegan{
+    0%{
+      background-image: url(../images/sprites/SasukeRinnegan/win/1.png);
+    }25%{
+      background-image: url(../images/sprites/SasukeRinnegan/win/2.png);
+    }50%{
+      background-image: url(../images/sprites/SasukeRinnegan/win/3.png);
+    }75%{
+      background-image: url(../images/sprites/SasukeRinnegan/win/4.png);
+    }100%{
+      background-image: url(../images/sprites/SasukeRinnegan/win/4.png);
+    }
+  }
+
+  @keyframes looseSasukeRinnegan{
+    0%{
+      background-image: url(../images/sprites/SasukeRinnegan/loose/1.png);
+    }50%{
+      background-image: url(../images/sprites/SasukeRinnegan/loose/2.png);
+    }100%{
+      background-image: url(../images/sprites/SasukeRinnegan/loose/2.png);
+    }
+  }
+
+  .Player1.NarutoDemon{
+    background-image: url(../images/sprites/narutoDemon/DemonNarutoDoingKameha.png);
+    animation: comingNarutoDemon 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.NarutoDemon.win{
+    background-image: url(../images/sprites/narutoDemon/comin/3.png);
+    animation: comingNarutoDemon 3s infinite;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.NarutoDemon.loose{
+    background-image: url(../images/sprites/narutoDemon/loose/1.png);
+  }
+
+  .Player2.NarutoDemon{
+    background-image: url(../images/sprites/narutoDemon/DemonNarutoDoingKameha.png);
+    animation: comingNarutoDemon 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.NarutoDemon.win{
+    background-image: url(../images/sprites/narutoDemon/comin/3.png);
+    animation: comingNarutoDemon 3s infinite;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.NarutoDemon.loose{
+    background-image: url(../images/sprites/narutoDemon/loose/1.png);
+  }
+
+  @keyframes comingNarutoDemon{
+    0%{
+      background-image: url(../images/sprites/narutoDemon/comin/1.png);
+    }33%{
+      background-image: url(../images/sprites/narutoDemon/comin/2.png);
+    }66%{
+      background-image: url(../images/sprites/narutoDemon/comin/3.png);
+    }100%{
+      background-image: url(../images/sprites/narutoDemon/comin/3.png);
+    }
+  }
+
+  .Player1.ZenBuu{
+    background-image: url(../images/sprites/ZenBuu/ZenBuuDoingKameha.png);
+    animation: comingZenBuu 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.ZenBuu.win{
+    background-image: url(../images/sprites/ZenBuu/win/1.png);
+  }
+
+  .Player1.ZenBuu.loose{
+    background-image: url(../images/sprites/ZenBuu/loose/4.png);
+    animation: looseZenBuu 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.ZenBuu{
+    background-image: url(../images/sprites/ZenBuu/ZenBuuDoingKameha.png);
+    animation: comingZenBuu 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.ZenBuu.win{
+    background-image: url(../images/sprites/ZenBuu/win/1.png);
+  }
+
+  .Player2.ZenBuu.loose{
+    background-image: url(../images/sprites/ZenBuu/loose/4.png);
+    animation: looseZenBuu 3s;
+    animation-timing-function: steps(1);
+  }
+
+  @keyframes looseZenBuu{
+    0%{
+      background-image: url(../images/sprites/ZenBuu/loose/1.png);
+    }25%{
+      background-image: url(../images/sprites/ZenBuu/loose/2.png);
+    }50%{
+      background-image: url(../images/sprites/ZenBuu/loose/3.png);
+    }75%{
+      background-image: url(../images/sprites/ZenBuu/loose/4.png);
+    }100%{
+      background-image: url(../images/sprites/ZenBuu/loose/4.png);
+    }
+  }
+
+  @keyframes comingZenBuu{
+    0%{
+      background-image: url(../images/sprites/ZenBuu/comingInFight/1.png);
+    }33%{
+      background-image: url(../images/sprites/ZenBuu/comingInFight/2.png);
+    }66%{
+      background-image: url(../images/sprites/ZenBuu/comingInFight/3.png);
+    }100%{
+      background-image: url(../images/sprites/ZenBuu/comingInFight/3.png);
+    }
+  }
+
+
   /***************PLAYERSET********************/
 
   /***************PORTRAITSET********************/
@@ -2217,6 +2475,38 @@
   .portraitP2.VegitoXenoSSJ4{
     background-image: url(../images/sprites/VegitoXeno/VegitoXenoPortrait.png);
   }
+
+  .portraitP1.MechaZamasu{
+    background-image: url(../images/sprites/MechaZamasu/MechaZamasuPortrait.png);
+  }
+
+  .portraitP2.MechaZamasu{
+    background-image: url(../images/sprites/MechaZamasu/MechaZamasuPortrait.png);
+  }
+
+  .portraitP1.SasukeRinnegan{
+    background-image: url(../images/sprites/SasukeRinnegan/SasukeRinneganPortrait.png);
+  }
+  
+  .portraitP2.SasukeRinnegan{
+    background-image: url(../images/sprites/SasukeRinnegan/SasukeRinneganPortrait.png);
+  }
+
+  .portraitP1.NarutoDemon{
+    background-image: url(../images/sprites/narutoDemon/narutoDemonportrait.png);
+  }
+
+  .portraitP2.NarutoDemon{
+    background-image: url(../images/sprites/narutoDemon/narutoDemonportrait.png);
+  }
+
+  .portraitP1.ZenBuu{
+    background-image: url(../images/sprites/ZenBuu/ZenBuuPortrait.png);
+  }
+
+  .portraitP2.ZenBuu{
+    background-image: url(../images/sprites/ZenBuu/ZenBuuPortrait.png);
+  }
   
   /******************PORTRAITSET*****************/
 
@@ -2338,4 +2628,20 @@
 
   .subPerso.VegitoXenoSSJ4{
     background-image: url(../images/slotCharacter/VegitoXenoPortrait.png);
+  }
+
+  .subPerso.MechaZamasu{
+    background-image: url(../images/slotCharacter/MechaZamasuSlot.png);
+  }
+
+  .subPerso.SasukeRinnegan{
+    background-image: url(../images/slotCharacter/SasukeRinneganSlot.png);
+  }
+
+  .subPerso.NarutoDemon{
+    background-image: url(../images/slotCharacter/NarutoDemonSlot.png);
+  }
+
+  .subPerso.ZenBuu{
+    background-image: url(../images/slotCharacter/ZenBuuSlot.png);
   }

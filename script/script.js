@@ -11,6 +11,7 @@ const divCampaign = document.getElementById("menuCampaign");
 const divSelection = document.getElementById("panelPerso");
 const divGame = document.getElementById("gameTable");
 const divSummon = document.getElementById("summonMenu");
+const divShop = document.getElementById("shopMenu");
 
 // TODO VAR SECTION
 
@@ -32,7 +33,9 @@ let kamehaPlayer1 = document.getElementById("kamehaP1");
 let kamehaPlayer2 = document.getElementById("kamehaP2");
 let tabPersoDOM = document.getElementById("choosePerso");
 let divChooseDiff = document.getElementById("divIAdiff");
+let divShopList = document.getElementById("shopList");
 let dragonBall = 50;
+let money = 1000;
 
 
 let gameIsIa = false;
@@ -132,7 +135,7 @@ let listCampaignDBZ = [
         reward: {
             name: "BlackGoku",
             ID: 679,
-            version: []
+            version: ["BlackGoku"]
         },
         player:{
             name: "GohanSSJ3",
@@ -142,7 +145,7 @@ let listCampaignDBZ = [
     },{
         div : document.getElementById("campaign6"),
         campaign : "DBZ",
-        level : 5,
+        level : 6,
         isLocked: true,
         difficulty : "S",
         altReward:{
@@ -159,6 +162,27 @@ let listCampaignDBZ = [
             name: "GogetaSSG",
             ID: 0,
             version: ["GogetaSSG"]
+        }
+    },{
+        div : document.getElementById("campaign7"),
+        campaign : "DBZ",
+        level : 7,
+        isLocked: true,
+        difficulty : "SSS",
+        altReward:{
+            name: "VegitoXenoSSJ4",
+            ID: 1,
+            version: ["VegitoXenoSSJ4"]
+        },
+        reward: {
+            name: "MechaZamasu",
+            ID: 679,
+            version: ["MechaZamasu"]
+        },
+        player:{
+            name: "VegitoXenoSSJ4",
+            ID: 1,
+            version: ["VegitoXenoSSJ4"]
         }
     }
 ]
@@ -193,7 +217,7 @@ let listCampaignBTM = [
         altReward:{
             name: "Sasuke",
             ID: 1042,
-            version: []
+            version: ["Sasuke"]
         },
         reward: {
             name: "Itachi",
@@ -203,7 +227,28 @@ let listCampaignBTM = [
         player: {
             name: "Sasuke",
             ID: 1042,
+            version: ["Sasuke"]
+        }
+    },{
+        div : document.getElementById("campaignBTM3"),
+        campaign : "BTM",
+        level : 3,
+        difficulty : "SS",
+        isLocked: true,
+        altReward:{
+            name: "SasukeRinnegan",
+            ID: 1042,
             version: []
+        },
+        reward: {
+            name: "NarutoDemon",
+            ID: 812,
+            version: ["NarutoDemon"]
+        },
+        player: {
+            name: "SasukeRinnegan",
+            ID: 1042,
+            version: ["SasukeRinnegan"]
         }
     }
 ]
@@ -271,6 +316,12 @@ const rollFightMenu = () => {
 
 const setCountCrystal = () => {
     document.getElementById("crystalCount").innerHTML = dragonBall;
+    document.getElementById("crystalCountSummon").innerHTML = dragonBall;
+}
+
+const setCountMoney = () => {
+    document.getElementById("moneyCount").innerHTML = money;
+    document.getElementById("moneyCountShop").innerHTML = money;
 }
 
 const startCampaign = () =>
@@ -283,6 +334,11 @@ const startCampaign = () =>
 
 const goToSummonMenu = () => {
     divSummon.style.display = "initial";
+    divMenu.style.display = "none";
+}
+
+const goToShopMenu = () => {
+    divShop.style.display = "initial";
     divMenu.style.display = "none";
 }
 
@@ -325,11 +381,17 @@ document.getElementById("agIA").addEventListener("click", startChoosePersoIA);
 document.getElementById("agPvP").addEventListener("click", startChoosePerso);
 document.getElementById("campaignButton").addEventListener("click", startCampaign);
 document.getElementById("gatchaButton").addEventListener("click", goToSummonMenu);
+document.getElementById("shopButton").addEventListener("click", goToShopMenu);
 document.getElementById("returnMainAsSummon").addEventListener("click", () =>
 {
     setCountCrystal();
     divSummon.style.display = "none";
     divMenu.style.display = "initial";
+})
+document.getElementById("returnMainAsShop").addEventListener("click", () =>
+{
+    divMenu.style.display = "initial";
+    divShop.style.display = "none";
 })
 
 // FANCY MAIN MENU
@@ -575,7 +637,7 @@ document.getElementById("returnMain").addEventListener("click", returnMainMenu);
 //?GAME*********************************
 //?GAME*********************************
 
-document.addEventListener('keyup', (e) => {
+document.addEventListener('keydown', (e) => {
     console.log("key e");
     if(gameStarted === true && canClick === true){
         if(e.key === " "){
@@ -664,9 +726,9 @@ const setDifficulty = () => {
     }else if(difficultyRank === "SS"){
         console.log("lessgui");
         timeOutIa = 110;
-    }else if(difficultyRank === "S+"){
+    }else if(difficultyRank === "SSS"){
         timeOutIa = 90;
-    }else if(difficultyRank === "SS+"){
+    }else if(difficultyRank === "SSSS"){
         timeOutIa = 70;
     }
 }
@@ -912,6 +974,7 @@ const summonNewCharacter = () => {
         waitCall = 25;
         dragonBall -= 7;
         iterationOfRoll = 0;
+        setCountCrystal();
         callBackForSummon();
     }
 }
@@ -964,6 +1027,70 @@ document.getElementById("summonB").addEventListener("click", summonNewCharacter)
 //*SUMMON MENU*********************************
 //*SUMMON MENU*********************************
 //*SUMMON MENU*********************************
+
+//!SHOP MENU*********************************
+//!SHOP MENU*********************************
+//!SHOP MENU*********************************
+
+let tablePersoShop = [
+    [{
+        name: "ZenBuu",
+        ID: 666,
+        version: ["ZenBuu"],
+    }, 200]
+]
+let tableDivPersoShop = []
+
+const buyCharacter = (character, price, shopCase, id) => {
+    if(money>=price){
+        addCharacter(character);
+        money -= price;
+        setCountMoney();
+        shopCase.classList.remove(character.name);
+        shopCase.children[0].innerHTML = "";
+        shopCase.remove();
+        tablePersoShop.splice(id);
+        createShopTable();
+    }
+}
+
+const createShopTable = () => {
+
+    divShopList.innerHTML = "";
+    
+    for(let i = 0;i<18;i++){
+        if(tablePersoShop[i] !== undefined){
+            let shopCase = divShopList.appendChild(document.createElement("div"));
+            shopCase.classList.add("shopCase");
+            shopCase.classList.add(tablePersoShop[i][0].name);
+            let priceCase = shopCase.appendChild(document.createElement("div"));
+            priceCase.classList.add("price");
+            priceCase.innerHTML = tablePersoShop[i][1] + "  $";
+
+            shopCase.addEventListener("click", () => {
+                buyCharacter(tablePersoShop[i][0], tablePersoShop[i][1], shopCase, i);
+            })
+
+            let CaseShopObject = {
+                shopDiv: shopCase,
+                shopPerso: tablePersoShop[i][0],
+                price: tablePersoShop[i][1]
+            }
+
+            tableDivPersoShop.push(CaseShopObject);
+        }else{
+            let shopCase = divShopList.appendChild(document.createElement("div"));
+            shopCase.classList.add("shopCase");
+        }
+    }
+}
+
+createShopTable();
+
+
+//!SHOP MENU*********************************
+//!SHOP MENU*********************************
+//!SHOP MENU*********************************
 
 //SET DIFFICULTY WITH EVENT
 

@@ -1216,6 +1216,14 @@ body{
   background-image: url(../images/ui/SuperJanembaLockedButton.png);
 }
 
+#campaign7{
+  background-image: url(../images/ui/ZamasuRevengeCampaign.png);
+}
+
+#campaign7.locked{
+  background-image: url(../images/ui/ZamasuRevengeLockedCampaign.png);
+}
+
 #campaignBTM1{
   background-image: url(../images/ui/WhatIsGoingOnCampaignButton.png);
   height: 10.25vh;
@@ -1228,6 +1236,16 @@ body{
 
 #campaignBTM2.locked{
   background-image: url(../images/ui/RevengeTimeLockedCampaignButton.png);
+  height: 10.25vh;
+}
+
+#campaignBTM3{
+  background-image: url(../images/ui/NarutoIsOnFireCampaign.png);
+  height: 10.25vh;
+}
+
+#campaignBTM3.locked{
+  background-image: url(../images/ui/NarutoIsOnFireLockedCampaign.png);
   height: 10.25vh;
 }
 
@@ -1267,6 +1285,14 @@ body{
 
 .ranking.SS{
   background-image: url(../images/ui/SS-Tier.png);
+}
+
+.ranking.SSS{
+  background-image: url(../images/ui/SSS-Tier.png);
+}
+
+.ranking.SSSS{
+  background-image: url(../images/ui/SSSS-Tier.png);
 }
 
 /**********************************************************/
@@ -1337,6 +1363,14 @@ body{
 
 #SS{
   background-image: url(../images/ui/SS-Tier.png);
+}
+
+#SSS{
+  background-image: url(../images/ui/SSS-tier.png);
+}
+
+#SSSS{
+  background-image: url(../images/ui/SSSS-tier.png);
 }
 
 /**********************************************************/
@@ -1589,4 +1623,84 @@ body{
 
 /**********************************************************/
 /***************************SUMMON*******************************/
+/**********************************************************/
+
+/**********************************************************/
+/***************************SHOP*******************************/
+/**********************************************************/
+
+#shopButton{
+  background-image: url(../images/ui/shop.png);
+}
+
+.shop{
+  display: none;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+.containerMoney{
+  position: absolute;
+  width: 35vh;
+  height: 7vh;
+  bottom: 9%;
+  left: 2.75vh;
+  background-image: url(../images/ui/containerMoney.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerMoney h1{
+  color: white;
+  font-size: 3.5vh;
+  margin-bottom:0.75vh ;
+  text-shadow: 0 0.5vh 0 rgba(0, 0, 0, 0.322);
+}
+
+#money2{
+  bottom: 3%;
+}
+
+.shopList{
+  display: flex;
+  position: absolute;
+  top: 12.5%;
+  left:12.5%;
+  width: 75%;
+  height: 75%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.shopCase{
+  width: 20vh;
+  height: 20vh;
+  background-size: cover;
+  margin: 2vh;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  background-image: url(../images/slotCharacter/slotLocked.png);
+}
+
+.price{
+  margin-top: 20vh;
+  font-size: 3vh;
+}
+
+/*Shoplist*/
+
+.shopCase.ZenBuu{
+  background-image: url(../images/slotCharacter/ZenBuuSlot.png);
+}
+
+/*Shoplist*/
+
+/**********************************************************/
+/***************************SHOP*******************************/
 /**********************************************************/
