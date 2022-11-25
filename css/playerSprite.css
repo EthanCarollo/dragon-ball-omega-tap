@@ -194,6 +194,30 @@
     background-image: url(../images/sprites/GohanSSB/GohanSSBPortrait.png);
   }
 
+  #selectedPlayer1.GokuSSJ4{
+    background-image: url(../images/sprites/GokuSSJ4/GokuSSJ4Portrait.png);
+  }
+
+  #selectedPlayer2.GokuSSJ4{
+    background-image: url(../images/sprites/GokuSSJ4/GokuSSJ4Portrait.png);
+  }
+
+  #selectedPlayer1.VegetaSSB{
+    background-image: url(../images/sprites/VegetaSSB/VegetaSSBPortrait.png);
+  }
+
+  #selectedPlayer2.VegetaSSB{
+    background-image: url(../images/sprites/VegetaSSB/VegetaSSBPortrait.png);
+  }
+
+  #selectedPlayer1.Bardock{
+    background-image: url(../images/sprites/Bardock/BardockPortrait.png);
+  }
+
+  #selectedPlayer2.Bardock{
+    background-image: url(../images/sprites/Bardock/BardockPortrait.png);
+  }
+
   /***********************************/
   /***********************************/
   /***********************************/
@@ -292,6 +316,18 @@
 
   .perso.GohanSSB{
     background-image: url(../images/slotCharacter/GohanSSBPortrait.png);
+  }
+
+  .perso.GokuSSJ4{
+    background-image: url(../images/slotCharacter/GokuSSJ4Slot.png);
+  }
+
+  .perso.VegetaSSB{
+    background-image: url(../images/slotCharacter/VegetaSSBSlot.png);
+  }
+
+  .perso.Bardock{
+    background-image: url(../images/slotCharacter/BardockSlot.png);
   }
 
   /**********************************************************/
@@ -1596,6 +1632,172 @@
     }
   }
 
+  .Player1.GokuSSJ4{
+    background-image: url(../images/sprites/GokuSSJ4/GokuSSJ4DoingKameha.png);
+    animation: comingGokuSSJ4 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.GokuSSJ4.win{
+    background-image: url(../images/sprites/GokuSSJ4/win/3.png);
+    animation: winGokuSSJ4 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.GokuSSJ4.loose{
+    background-image: url(../images/sprites/GokuSSJ4/loose/3.png);
+    animation: looseGokuSSJ4 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.GokuSSJ4{
+    background-image: url(../images/sprites/GokuSSJ4/GokuSSJ4DoingKameha.png);
+    animation: comingGokuSSJ4 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.GokuSSJ4.win{
+    background-image: url(../images/sprites/GokuSSJ4/win/3.png);
+    animation: winGokuSSJ4 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.GokuSSJ4.loose{
+    background-image: url(../images/sprites/GokuSSJ4/loose/3.png);
+    animation: looseGokuSSJ4 3s;
+    animation-timing-function: steps(1);
+  }
+
+  @keyframes comingGokuSSJ4{
+    0%{
+      background-image: url(../images/sprites/GokuSSJ4/comingInFight/1.png);
+    }33%{
+      background-image: url(../images/sprites/GokuSSJ4/comingInFight/2.png);
+    }66%{
+      background-image: url(../images/sprites/GokuSSJ4/comingInFight/3.png);
+    }100%{
+      background-image: url(../images/sprites/GokuSSJ4/comingInFight/3.png);
+    }
+  }
+
+  @keyframes winGokuSSJ4{
+    0%{
+      background-image: url(../images/sprites/GokuSSJ4/win/1.png);
+    }33%{
+      background-image: url(../images/sprites/GokuSSJ4/win/2.png);
+    }66%{
+      background-image: url(../images/sprites/GokuSSJ4/win/3.png);
+    }100%{
+      background-image: url(../images/sprites/GokuSSJ4/win/4.png);
+    }
+  }
+
+  @keyframes looseGokuSSJ4{
+    0%{
+      background-image: url(../images/sprites/GokuSSJ4/loose/1.png);
+    }50%{
+      background-image: url(../images/sprites/GokuSSJ4/loose/2.png);
+    }100%{
+      background-image: url(../images/sprites/GokuSSJ4/loose/3.png);
+    }
+  }
+
+  .Player1.VegetaSSB{
+    background-image: url(../images/sprites/VegetaSSB/VegetaSSBDoingKameha.png);
+    animation: comingVegetaSSB 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.VegetaSSB.win{
+    background-image: url(../images/sprites/VegetaSSB/win/3.png);
+    animation: winVegetaSSB 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.VegetaSSB.loose{
+    background-image: url(../images/sprites/VegetaSSB/loose/1.png);
+  }
+
+  .Player2.VegetaSSB{
+    background-image: url(../images/sprites/VegetaSSB/VegetaSSBDoingKameha.png);
+    animation: comingVegetaSSB 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.VegetaSSB.win{
+    background-image: url(../images/sprites/VegetaSSB/win/3.png);
+    animation: winVegetaSSB 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.VegetaSSB.loose{
+    background-image: url(../images/sprites/VegetaSSB/loose/1.png);
+  }
+
+  @keyframes comingVegetaSSB{
+    0%{
+      background-image: url(../images/sprites/VegetaSSB/coming/1.png);
+    }33%{
+      background-image: url(../images/sprites/VegetaSSB/coming/2.png);
+    }66%{
+      background-image: url(../images/sprites/VegetaSSB/coming/2.png);
+    }100%{
+      background-image: url(../images/sprites/VegetaSSB/coming/2.png);
+    }
+  }
+
+  @keyframes winVegetaSSB{
+    0%{
+      background-image: url(../images/sprites/VegetaSSB/win/1.png);
+    }33%{
+      background-image: url(../images/sprites/VegetaSSB/win/2.png);
+    }66%{
+      background-image: url(../images/sprites/VegetaSSB/win/3.png);
+    }100%{
+      background-image: url(../images/sprites/VegetaSSB/win/3.png);
+    }
+  }
+
+  .Player1.Bardock{
+    background-image: url(../images/sprites/Bardock/BardockDoingKameha.png);
+    animation: comingBardock 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.Bardock.win{
+    background-image: url(../images/sprites/Bardock/comin/2.png);
+  }
+
+  .Player1.Bardock.loose{
+    background-image: url(../images/sprites/Bardock/loose/1.png);
+  }
+
+  .Player2.Bardock{
+    background-image: url(../images/sprites/Bardock/BardockDoingKameha.png);
+    animation: comingBardock 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.Bardock.win{
+    background-image: url(../images/sprites/Bardock/comin/2.png);
+  }
+
+  .Player2.Bardock.loose{
+    background-image: url(../images/sprites/Bardock/loose/1.png);
+  }
+
+  @keyframes comingBardock{
+    0%{
+      background-image: url(../images/sprites/Bardock/comin/1.png);
+    }33%{
+      background-image: url(../images/sprites/Bardock/comin/1.png);
+    }66%{
+      background-image: url(../images/sprites/Bardock/comin/2.png);
+    }100%{
+      background-image: url(../images/sprites/Bardock/comin/1.png);
+    }
+  }
+
   /***************PLAYERSET********************/
 
   /***************PORTRAITSET********************/
@@ -1791,7 +1993,30 @@
   .portraitP2.GohanSSB{
     background-image: url(../images/sprites/GohanSSB/GohanSSBPortrait.png);
   }
+
+  .portraitP1.GokuSSJ4{
+    background-image: url(../images/sprites/GokuSSJ4/GokuSSJ4Portrait.png);
+  }
   
+  .portraitP2.GokuSSJ4{
+    background-image: url(../images/sprites/GokuSSJ4/GokuSSJ4Portrait.png);
+  }
+
+  .portraitP1.VegetaSSB{
+    background-image: url(../images/sprites/VegetaSSB/VegetaSSBPortrait.png);
+  }
+  
+  .portraitP2.VegetaSSB{
+    background-image: url(../images/sprites/VegetaSSB/VegetaSSBPortrait.png);
+  }
+
+  .portraitP1.Bardock{
+    background-image: url(../images/sprites/Bardock/BardockPortrait.png);
+  }
+  
+  .portraitP2.Bardock{
+    background-image: url(../images/sprites/Bardock/BardockPortrait.png);
+  }
   
   /******************PORTRAITSET*****************/
 
@@ -1889,4 +2114,16 @@
 
   .subPerso.GohanSSB{
     background-image: url(../images/slotCharacter/GohanSSBPortrait.png);
+  }
+
+  .subPerso.GokuSSJ4{
+    background-image: url(../images/slotCharacter/GokuSSJ4Slot.png);
+  }
+
+  .subPerso.VegetaSSB{
+    background-image: url(../images/slotCharacter/VegetaSSBSlot.png);
+  }
+
+  .subPerso.Bardock{
+    background-image: url(../images/slotCharacter/BardockSlot.png);
   }

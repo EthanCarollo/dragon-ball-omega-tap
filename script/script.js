@@ -858,6 +858,18 @@ let summoningCharacter = [
         name: "GohanSSB",
         ID: 54,
         version: ["GohanSSB"]
+    },{
+        name: "GokuSSJ4",
+        ID:10,
+        version: ["GokuSSJ4"]
+    },{
+        name: "VegetaSSB",
+        ID: 1123,
+        version: ["VegetaSSB"]
+    },{
+        name:"Bardock",
+        ID: 158,
+        version:["Bardock"]
     }
 ];
 let random = [summoningCharacter[(getRandomInt(summoningCharacter.length))],

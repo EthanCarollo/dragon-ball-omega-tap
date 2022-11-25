@@ -615,7 +615,7 @@ body{
 
 /* ! endregion Spiderman */
 
-/* ! region Spiderman */
+/* ! region Venom */
 
 /*KamehaP1*/
 
@@ -631,6 +631,8 @@ body{
   background-image: url(../images/sprites/kameha/slimeEndKameha.png);
   animation: none;
 }
+
+
 
 /*KamehaP1*/
 
@@ -652,7 +654,57 @@ body{
 /*KamehaP2*/
 
 
-/* ! endregion Spiderman */
+/* ! endregion Venom */
+
+/* ! region Frieza */
+
+/*KamehaP1*/
+
+.KamehaPlayer1.FirstFrieza .startPlayer1{
+  background-image:url(../images/sprites/kameha/pinkStartKameha\(4\).png);
+}
+
+.KamehaPlayer1.FirstFrieza .midPlayer1{
+  background-image: url(../images/sprites/kameha/pinkMidKameha\(3\).png);
+}
+
+.KamehaPlayer1.FirstFrieza .endPlayer1{
+  background-image: url(../images/sprites/kameha/pinkEndKameha\(1\).png);
+  animation: endKamehaPink2 1s infinite;
+  animation-timing-function: steps(1);
+}
+
+/*KamehaP1*/
+
+/*KamehaP2*/
+
+.KamehaPlayer2.FirstFrieza .startPlayer2{
+  background-image:url(../images/sprites/kameha/pinkStartKameha\(4\).png);
+}
+
+.KamehaPlayer2.FirstFrieza .midPlayer2{
+  background-image: url(../images/sprites/kameha/pinkMidKameha\(3\).png);
+}
+
+.KamehaPlayer2.FirstFrieza .endPlayer2{
+  background-image: url(../images/sprites/kameha/pinkEndKameha\(1\).png);
+  animation: endKamehaPink2 1s infinite;
+  animation-timing-function: steps(1);
+}
+
+@keyframes endKamehaPink2 {
+  0%{
+    background-image: url(../images/sprites/kameha/pinkEndKameha\(1\).png);
+  }50%{
+    background-image: url(../images/sprites/kameha/pinkEndKameha\(2\).png);
+  }
+
+}
+
+/*KamehaP2*/
+
+
+/* ! endregion Frieza */
 
 /***************KAMEHASET********************/
 
@@ -1499,6 +1551,30 @@ body{
 
 .playerIn.GohanSSB{
   background-image: url(../images/sprites/GohanSSB/GohanSSBPortrait.png);
+}
+
+.playerIn.GokuSSJ4{
+  background-image: url(../images/sprites/GokuSSJ4/GokuSSJ4Portrait.png);
+}
+
+.playerSubIn.GokuSSJ4{
+  background-image: url(../images/sprites/GokuSSJ4/GokuSSJ4Portrait.png);
+}
+
+.playerIn.VegetaSSB{
+  background-image: url(../images/sprites/VegetaSSB/VegetaSSBPortrait.png);
+}
+
+.playerSubIn.VegetaSSB{
+  background-image: url(../images/sprites/VegetaSSB/VegetaSSBPortrait.png);
+}
+
+.playerIn.Bardock{
+  background-image: url(../images/sprites/Bardock/BardockPortrait.png);
+}
+
+.playerSubIn.Bardock{
+  background-image: url(../images/sprites/Bardock/BardockPortrait.png);
 }
 
 /**********************************************************/
