@@ -1037,7 +1037,17 @@ let tablePersoShop = [
         name: "ZenBuu",
         ID: 666,
         version: ["ZenBuu"],
-    }, 200]
+    }, 200],
+    [{
+        name: "BabyVegeta",
+        ID: 646,
+        version: ["BabyVegeta"],
+    }, 300],
+    [{
+        name: "BabyBlackVegito",
+        ID: 646,
+        version: ["BabyBlackVegito"],
+    }, 500]
 ]
 let tableDivPersoShop = []
 

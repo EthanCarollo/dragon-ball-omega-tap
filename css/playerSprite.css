@@ -274,6 +274,22 @@
     background-image: url(../images/sprites/ZenBuu/ZenBuuPortrait.png);
   }
 
+  #selectedPlayer1.BabyVegeta{
+    background-image: url(../images/sprites/BabyVegeta/BabyVegetaPortrait.png);
+  }
+
+  #selectedPlayer2.BabyVegeta{
+    background-image: url(../images/sprites/BabyVegeta/BabyVegetaPortrait.png);
+  }
+
+  #selectedPlayer1.BabyBlackVegito{
+    background-image: url(../images/sprites/BabyBlackVegito/babyBlackVegitoPortrait.png);
+  }
+
+  #selectedPlayer2.BabyBlackVegito{
+    background-image: url(../images/sprites/BabyBlackVegito/babyBlackVegitoPortrait.png);
+  }
+
   /***********************************/
   /***********************************/
   /***********************************/
@@ -412,6 +428,14 @@
 
   .perso.ZenBuu{
     background-image: url(../images/slotCharacter/ZenBuuSlot.png);
+  }
+
+  .perso.BabyVegeta{
+    background-image: url(../images/slotCharacter/BabyVegetaSlot.png);
+  }
+
+  .perso.BabyBlackVegito{
+    background-image: url(../images/slotCharacter/BabyBlackVegitoSlot.png);
   }
 
   /**********************************************************/
@@ -2231,6 +2255,94 @@
     }
   }
 
+  .Player1.BabyVegeta{
+    background-image: url(../images/sprites/BabyVegeta/babyVegetaDoingKameha.png);
+    animation: comingBabyVegeta 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.BabyVegeta.win{
+    background-image: url(../images/sprites/BabyVegeta/Comin/1.png);
+  }
+
+  .Player1.BabyVegeta.loose{
+    background-image: url(../images/sprites/BabyVegeta/loose/1.png);
+  }
+
+  .Player2.BabyVegeta{
+    background-image: url(../images/sprites/BabyVegeta/babyVegetaDoingKameha.png);
+    animation: comingBabyVegeta 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.BabyVegeta.win{
+    background-image: url(../images/sprites/BabyVegeta/Comin/1.png);
+  }
+
+  .Player2.BabyVegeta.loose{
+    background-image: url(../images/sprites/BabyVegeta/loose/1.png);
+  }
+
+  @keyframes comingBabyVegeta{
+    0%{
+      background-image: url(../images/sprites/BabyVegeta/Comin/1.png);
+    }100%{
+      background-image: url(../images/sprites/BabyVegeta/Comin/1.png);
+    }
+  }
+
+  .Player1.BabyBlackVegito{
+    background-image: url(../images/sprites/BabyBlackVegito/babyBlackFusionDoingKameha.png);
+    animation: comingBabyBlackVegito 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.BabyBlackVegito.loose{
+    background-image: url(../images/sprites/BabyBlackVegito/loose/1.png);
+  }
+
+  .Player1.BabyBlackVegito.win{
+    background-image: url(../images/sprites/BabyBlackVegito/win/1.png);
+  }
+
+
+  .Player2.BabyBlackVegito{
+    background-image: url(../images/sprites/BabyBlackVegito/babyBlackFusionDoingKameha.png);
+    animation: comingBabyBlackVegito 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.BabyBlackVegito.loose{
+    background-image: url(../images/sprites/BabyBlackVegito/loose/1.png);
+  }
+
+  .Player2.BabyBlackVegito.win{
+    background-image: url(../images/sprites/BabyBlackVegito/win/1.png);
+  }
+
+  @keyframes comingBabyBlackVegito{
+    0%{
+      background-image: url(../images/sprites/BabyBlackVegito/comin/1.png);
+    }10%{
+      background-image: url(../images/sprites/BabyBlackVegito/comin/2.png);
+    }20%{
+      background-image: url(../images/sprites/BabyBlackVegito/comin/3.png);
+    }30%{
+      background-image: url(../images/sprites/BabyBlackVegito/comin/4.png);
+    }40%{
+      background-image: url(../images/sprites/BabyBlackVegito/comin/5.png);
+    }50%{
+      background-image: url(../images/sprites/BabyBlackVegito/comin/6.png);
+    }60%{
+      background-image: url(../images/sprites/BabyBlackVegito/comin/7.png);
+    }70%{
+      background-image: url(../images/sprites/BabyBlackVegito/comin/8.png);
+    }80%{
+      background-image: url(../images/sprites/BabyBlackVegito/comin/9.png);
+    }100%{
+      background-image: url(../images/sprites/BabyBlackVegito/comin/9.png);
+    }
+  }
 
   /***************PLAYERSET********************/
 
@@ -2507,6 +2619,14 @@
   .portraitP2.ZenBuu{
     background-image: url(../images/sprites/ZenBuu/ZenBuuPortrait.png);
   }
+
+  .portraitP1.BabyBlackVegito{
+    background-image: url(../images/sprites/BabyBlackVegito/babyBlackVegitoPortrait.png);
+  }
+
+  .portraitP2.BabyBlackVegito{
+    background-image: url(../images/sprites/BabyBlackVegito/babyBlackVegitoPortrait.png);
+  }
   
   /******************PORTRAITSET*****************/
 
@@ -2644,4 +2764,12 @@
 
   .subPerso.ZenBuu{
     background-image: url(../images/slotCharacter/ZenBuuSlot.png);
+  }
+
+  .subPerso.BabyVegeta{
+    background-image: url(../images/slotCharacter/BabyVegetaSlot.png);
+  }
+
+  .subPerso.BabyBlackVegito{
+    background-image: url(../images/slotCharacter/BabyBlackVegitoSlot.png);
   }

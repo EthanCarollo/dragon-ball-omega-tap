@@ -1699,6 +1699,14 @@ body{
   background-image: url(../images/slotCharacter/ZenBuuSlot.png);
 }
 
+.shopCase.BabyVegeta{
+  background-image: url(../images/slotCharacter/BabyVegetaSlot.png);
+}
+
+.shopCase.BabyBlackVegito{
+  background-image: url(../images/slotCharacter/BabyBlackVegitoSlot.png);
+}
+
 /*Shoplist*/
 
 /**********************************************************/
