@@ -27,10 +27,11 @@
 # KidBuu = ++
 # Buumasu = ++
 # Buutenks = ++
+# ZenBuu = ++
+# Buuhan sprite is set
 
 # Venom = ++
 # SpiderMan = ++
 # Itachi = ++
 # Sasuke = ++
 
-# Perso à add pour le menu summon : Buumasu, MajinVegeta
