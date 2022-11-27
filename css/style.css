@@ -1168,6 +1168,11 @@ body{
   background-image: url(../images/ui/BreakingTheMultiverseCampaignButton.png);
 }
 
+#campaignSlide3{
+  background-image: url(../images/ui/BTM\ BUTTON\ CAMPAIGN\ nightmare.png);
+  display: none;
+}
+
 .campaign{
   transition: all 1s;
   cursor: pointer;
@@ -1276,6 +1281,11 @@ body{
   height: 10.25vh;
 }
 
+#campaignNTM1{
+  background-image: url(../images/ui/NightmareButtonYouCantDefeatMe.png);
+  height: 10.25vh;
+}
+
 .campaignMenu{
   overflow-y: auto;
 }
@@ -1320,6 +1330,10 @@ body{
 
 .ranking.SSSS{
   background-image: url(../images/ui/SSSS-Tier.png);
+}
+
+.ranking.SSSSS{
+  background-image: url(../images/ui/SSSSS-Tier.png);
 }
 
 /**********************************************************/
@@ -1765,6 +1779,33 @@ body{
   height: 100%;
   top: 0%;
   display: none;
+  background-image: url(../images/background/backgroundTamise.png);
+  animation: appearBG 0.5s reverse;
+  z-index: 150;
+}
+
+.code.active{
+  display: initial;
+  animation: appearBG 0.5s;
+  z-index: 150;
+}
+
+@keyframes appearBG{
+  0%{
+    display: none;
+    opacity: 0;
+  }1%{
+    display: initial;
+  }100%{
+    opacity: 100;
+  }
+}
+
+.imageCode{
+  position: absolute;
+  top: 25%;
+  width: 50%;
+  left: 25%;
 }
 
 .centeringForm{

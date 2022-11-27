@@ -290,6 +290,14 @@
     background-image: url(../images/sprites/BabyBlackVegito/babyBlackVegitoPortrait.png);
   }
 
+  #selectedPlayer1.NappaSSJ4{
+    background-image: url(../images/sprites/NappaSSJ4/NappaSSJ4Portrait.png);
+  }
+
+  #selectedPlayer2.NappaSSJ4{
+    background-image: url(../images/sprites/NappaSSJ4/NappaSSJ4Portrait.png);
+  }
+
   /***********************************/
   /***********************************/
   /***********************************/
@@ -436,6 +444,10 @@
 
   .perso.BabyBlackVegito{
     background-image: url(../images/slotCharacter/BabyBlackVegitoSlot.png);
+  }
+
+  .perso.NappaSSJ4{
+    background-image: url(../images/slotCharacter/NappaSSJ4Slot.png);
   }
 
   /**********************************************************/
@@ -2344,6 +2356,56 @@
     }
   }
 
+  .Player1.NappaSSJ4{
+    background-image: url(../images/sprites/NappaSSJ4/NappaSSJ4KamehaDo.png);
+    animation: comingNappaSSJ4 3s;
+    width: 25vh;
+    height: 25vh;
+    top:35%;
+    left: -2%;
+  }
+
+  @keyframes comingNappaSSJ4{
+    0%{
+      background-image: url(../images/sprites/NappaSSJ4/NappaSSJ4Idle.png);
+    }100%{
+      background-image: url(../images/sprites/NappaSSJ4/NappaSSJ4Idle.png);
+    }
+  }
+
+  .Player1.NappaSSJ4.loose{
+    background-image: none;
+  }
+
+  .Player1.NappaSSJ4.win{
+    background-image: url(../images/sprites/NappaSSJ4/NappaSSJ4Idle.png);
+  }
+
+  .Player2.NappaSSJ4{
+    background-image: url(../images/sprites/NappaSSJ4/NappaSSJ4KamehaDo.png);
+    animation: comingNappaSSJ4 3s;
+    width: 25vh;
+    height: 25vh;
+    top:35%;
+    right: -2%;
+  }
+
+  @keyframes comingNappaSSJ4{
+    0%{
+      background-image: url(../images/sprites/NappaSSJ4/NappaSSJ4Idle.png);
+    }100%{
+      background-image: url(../images/sprites/NappaSSJ4/NappaSSJ4Idle.png);
+    }
+  }
+
+  .Player2.NappaSSJ4.loose{
+    background-image: none;
+  }
+
+  .Player2.NappaSSJ4.win{
+    background-image: url(../images/sprites/NappaSSJ4/NappaSSJ4Idle.png);
+  }
+
   /***************PLAYERSET********************/
 
   /***************PORTRAITSET********************/
@@ -2627,6 +2689,14 @@
   .portraitP2.BabyBlackVegito{
     background-image: url(../images/sprites/BabyBlackVegito/babyBlackVegitoPortrait.png);
   }
+
+  .portraitP1.NappaSSJ4{
+    background-image: url(../images/sprites/NappaSSJ4/NappaSSJ4Portrait.png);
+  }
+
+  .portraitP2.NappaSSJ4{
+    background-image: url(../images/sprites/NappaSSJ4/NappaSSJ4Portrait.png);
+  }
   
   /******************PORTRAITSET*****************/
 
@@ -2772,4 +2842,8 @@
 
   .subPerso.BabyBlackVegito{
     background-image: url(../images/slotCharacter/BabyBlackVegitoSlot.png);
+  }
+
+  .subPerso.NappaSSJ4{
+    background-image: url(../images/slotCharacter/NappaSSJ4Slot.png);
   }

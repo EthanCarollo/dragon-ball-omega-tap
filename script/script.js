@@ -253,6 +253,26 @@ let listCampaignBTM = [
         }
     }
 ]
+let listCampaignNTM = [
+    {
+        div : document.getElementById("campaignNTM1"),
+        campaign : "NTM",
+        level : 1,
+        difficulty : "SSSSS",
+        isLocked: false,
+        altReward:null,
+        reward: {
+            name: "NappaSSJ4",
+            ID: 8145,
+            version: []
+        },
+        player: {
+            name: "GogetaSSG",
+            ID: 102,
+            version: []
+        }
+    }
+]
 let actualCampaign = null;
 let tabPerso = [
     {
@@ -297,15 +317,15 @@ let tabAllPerso = [
     },{
         name: "Gogeta",
         ID: 0,
-        version: ["Gogeta"]
+        version: ["Gogeta", "GogetaSSG"]
     },{
         name: "VegitoSSJ",
         ID: 1,
-        version: ["VegitoSSJ"]
+        version: ["VegitoSSJ", "VegitoXenoSSJ4"]
     },{
         name: "FirstFrieza",
         ID: 8,
-        version: ["FirstFrieza"]
+        version: ["FirstFrieza", "GoldenFrieza"]
     },{
         name: "KidBuu",
         ID: 666,
@@ -313,7 +333,51 @@ let tabAllPerso = [
     },{
         name: "GohanSSJ",
         ID: 54,
-        version: ["GohanSSJ", "GohanSSB"]
+        version: ["GohanSSJ", "GohanSSJ3", "GohanSSB"]
+    },{
+        name: "FinalCooler",
+        ID: 896,
+        version: ["FinalCooler", "GoldenCooler"]
+    },{
+        name: "SuperJanembaXeno",
+        ID: 678,
+        version: ["SuperJanembaXeno"]
+    },{
+        name: "BlackGoku",
+        ID: 679,
+        version: ["BlackGoku", "MechaZamasu"]
+    },{
+        name: "NappaSSJ4",
+        ID: 8145,
+        version: []
+    },{
+        name:"Bardock",
+        ID: 158,
+        version:["Bardock"]
+    },{
+        name: "DrGero",
+        ID: 1124,
+        version: ["DrGero"]
+    },{
+        name: "Sasuke",
+        ID: 1042,
+        version: ["Sasuke", "SasukeRinnegan"]
+    },{
+        name: "Itachi",
+        ID: 811,
+        version: []
+    },{
+        name: "NarutoDemon",
+        ID: 812,
+        version: ["NarutoDemon"]
+    },{
+        name: "SpiderMan",
+        ID: 102,
+        version: []
+    },{
+        name: "Venom",
+        ID: 81,
+        version: []
     }
 ];
 let tabPersoDiv = [];
@@ -356,14 +420,6 @@ const setCountMoney = () => {
     document.getElementById("moneyCountShop").innerHTML = money;
 }
 
-const startCampaign = () =>
-{
-    setVisualCampaignMenu(listCampaignDBZ);
-    setVisualCampaignMenu(listCampaignBTM);
-    divCampaign.style.display = "initial";
-    divMenu.style.display = "none";
-}
-
 const goToSummonMenu = () => {
     divSummon.style.display = "initial";
     divMenu.style.display = "none";
@@ -375,7 +431,15 @@ const goToShopMenu = () => {
 }
 
 const goToCodeMenu = () => {
-    divCode.style.display = "initial";
+    divCode.classList.toggle("active");
+}
+
+const startCampaign = () =>
+{
+    setVisualCampaignMenu(listCampaignDBZ);
+    setVisualCampaignMenu(listCampaignBTM);
+    setVisualCampaignMenu(listCampaignNTM);
+    divCampaign.style.display = "initial";
     divMenu.style.display = "none";
 }
 
@@ -396,20 +460,6 @@ const startChoosePersoIA = () => {
     setDifficultyInTab("D", 0);
     divMenu.style.display = "none";
     divSelection.style.display = "initial"
-}
-
-const setVisualCampaignMenu = (campaignSlide) => {
-    for(let i =0;i<campaignSlide.length;i++){
-        if(campaignSlide[i].isLocked === true){
-            campaignSlide[i].div.classList.add("locked");
-        }else{
-            campaignSlide[i].div.classList.remove("locked");
-            campaignSlide[i].div.innerHTML ="";
-            let rankTier = campaignSlide[i].div.appendChild(document.createElement("div"));
-            rankTier.classList.add("ranking");
-            rankTier.classList.add(campaignSlide[i].difficulty);
-        }
-    }
 }
 
 setCountCrystal();
@@ -433,8 +483,7 @@ document.getElementById("returnMainAsShop").addEventListener("click", () =>
 })
 document.getElementById("returnMainAsCode").addEventListener("click", () =>
 {
-    divMenu.style.display = "initial";
-    divCode.style.display = "none";
+    divCode.classList.toggle("active");
 })
 
 // FANCY MAIN MENU
@@ -453,7 +502,6 @@ let logMovement = (e) => {
     document.getElementById("backgroundSpecial").style.transform = rotateYString + rotateXString;
 }
 
-
 document.addEventListener('mousemove', logMovement);
 
 // FANCY MAIN MENU
@@ -465,6 +513,20 @@ document.addEventListener('mousemove', logMovement);
 //? CAMPAIGN MENU*********************************
 //? CAMPAIGN MENU*********************************
 //? CAMPAIGN MENU*********************************
+
+const setVisualCampaignMenu = (campaignSlide) => {
+    for(let i =0;i<campaignSlide.length;i++){
+        if(campaignSlide[i].isLocked === true){
+            campaignSlide[i].div.classList.add("locked");
+        }else{
+            campaignSlide[i].div.classList.remove("locked");
+            campaignSlide[i].div.innerHTML ="";
+            let rankTier = campaignSlide[i].div.appendChild(document.createElement("div"));
+            rankTier.classList.add("ranking");
+            rankTier.classList.add(campaignSlide[i].difficulty);
+        }
+    }
+}
 
 const returnToMainMenuAsCampaign = () => {
     divCampaign.style.display = "none";
@@ -505,6 +567,11 @@ const setCampaignEvent = () => {
             chooseCampaign(listCampaignBTM[j]);
         })
     }
+    for(let k = 0;k<listCampaignNTM.length;k++){
+        listCampaignNTM[k].div.addEventListener("click", () => {
+            chooseCampaign(listCampaignNTM[k]);
+        })
+    }
 }
 
 setCampaignEvent();
@@ -515,6 +582,9 @@ document.getElementById("campaignSlide1").addEventListener("click", ()=>{
 })
 document.getElementById("campaignSlide2").addEventListener("click", ()=>{
     rollCampaignSlide(listCampaignBTM);
+})
+document.getElementById("campaignSlide3").addEventListener("click", ()=>{
+    rollCampaignSlide(listCampaignNTM);
 })
 
 
@@ -767,12 +837,13 @@ const setDifficulty = () => {
     }else if(difficultyRank === "S"){
         timeOutIa = 160;
     }else if(difficultyRank === "SS"){
-        console.log("lessgui");
         timeOutIa = 110;
     }else if(difficultyRank === "SSS"){
         timeOutIa = 90;
     }else if(difficultyRank === "SSSS"){
         timeOutIa = 70;
+    }else if(difficultyRank === "SSSSS"){
+        timeOutIa = 50;
     }
 }
 
@@ -1158,10 +1229,18 @@ const getAllPerso = () => {
     tabPerso = [...tabAllPerso];
 }
 
+const setNightmare = () => {
+    document.getElementById("campaignSlide3").style.display = "initial";
+}
+
 let cheatCode = [
     {
     code : "unlockall",
     function : getAllPerso
+    },
+    {
+        code : "nightmare",
+        function : setNightmare
     }
 ];
 
