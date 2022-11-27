@@ -14,6 +14,7 @@
 
 # GohanSSJ = ++
 # GohanSSJ3 = ++
+# GohanSSB = ++
 
 # BlackGoku = ++
 
