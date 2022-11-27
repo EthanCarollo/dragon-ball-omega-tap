@@ -34,4 +34,6 @@
 # SpiderMan = ++
 # Itachi = ++
 # Sasuke = ++
+# SasukeRinnegan = ++
+# NarutoDemon = ++
 
