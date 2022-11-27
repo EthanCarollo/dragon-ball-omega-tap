@@ -1037,17 +1037,17 @@ let tablePersoShop = [
         name: "ZenBuu",
         ID: 666,
         version: ["ZenBuu"],
-    }, 200],
+    }, 200, true],
     [{
         name: "BabyVegeta",
         ID: 646,
         version: ["BabyVegeta"],
-    }, 300],
+    }, 300, true],
     [{
         name: "BabyBlackVegito",
         ID: 646,
         version: ["BabyBlackVegito"],
-    }, 500]
+    }, 500,true]
 ]
 let tableDivPersoShop = []
 
@@ -1059,7 +1059,8 @@ const buyCharacter = (character, price, shopCase, id) => {
         shopCase.classList.remove(character.name);
         shopCase.children[0].innerHTML = "";
         shopCase.remove();
-        tablePersoShop.splice(id);
+        tablePersoShop[id][2] = false;
+        //tablePersoShop.splice(id);
         createShopTable();
     }
 }
@@ -1068,25 +1069,29 @@ const createShopTable = () => {
 
     divShopList.innerHTML = "";
     
-    for(let i = 0;i<18;i++){
+    for(let i = 0;i<21;i++){
         if(tablePersoShop[i] !== undefined){
             let shopCase = divShopList.appendChild(document.createElement("div"));
             shopCase.classList.add("shopCase");
-            shopCase.classList.add(tablePersoShop[i][0].name);
-            let priceCase = shopCase.appendChild(document.createElement("div"));
-            priceCase.classList.add("price");
-            priceCase.innerHTML = tablePersoShop[i][1] + "  $";
 
-            shopCase.addEventListener("click", () => {
-                buyCharacter(tablePersoShop[i][0], tablePersoShop[i][1], shopCase, i);
-            })
-
+            if(tablePersoShop[i][2]!==false){
+                shopCase.classList.add(tablePersoShop[i][0].name);
+                let priceCase = shopCase.appendChild(document.createElement("div"));
+                priceCase.classList.add("price");
+                priceCase.innerHTML = tablePersoShop[i][1] + "  $";
+                shopCase.addEventListener("click", () => {
+                    buyCharacter(tablePersoShop[i][0], tablePersoShop[i][1], shopCase, i);
+                })
+                let CaseShopObject = {
+                    shopDiv: shopCase,
+                    shopPerso: tablePersoShop[i][0],
+                    price: tablePersoShop[i][1]
+                }
+            }
             let CaseShopObject = {
                 shopDiv: shopCase,
-                shopPerso: tablePersoShop[i][0],
-                price: tablePersoShop[i][1]
+                shopPerso: tablePersoShop[i][0]
             }
-
             tableDivPersoShop.push(CaseShopObject);
         }else{
             let shopCase = divShopList.appendChild(document.createElement("div"));
