@@ -6,8 +6,10 @@
 # Goku = ++
 # GokuSSJ = ++
 # GokuSSJ3 = ++
+# GokuSSJ4 = ++
 
 # Vegeta = ++
+# BlueVegeta = ++
 # MajinVegeta = ++
 
 # GohanSSJ = ++

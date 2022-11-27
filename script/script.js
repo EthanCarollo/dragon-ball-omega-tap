@@ -285,6 +285,37 @@ let tabPerso = [
         version: ["GohanSSJ"]
     }
 ];
+let tabAllPerso = [
+    {
+        name: "Goku",
+        ID: 10,
+        version: ["Goku", "GokuSSJ", "GokuSSJ3", "GokuSSJ4"]
+    },{
+        name: "Vegeta",
+        ID: 1123,
+        version: ["Vegeta", "MajinVegeta", "VegetaSSB"]
+    },{
+        name: "Gogeta",
+        ID: 0,
+        version: ["Gogeta"]
+    },{
+        name: "VegitoSSJ",
+        ID: 1,
+        version: ["VegitoSSJ"]
+    },{
+        name: "FirstFrieza",
+        ID: 8,
+        version: ["FirstFrieza"]
+    },{
+        name: "KidBuu",
+        ID: 666,
+        version: ["KidBuu", "Buutenks", "Buumasu", "ZenBuu"]
+    },{
+        name: "GohanSSJ",
+        ID: 54,
+        version: ["GohanSSJ", "GohanSSB"]
+    }
+];
 let tabPersoDiv = [];
 let player1perso = null;
 let player2perso = null;
@@ -1123,6 +1154,31 @@ createShopTable();
 //*CODE MENU*********************************
 //*CODE MENU*********************************
 
+const getAllPerso = () => {
+    tabPerso = [...tabAllPerso];
+}
+
+let cheatCode = [
+    {
+    code : "unlockall",
+    function : getAllPerso
+    }
+];
+
+document.getElementById("codeForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    checkCode(document.getElementById("code").value);
+})
+
+const checkCode = (code) => {
+    let tempCode = code.toLowerCase();
+    for(let i=0;i<cheatCode.length;i++){
+        if(tempCode === cheatCode[i].code)
+        {
+            cheatCode[i].function();
+        }
+    }
+}
 
 
 //*CODE MENU*********************************

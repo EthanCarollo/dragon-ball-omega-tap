@@ -1767,6 +1767,45 @@ body{
   display: none;
 }
 
+.centeringForm{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#code{
+  width: 40vh;
+  height: 3vh;
+  padding: 2vh;
+  font-size: 5vh;
+}
+
+.submitButton{
+  margin-top: 1vh;
+  display: flex;
+  justify-content: center;
+}
+
+#submit{
+  padding: 1vh;
+  font-size: 2.5vh;
+  transition: all 1s;
+}
+
+#submit:hover{
+  transition: all 1s;
+  transform: translateY(-0.5vh);
+  cursor: pointer;
+  box-shadow: 0vh -1vh 1vh rgba(0, 0, 0, 0.507);
+}
+
+#returnMainAsCode{
+  z-index: 1000;
+}
+
 /**********************************************************/
 /***************************CODEMENU*******************************/
 /**********************************************************/
