@@ -1695,23 +1695,12 @@ body{
   background-image: url(../images/slotCharacter/slotLocked.png);
   transition: all 1s;
   opacity: 100;
-  animation: appearFromTop 1s;
 }
 
 .shopCase:hover{
   transform: translateY(-2vh);
   filter: drop-shadow(0vh 1vh 1vh black);
   transition: all 1s;
-}
-
-@keyframes appearFromTop {
-  from{
-    transform: translateY(-2vh);
-    opacity: 0;
-  }to{
-    transform: translateY(0vh);
-    opacity: 100;
-  }
 }
 
 .price{
