@@ -4,10 +4,18 @@
   src: url("../fonts/boldfont.ttf");
 }
 
+@font-face 
+{
+  font-family: Minecraft;
+  src: url("../fonts/Minecraft.ttf");
+}
+
 *{
     margin: 0;
+    font: inherit;
     font-family: BoldFont;
     image-rendering: pixelated;
+
 }
 
 body{
@@ -15,6 +23,20 @@ body{
   background-size: cover;
   background-repeat: none;
   overflow:hidden;
+}
+
+.version{
+  text-align: right;
+  font-size: 2vh;
+  position: absolute;
+  color: white;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  mix-blend-mode:difference;
+  margin: 0.5vh;
+  pointer-events: none;
+  font-family: Minecraft;
 }
 
 #panelPerso{
@@ -980,6 +1002,11 @@ body{
   transition: all 1s;
 }
 
+#codeButton{
+  background-image: url(../images/ui/CodeButton.png);
+  transition: all 1s;
+}
+
 .particle{
   position: absolute;
   top: 0%;
@@ -1726,4 +1753,20 @@ body{
 
 /**********************************************************/
 /***************************SHOP*******************************/
+/**********************************************************/
+
+/**********************************************************/
+/***************************CODEMENU*******************************/
+/**********************************************************/
+
+.code{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  display: none;
+}
+
+/**********************************************************/
+/***************************CODEMENU*******************************/
 /**********************************************************/

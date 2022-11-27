@@ -12,6 +12,7 @@ const divSelection = document.getElementById("panelPerso");
 const divGame = document.getElementById("gameTable");
 const divSummon = document.getElementById("summonMenu");
 const divShop = document.getElementById("shopMenu");
+const divCode = document.getElementById("codeMenu");
 
 // TODO VAR SECTION
 
@@ -342,6 +343,11 @@ const goToShopMenu = () => {
     divMenu.style.display = "none";
 }
 
+const goToCodeMenu = () => {
+    divCode.style.display = "initial";
+    divMenu.style.display = "none";
+}
+
 const startChoosePerso = () => {
     createTablePerso();
     divChooseDiff.style.display = "none";
@@ -382,6 +388,7 @@ document.getElementById("agPvP").addEventListener("click", startChoosePerso);
 document.getElementById("campaignButton").addEventListener("click", startCampaign);
 document.getElementById("gatchaButton").addEventListener("click", goToSummonMenu);
 document.getElementById("shopButton").addEventListener("click", goToShopMenu);
+document.getElementById("codeButton").addEventListener("click", goToCodeMenu);
 document.getElementById("returnMainAsSummon").addEventListener("click", () =>
 {
     setCountCrystal();
@@ -392,6 +399,11 @@ document.getElementById("returnMainAsShop").addEventListener("click", () =>
 {
     divMenu.style.display = "initial";
     divShop.style.display = "none";
+})
+document.getElementById("returnMainAsCode").addEventListener("click", () =>
+{
+    divMenu.style.display = "initial";
+    divCode.style.display = "none";
 })
 
 // FANCY MAIN MENU
@@ -1106,6 +1118,16 @@ createShopTable();
 //!SHOP MENU*********************************
 //!SHOP MENU*********************************
 //!SHOP MENU*********************************
+
+//*CODE MENU*********************************
+//*CODE MENU*********************************
+//*CODE MENU*********************************
+
+
+
+//*CODE MENU*********************************
+//*CODE MENU*********************************
+//*CODE MENU*********************************
 
 //SET DIFFICULTY WITH EVENT
 
