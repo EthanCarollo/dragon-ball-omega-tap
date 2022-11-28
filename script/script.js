@@ -374,6 +374,10 @@ let tabAllPerso = [
         ID: 158,
         version:["Bardock"]
     },{
+        name: "BabyVegeta",
+        ID: 646,
+        version: ["BabyVegeta","BabyBlackVegito"]
+    },{
         name:"BrolySSJ",
         ID: 175,
         version:["BrolySSJ"]
