@@ -650,6 +650,7 @@ const createTablePerso = () => {
 }
 
 const rollPersoVersion = (listVersions) => {
+    // Permet d'afficher les différebntes versions du personnages en question dans le menu de selection du personnage
     for(let o = 0; o<listVersions.length;o++){
         listVersions[o].classList.toggle("exist");
     }
@@ -746,7 +747,7 @@ document.getElementById("returnMain").addEventListener("click", returnMainMenu);
 //?GAME*********************************
 //?GAME*********************************
 
-document.addEventListener('keydown', (e) => {
+document.addEventListener('keyup', (e) => {
     if(gameStarted === true && canClick === true){
         if(e.key === " "){
             addPlayer1Click();
