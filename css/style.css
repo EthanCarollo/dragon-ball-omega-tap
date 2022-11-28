@@ -1286,6 +1286,11 @@ body{
   height: 10.25vh;
 }
 
+#campaignNTM2{
+  background-image: url(../images/ui/TheBestFighterCampaignNTM.png);
+  height: 10.25vh;
+}
+
 .campaignMenu{
   overflow-y: auto;
 }

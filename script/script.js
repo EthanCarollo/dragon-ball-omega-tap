@@ -269,6 +269,27 @@ let listCampaignNTM = [
             ID: 102,
             version: []
         }
+    },{
+        div : document.getElementById("campaignNTM2"),
+        campaign : "NTM",
+        level : 2,
+        difficulty : "SSSSS",
+        isLocked: false,
+        altReward:{
+            name: "GokuUltraInstinct",
+            ID: 10,
+            version: ["GokuUltraInstinct"]
+        },
+        reward: {
+            name: "BrolySSJ",
+            ID: 175,
+            version: ["BrolySSJ"]
+        },
+        player: {
+            name: "GokuUltraInstinct",
+            ID: 10,
+            version: ["GokuUltraInstinct"]
+        }
     }
 ]
 let actualCampaign = null;
@@ -337,9 +358,9 @@ let tabAllPerso = [
         ID: 896,
         version: ["FinalCooler", "GoldenCooler"]
     },{
-        name: "SuperJanembaXeno",
+        name: "SuperJanemba",
         ID: 678,
-        version: ["SuperJanembaXeno"]
+        version: ["SuperJanemba","SuperJanembaXeno"]
     },{
         name: "BlackGoku",
         ID: 679,

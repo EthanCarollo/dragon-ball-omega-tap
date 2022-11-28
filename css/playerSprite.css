@@ -354,6 +354,14 @@
     background-image: url(../images/sprites/Broly/brolyPortrait.png);
   }
 
+  #selectedPlayer1.SuperJanemba{
+    background-image: url(../images/sprites/SuperJanemba/SuperJanembaPortrait.png);
+  }
+
+  #selectedPlayer2.SuperJanemba{
+    background-image: url(../images/sprites/SuperJanemba/SuperJanembaPortrait.png);
+  }
+
   /***********************************/
   /***********************************/
   /***********************************/
@@ -532,6 +540,10 @@
 
   .perso.BrolySSJ{
     background-image: url(../images/slotCharacter/BrolySlotCharacter.png);
+  }
+
+  .perso.SuperJanemba{
+    background-image: url(../images/slotCharacter/SuperJanembaPortrait.png);
   }
 
   /**********************************************************/
@@ -2828,6 +2840,42 @@
     }
   }
 
+  .Player1.SuperJanemba{
+    background-image: url(../images/sprites/SuperJanemba/SuperJanembaDoingKameha.png);
+    animation: comingSuperJanemba 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.SuperJanemba.loose{
+    background-image: url(../images/sprites/SuperJanemba/loose/1.png);
+  }
+
+  .Player1.SuperJanemba.win{
+    background-image: url(../images/sprites/SuperJanemba/come\ &\ win/1.png);
+  }
+
+  .Player2.SuperJanemba{
+    background-image: url(../images/sprites/SuperJanemba/SuperJanembaDoingKameha.png);
+    animation: comingSuperJanemba 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.SuperJanemba.loose{
+    background-image: url(../images/sprites/SuperJanemba/loose/1.png);
+  }
+
+  .Player2.SuperJanemba.win{
+    background-image: url(../images/sprites/SuperJanemba/come\ &\ win/1.png);
+  }
+
+  @keyframes comingSuperJanemba{
+    0%{
+      background-image: url(../images/sprites/SuperJanemba/come\ &\ win/1.png);
+    }100%{
+      background-image: url(../images/sprites/SuperJanemba/come\ &\ win/1.png);
+    }
+  }
+
   /***************PLAYERSET********************/
 
   /***************PORTRAITSET********************/
@@ -3175,6 +3223,14 @@
   .portraitP2.BrolySSJ{
     background-image: url(../images/sprites/Broly/brolyPortrait.png);
   }
+
+  .portraitP1.SuperJanemba{
+    background-image: url(../images/sprites/SuperJanemba/SuperJanembaPortrait.png);
+  }
+
+  .portraitP2.SuperJanemba{
+    background-image: url(../images/sprites/SuperJanemba/SuperJanembaPortrait.png);
+  }
   
   /******************PORTRAITSET*****************/
 
@@ -3352,4 +3408,8 @@
 
   .subPerso.BrolySSJ{
     background-image: url(../images/slotCharacter/BrolySlotCharacter.png);
+  }
+
+  .subPerso.SuperJanemba{
+    background-image: url(../images/slotCharacter/SuperJanembaPortrait.png);
   }
