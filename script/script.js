@@ -276,9 +276,9 @@ let listCampaignNTM = [
         difficulty : "SSSSS",
         isLocked: false,
         altReward:{
-            name: "GokuUltraInstinct",
-            ID: 10,
-            version: ["GokuUltraInstinct"]
+            name: "VegitoSSJPink",
+            ID: 1,
+            version: ["VegitoSSJPink"]
         },
         reward: {
             name: "BrolySSJ",
@@ -286,9 +286,9 @@ let listCampaignNTM = [
             version: ["BrolySSJ"]
         },
         player: {
-            name: "GokuUltraInstinct",
-            ID: 10,
-            version: ["GokuUltraInstinct"]
+            name: "VegitoSSJPink",
+            ID: 1,
+            version: ["VegitoSSJPink"]
         }
     }
 ]
@@ -344,7 +344,7 @@ let tabAllPerso = [
     },{
         name: "FirstFrieza",
         ID: 8,
-        version: ["FirstFrieza", "GoldenFrieza"]
+        version: ["FirstFrieza", "Frieza", "GoldenFrieza"]
     },{
         name: "KidBuu",
         ID: 666,
