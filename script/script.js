@@ -313,7 +313,7 @@ let tabAllPerso = [
     },{
         name: "Vegeta",
         ID: 1123,
-        version: ["Vegeta", "MajinVegeta", "VegetaSSB"]
+        version: ["Vegeta", "MajinVegeta", "VegetaSSB", "VegetaXenoSSJ5"]
     },{
         name: "Gogeta",
         ID: 0,
@@ -329,7 +329,7 @@ let tabAllPerso = [
     },{
         name: "KidBuu",
         ID: 666,
-        version: ["KidBuu", "Buutenks", "Buumasu", "ZenBuu"]
+        version: ["KidBuu", "Buutenks", "Buumasu", "Buuhan", "ZenBuu"]
     },{
         name: "GohanSSJ",
         ID: 54,
