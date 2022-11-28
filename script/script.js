@@ -35,8 +35,6 @@ let kamehaPlayer2 = document.getElementById("kamehaP2");
 let tabPersoDOM = document.getElementById("choosePerso");
 let divChooseDiff = document.getElementById("divIAdiff");
 let divShopList = document.getElementById("shopList");
-let dragonBall = 50;
-let money = 1000;
 
 
 let gameIsIa = false;
@@ -309,11 +307,11 @@ let tabAllPerso = [
     {
         name: "Goku",
         ID: 10,
-        version: ["Goku", "GokuSSJ", "GokuSSJ3", "GokuSSJ4"]
+        version: ["Goku", "MajinGoku", "GokuSSJ", "GokuSSJ3", "GokuSSJ4"]
     },{
         name: "Vegeta",
         ID: 1123,
-        version: ["Vegeta", "MajinVegeta", "VegetaSSB"]
+        version: ["Vegeta", "MajinVegeta", "VegetaSSJ3", "VegetaSSB", "VegetaXenoSSJ5"]
     },{
         name: "Gogeta",
         ID: 0,
@@ -321,7 +319,7 @@ let tabAllPerso = [
     },{
         name: "VegitoSSJ",
         ID: 1,
-        version: ["VegitoSSJ", "VegitoXenoSSJ4"]
+        version: ["VegitoSSJ", "VegitoSSJPink", "VegitoXenoSSJ4"]
     },{
         name: "FirstFrieza",
         ID: 8,
@@ -329,7 +327,7 @@ let tabAllPerso = [
     },{
         name: "KidBuu",
         ID: 666,
-        version: ["KidBuu", "Buutenks", "Buumasu", "ZenBuu"]
+        version: ["KidBuu", "Buutenks", "Buumasu", "Buuhan", "ZenBuu"]
     },{
         name: "GohanSSJ",
         ID: 54,
@@ -345,7 +343,7 @@ let tabAllPerso = [
     },{
         name: "BlackGoku",
         ID: 679,
-        version: ["BlackGoku", "MechaZamasu"]
+        version: ["BlackGoku", "CorruptedZamasu", "MechaZamasu"]
     },{
         name: "NappaSSJ4",
         ID: 8145,
@@ -397,6 +395,8 @@ let TimeOutClickP1 = 2;
 let TimeOutClickP2 = 2;
 let whoWin;
 
+let dragonBall = 50;
+let money = 1000;
 
 // TODO VAR SECTION
 
@@ -616,7 +616,6 @@ const createTablePerso = () => {
             let subFleche = perso.appendChild(document.createElement("div"));
             subFleche.classList.add("FlechePerso"); 
             for(let k =0; k<tabPerso[i].version.length; k++){
-                console.log(tabPerso[i].version[k]);
                 let subPerso = tabPersoDOM.appendChild(document.createElement("div"));
                 subPerso.classList.add("subPerso");
                 subPerso.classList.add(tabPerso[i].version[k]);
@@ -652,6 +651,7 @@ const createTablePerso = () => {
 }
 
 const rollPersoVersion = (listVersions) => {
+    // Permet d'afficher les différebntes versions du personnages en question dans le menu de selection du personnage
     for(let o = 0; o<listVersions.length;o++){
         listVersions[o].classList.toggle("exist");
     }
@@ -664,7 +664,6 @@ const selectPlayer = (ID, NumberOfVersion = 0) => {
             player1perso = tabPerso[ID].version[NumberOfVersion];
             player1DOM.classList.toggle(player1perso);
         }else{
-            console.log(ID);
             player1perso = tabPerso[ID].name;
             player1DOM.classList.toggle(tabPerso[ID].name);
         }
@@ -674,7 +673,6 @@ const selectPlayer = (ID, NumberOfVersion = 0) => {
             player2perso = tabPerso[ID].version[NumberOfVersion];
             player2DOM.classList.toggle(player2perso);
         }else{
-            console.log(ID);
             player2perso = tabPerso[ID].name;
             player2DOM.classList.toggle(tabPerso[ID].name);
         }
@@ -686,7 +684,6 @@ let startCount = 3;
 
 const startGame = () => {
     startCount = 3;
-    console.log("gameStart");
     setDifficulty();
     setVisual();
     startingCount();
@@ -751,12 +748,10 @@ document.getElementById("returnMain").addEventListener("click", returnMainMenu);
 //?GAME*********************************
 //?GAME*********************************
 
-document.addEventListener('keydown', (e) => {
-    console.log("key e");
+document.addEventListener('keyup', (e) => {
     if(gameStarted === true && canClick === true){
         if(e.key === " "){
             addPlayer1Click();
-            console.log(player2KamehaWidth);
         }
         if(e.code === "Numpad0" && gameIsIa === false){
             addPlayer2Click();

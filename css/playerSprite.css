@@ -298,6 +298,54 @@
     background-image: url(../images/sprites/NappaSSJ4/NappaSSJ4Portrait.png);
   }
 
+  #selectedPlayer1.Buuhan{
+    background-image: url(../images/sprites/Buuhan/buuhanportrait.png);
+  }
+
+  #selectedPlayer2.Buuhan{
+    background-image: url(../images/sprites/Buuhan/buuhanportrait.png);
+  }
+
+  #selectedPlayer1.VegetaXenoSSJ5{
+    background-image: url(../images/sprites/XenoVegetaSSJ5/XenoVegetaPortrait.png);
+  }
+
+  #selectedPlayer2.VegetaXenoSSJ5{
+    background-image: url(../images/sprites/XenoVegetaSSJ5/XenoVegetaPortrait.png);
+  }
+
+  #selectedPlayer1.VegetaSSJ3{
+    background-image: url(../images/sprites/VegetaSSJ3/VegetaSSJ3portrait.png);
+  }
+
+  #selectedPlayer2.VegetaSSJ3{
+    background-image: url(../images/sprites/VegetaSSJ3/VegetaSSJ3portrait.png);
+  }
+
+  #selectedPlayer1.MajinGoku{
+    background-image: url(../images/sprites/MajinGoku/MajinGokuPortrait.png);
+  }
+
+  #selectedPlayer2.MajinGoku{
+    background-image: url(../images/sprites/MajinGoku/MajinGokuPortrait.png);
+  }
+
+  #selectedPlayer1.VegitoSSJPink{
+    background-image: url(../images/sprites/vegitoPik/VegitoSSPportrait.png);
+  }
+
+  #selectedPlayer2.VegitoSSJPink{
+    background-image: url(../images/sprites/vegitoPik/VegitoSSPportrait.png);
+  }
+
+  #selectedPlayer1.CorruptedZamasu{
+    background-image: url(../images/sprites/ZamasuCorrompu/ZamasuCorrompportrait.png);
+  }
+
+  #selectedPlayer2.CorruptedZamasu{
+    background-image: url(../images/sprites/ZamasuCorrompu/ZamasuCorrompportrait.png);
+  }
+
   /***********************************/
   /***********************************/
   /***********************************/
@@ -448,6 +496,30 @@
 
   .perso.NappaSSJ4{
     background-image: url(../images/slotCharacter/NappaSSJ4Slot.png);
+  }
+
+  .perso.Buuhan{
+    background-image: url(../images/slotCharacter/buuhanSlot.png);
+  }
+
+  .perso.VegetaXenoSSJ5{
+    background-image: url(../images/slotCharacter/XenoVegetaSSJ5.png);
+  }
+
+  .perso.VegetaSSJ3{
+    background-image: url(../images/slotCharacter/XenoVegetaSSJ3Slot.png);
+  }
+
+  .perso.MajinGoku{
+    background-image: url(../images/slotCharacter/MajinGokuSlot.png);
+  }
+
+  .perso.VegitoSSJPink{
+    background-image: url(../images/slotCharacter/VegitoSlotPink.png);
+  }
+
+  .perso.CorruptedZamasu{
+    background-image: url(../images/slotCharacter/ZamasuCorrompSlot.png);
   }
 
   /**********************************************************/
@@ -2406,6 +2478,278 @@
     background-image: url(../images/sprites/NappaSSJ4/NappaSSJ4Idle.png);
   }
 
+  .Player1.Buuhan{
+    background-image: url(../images/sprites/Buuhan/BuuhanDoingKameha.png);
+    animation: comingBuuhan 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.Buuhan.loose{
+    top:40%;
+    background-image:  url(../images/sprites/Buuhan/loose/4.png);
+    animation: looseBuuhan 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .player1.Buuhan.win{
+    background-image: url(../images/sprites/Buuhan/comin\ &\ win/1.png);
+  }
+
+  .Player2.Buuhan{
+    background-image: url(../images/sprites/Buuhan/BuuhanDoingKameha.png);
+    animation: comingBuuhan 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.Buuhan.loose{
+    top:40%;
+    background-image:  url(../images/sprites/Buuhan/loose/4.png);
+    animation: looseBuuhan 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .player2.Buuhan.win{
+    background-image: url(../images/sprites/Buuhan/comin\ &\ win/1.png);
+  }
+
+  @keyframes comingBuuhan{
+    0%{
+      background-image: url(../images/sprites/Buuhan/comin\ &\ win/1.png);
+    }100%{
+      background-image: url(../images/sprites/Buuhan/comin\ &\ win/1.png);
+    }
+  }
+
+  @keyframes looseBuuhan{
+    0%{
+      background-image: url(../images/sprites/Buuhan/loose/1.png);
+    }33%{
+      background-image: url(../images/sprites/Buuhan/loose/2.png);
+    }66%{
+      background-image: url(../images/sprites/Buuhan/loose/3.png);
+    }100%{
+      background-image: url(../images/sprites/Buuhan/loose/4.png);
+    }
+  }
+
+  .Player1.VegetaXenoSSJ5{
+    background-image: url(../images/sprites/XenoVegetaSSJ5/XenoVegetaDoingKameha.png);
+    animation: comingVegetaXenoSSJ5 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.VegetaXenoSSJ5.loose{
+    background-image:  url(../images/sprites/XenoVegetaSSJ5/loose/5.png);
+    animation: looseVegetaXenoSSJ5 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.VegetaXenoSSJ5.win{
+    background-image:  url(../images/sprites/XenoVegetaSSJ5/win/3.png);
+    animation: winVegetaXenoSSJ5 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.VegetaXenoSSJ5{
+    background-image: url(../images/sprites/XenoVegetaSSJ5/XenoVegetaDoingKameha.png);
+    animation: comingVegetaXenoSSJ5 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.VegetaXenoSSJ5.loose{
+    background-image:  url(../images/sprites/XenoVegetaSSJ5/loose/5.png);
+    animation: looseVegetaXenoSSJ5 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.VegetaXenoSSJ5.win{
+    background-image:  url(../images/sprites/XenoVegetaSSJ5/win/3.png);
+    animation: winVegetaXenoSSJ5 3s;
+    animation-timing-function: steps(1);
+  }
+
+  @keyframes comingVegetaXenoSSJ5{
+    0%{
+      background-image: url(../images/sprites/XenoVegetaSSJ5/comin/1.png);
+    }50%{
+      background-image: url(../images/sprites/XenoVegetaSSJ5/comin/2.png);
+    }100%{
+      background-image: url(../images/sprites/XenoVegetaSSJ5/comin/3.png);
+    }
+  }
+
+  @keyframes winVegetaXenoSSJ5{
+    0%{
+      background-image: url(../images/sprites/XenoVegetaSSJ5/win/1.png);
+    }50%{
+      background-image: url(../images/sprites/XenoVegetaSSJ5/win/2.png);
+    }100%{
+      background-image: url(../images/sprites/XenoVegetaSSJ5/win/3.png);
+    }
+  }
+
+  @keyframes looseVegetaXenoSSJ5{
+    0%{
+      background-image: url(../images/sprites/XenoVegetaSSJ5/loose/1.png);
+    }25%{
+      background-image: url(../images/sprites/XenoVegetaSSJ5/loose/2.png);
+    }50%{
+      background-image: url(../images/sprites/XenoVegetaSSJ5/loose/3.png);
+    }75%{
+      background-image: url(../images/sprites/XenoVegetaSSJ5/loose/4.png);
+    }100%{
+      background-image: url(../images/sprites/XenoVegetaSSJ5/loose/5.png);
+    }
+  }
+
+  .Player1.VegetaSSJ3{
+    background-image: url(../images/sprites/VegetaSSJ3/VegetaSSJ3DoingKameha.png);
+    animation: comingVegetaSSJ3 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.VegetaSSJ3.loose{
+    background-image:  url(../images/sprites/VegetaSSJ3/loose/1.png);
+  }
+
+  .Player1.VegetaSSJ3.win{
+    background-image:  url(../images/sprites/VegetaSSJ3/win/1.png);
+  }
+
+  .Player2.VegetaSSJ3{
+    background-image: url(../images/sprites/VegetaSSJ3/VegetaSSJ3DoingKameha.png);
+    animation: comingVegetaSSJ3 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.VegetaSSJ3.loose{
+    background-image:  url(../images/sprites/VegetaSSJ3/loose/1.png);
+  }
+
+  .Player2.VegetaSSJ3.win{
+    background-image:  url(../images/sprites/VegetaSSJ3/win/1.png);
+  }
+
+  @keyframes comingVegetaSSJ3{
+    0%{
+      background-image: url(../images/sprites/VegetaSSJ3/comin/1.png);
+    }100%{
+      background-image: url(../images/sprites/VegetaSSJ3/comin/1.png);
+    }
+  }
+
+  .Player1.MajinGoku{
+    background-image: url(../images/sprites/MajinGoku/MajinGokuDoingKameha.png);
+    animation: comingMajinGoku 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.MajinGoku.loose{
+    background-image: url(../images/sprites/MajinGoku/loose\ x\ win/1.png);
+  }
+
+  .Player1.MajinGoku.win{
+    background-image: url(../images/sprites/MajinGoku/loose\ x\ win/1.png);
+  }
+
+  .Player2.MajinGoku{
+    background-image: url(../images/sprites/MajinGoku/MajinGokuDoingKameha.png);
+    animation: comingMajinGoku 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.MajinGoku.loose{
+    background-image: url(../images/sprites/MajinGoku/loose\ x\ win/1.png);
+  }
+
+  .Player2.MajinGoku.win{
+    background-image: url(../images/sprites/MajinGoku/loose\ x\ win/1.png);
+  }
+
+  @keyframes comingMajinGoku{
+    0%{
+      background-image: url(../images/sprites/MajinGoku/comin/1.png);
+    }33%{
+      background-image: url(../images/sprites/MajinGoku/comin/2.png);
+    }66%{
+      background-image: url(../images/sprites/MajinGoku/comin/3.png);
+    }100%{
+      background-image: url(../images/sprites/MajinGoku/comin/4.png);
+    }
+  }
+
+  .Player1.VegitoSSJPink{
+    background-image: url(../images/sprites/vegitoPik/VegitoPinkKameha.png);
+    animation: comingVegitoPink 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.VegitoSSJPink.loose{
+    background-image: url(../images/sprites/vegitoPik/loose/1.png);
+  }
+
+  .Player1.VegitoSSJPink.win{
+    background-image: url(../images/sprites/vegitoPik/com\ &\ win/1.png);
+  }
+
+  .Player2.VegitoSSJPink{
+    background-image: url(../images/sprites/vegitoPik/VegitoPinkKameha.png);
+    animation: comingVegitoPink 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.VegitoSSJPink.loose{
+    background-image: url(../images/sprites/vegitoPik/loose/1.png);
+  }
+
+  .Player2.VegitoSSJPink.win{
+    background-image: url(../images/sprites/vegitoPik/com\ &\ win/1.png);
+  }
+
+  @keyframes comingVegitoPink{
+    0%{
+      background-image: url(../images/sprites/vegitoPik/com\ &\ win/1.png);
+    }100%{
+      background-image: url(../images/sprites/vegitoPik/com\ &\ win/1.png);
+    }
+  }
+
+  .Player1.CorruptedZamasu{
+    background-image: url(../images/sprites/ZamasuCorrompu/ZamasuCorrompedKameha.png);
+    animation: comingCorruptZamasu 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.CorruptedZamasu.loose{
+    background-image: url(../images/sprites/ZamasuCorrompu/loose/1.png);
+  }
+
+  .Player1.CorruptedZamasu.win{
+    background-image: url(../images/sprites/ZamasuCorrompu/comin\ &\ win/1.png);
+  }
+
+  .Player2.CorruptedZamasu{
+    background-image: url(../images/sprites/ZamasuCorrompu/ZamasuCorrompedKameha.png);
+    animation: comingCorruptZamasu 3s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.CorruptedZamasu.loose{
+    background-image: url(../images/sprites/ZamasuCorrompu/loose/1.png);
+  }
+
+  .Player2.CorruptedZamasu.win{
+    background-image: url(../images/sprites/ZamasuCorrompu/comin\ &\ win/1.png);
+  }
+
+  @keyframes comingCorruptZamasu{
+    0%{
+      background-image: url(../images/sprites/ZamasuCorrompu/comin\ &\ win/1.png);
+    }100%{
+      background-image: url(../images/sprites/ZamasuCorrompu/comin\ &\ win/1.png);
+    }
+  }
+
   /***************PLAYERSET********************/
 
   /***************PORTRAITSET********************/
@@ -2697,6 +3041,54 @@
   .portraitP2.NappaSSJ4{
     background-image: url(../images/sprites/NappaSSJ4/NappaSSJ4Portrait.png);
   }
+
+  .portraitP1.Buuhan{
+    background-image: url(../images/sprites/Buuhan/buuhanportrait.png);
+  }
+
+  .portraitP2.Buuhan{
+    background-image: url(../images/sprites/Buuhan/buuhanportrait.png);
+  }
+
+  .portraitP1.VegetaXenoSSJ5{
+    background-image: url(../images/sprites/XenoVegetaSSJ5/XenoVegetaPortrait.png);
+  }
+
+  .portraitP2.VegetaXenoSSJ5{
+    background-image: url(../images/sprites/XenoVegetaSSJ5/XenoVegetaPortrait.png);
+  }
+
+  .portraitP1.VegetaSSJ3{
+    background-image: url(../images/sprites/VegetaSSJ3/VegetaSSJ3portrait.png);
+  }
+  
+  .portraitP2.VegetaSSJ3{
+    background-image: url(../images/sprites/VegetaSSJ3/VegetaSSJ3portrait.png);
+  }
+
+  .portraitP1.MajinGoku{
+    background-image: url(../images/sprites/MajinGoku/MajinGokuPortrait.png);
+  }
+
+  .portraitP2.MajinGoku{
+    background-image: url(../images/sprites/MajinGoku/MajinGokuPortrait.png);
+  }
+
+  .portraitP1.VegitoSSJPink{
+    background-image: url(../images/sprites/vegitoPik/VegitoSSPportrait.png);
+  }
+
+  .portraitP2.VegitoSSJPink{
+    background-image: url(../images/sprites/vegitoPik/VegitoSSPportrait.png);
+  }
+
+  .portraitP1.CorruptedZamasu{
+    background-image: url(../images/sprites/ZamasuCorrompu/ZamasuCorrompportrait.png);
+  }
+
+  .portraitP2.CorruptedZamasu{
+    background-image: url(../images/sprites/ZamasuCorrompu/ZamasuCorrompportrait.png);
+  }
   
   /******************PORTRAITSET*****************/
 
@@ -2846,4 +3238,28 @@
 
   .subPerso.NappaSSJ4{
     background-image: url(../images/slotCharacter/NappaSSJ4Slot.png);
+  }
+
+  .subPerso.Buuhan{
+    background-image: url(../images/slotCharacter/buuhanSlot.png);
+  }
+
+  .subPerso.VegetaXenoSSJ5{
+    background-image: url(../images/slotCharacter/XenoVegetaSSJ5.png);
+  }
+
+  .subPerso.VegetaSSJ3{
+    background-image: url(../images/slotCharacter/XenoVegetaSSJ3Slot.png);
+  }
+
+  .subPerso.MajinGoku{
+    background-image: url(../images/slotCharacter/MajinGokuSlot.png);
+  }
+
+  .subPerso.VegitoSSJPink{
+    background-image: url(../images/slotCharacter/VegitoSlotPink.png);
+  }
+
+  .subPerso.CorruptedZamasu{
+    background-image: url(../images/slotCharacter/ZamasuCorrompSlot.png);
   }

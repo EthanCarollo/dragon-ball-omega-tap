@@ -1,7 +1,10 @@
 # Listes Persos et avancement sur les animations
 
 # Gogeta = ++
+# GogetaSSG = ++
 # Vegito = ++
+# VegitoSSJPink = ++
+# XenoVegitoSSJ5 = ++
 
 # Goku = ++
 # GokuSSJ = ++
@@ -11,12 +14,16 @@
 # Vegeta = ++
 # BlueVegeta = ++
 # MajinVegeta = ++
+# VegetaSSJ3 = ++
+# XenoVegetaSSJ5 = ++
 
 # GohanSSJ = ++
 # GohanSSJ3 = ++
 # GohanSSB = ++
 
 # BlackGoku = ++
+# CorruptedZamasu = ++
+# MechaZamasu = ++
 
 # FirstFrieza = ++
 # Frieza = ++
@@ -29,7 +36,7 @@
 # Buumasu = ++
 # Buutenks = ++
 # ZenBuu = ++
-# Buuhan sprite is set
+# Buuhan = ++
 
 # Venom = ++
 # SpiderMan = ++
@@ -38,3 +45,5 @@
 # SasukeRinnegan = ++
 # NarutoDemon = ++
 
+# BabyVegeta = ++
+# BabyBlackVegito = ++
