@@ -423,6 +423,7 @@ const setCountMoney = () => {
 const goToSummonMenu = () => {
     divSummon.style.display = "initial";
     divMenu.style.display = "none";
+    rollCard();
 }
 
 const goToShopMenu = () => {
