@@ -346,6 +346,14 @@
     background-image: url(../images/sprites/ZamasuCorrompu/ZamasuCorrompportrait.png);
   }
 
+  #selectedPlayer1.BrolySSJ{
+    background-image: url(../images/sprites/Broly/brolyPortrait.png);
+  }
+
+  #selectedPlayer2.BrolySSJ{
+    background-image: url(../images/sprites/Broly/brolyPortrait.png);
+  }
+
   /***********************************/
   /***********************************/
   /***********************************/
@@ -520,6 +528,10 @@
 
   .perso.CorruptedZamasu{
     background-image: url(../images/slotCharacter/ZamasuCorrompSlot.png);
+  }
+
+  .perso.BrolySSJ{
+    background-image: url(../images/slotCharacter/BrolySlotCharacter.png);
   }
 
   /**********************************************************/
@@ -2750,6 +2762,72 @@
     }
   }
 
+  .Player1.BrolySSJ{
+    background-image: url(../images/sprites/Broly/comin/7.png);
+    animation: comingBrolySSJ 3s;
+    animation-timing-function: steps(1);
+    width: 25vh;
+    height: 25vh;
+    top:35%;
+    left: -2%;
+  }
+
+  .Player1.BrolySSJ.win{
+    background-image: url(../images/sprites/Broly/win/1.png);
+    animation: winBrolySSJ 2s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player1.BrolySSJ.loose{
+    background-image: none;
+  }
+
+  .Player2.BrolySSJ{
+    background-image: url(../images/sprites/Broly/comin/7.png);
+    animation: comingBrolySSJ 3s;
+    animation-timing-function: steps(1);
+    width: 25vh;
+    height: 25vh;
+    top:35%;
+    right: -2%;
+  }
+
+  .Player2.BrolySSJ.win{
+    background-image: url(../images/sprites/Broly/win/1.png);
+    animation: winBrolySSJ 2s;
+    animation-timing-function: steps(1);
+  }
+
+  .Player2.BrolySSJ.loose{
+    background-image: none;
+  }
+
+  @keyframes comingBrolySSJ{
+    0%{
+      background-image: url(../images/sprites/Broly/comin/1.png);
+    }15%{
+      background-image: url(../images/sprites/Broly/comin/2.png);
+    }30%{
+      background-image: url(../images/sprites/Broly/comin/3.png);
+    }45%{
+      background-image: url(../images/sprites/Broly/comin/4.png);
+    }60%{
+      background-image: url(../images/sprites/Broly/comin/5.png);
+    }85%{
+      background-image: url(../images/sprites/Broly/comin/6.png);
+    }100%{
+      background-image: url(../images/sprites/Broly/comin/7.png);
+    }
+  }
+
+  @keyframes winBrolySSJ{
+    0%{
+      background-image: url(../images/sprites/Broly/win/1.png);
+    }100%{
+      background-image: url(../images/sprites/Broly/win/2.png);
+    }
+  }
+
   /***************PLAYERSET********************/
 
   /***************PORTRAITSET********************/
@@ -3089,6 +3167,14 @@
   .portraitP2.CorruptedZamasu{
     background-image: url(../images/sprites/ZamasuCorrompu/ZamasuCorrompportrait.png);
   }
+
+  .portraitP1.BrolySSJ{
+    background-image: url(../images/sprites/Broly/brolyPortrait.png);
+  }
+
+  .portraitP2.BrolySSJ{
+    background-image: url(../images/sprites/Broly/brolyPortrait.png);
+  }
   
   /******************PORTRAITSET*****************/
 
@@ -3262,4 +3348,8 @@
 
   .subPerso.CorruptedZamasu{
     background-image: url(../images/slotCharacter/ZamasuCorrompSlot.png);
+  }
+
+  .subPerso.BrolySSJ{
+    background-image: url(../images/slotCharacter/BrolySlotCharacter.png);
   }

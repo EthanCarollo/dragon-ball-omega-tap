@@ -353,6 +353,10 @@ let tabAllPerso = [
         ID: 158,
         version:["Bardock"]
     },{
+        name:"BrolySSJ",
+        ID: 175,
+        version:["BrolySSJ"]
+    },{
         name: "DrGero",
         ID: 1124,
         version: ["DrGero"]
@@ -423,6 +427,7 @@ const setCountMoney = () => {
 const goToSummonMenu = () => {
     divSummon.style.display = "initial";
     divMenu.style.display = "none";
+    rollCard();
 }
 
 const goToShopMenu = () => {
