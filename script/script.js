@@ -9,6 +9,7 @@ function getRandomInt(max) {
 //#endregion //logic
 
 //#region // TODO VAR DOM SECTION
+//TODO TODO TODO TODO TODO TODO
 
 const divMenu = document.getElementById("menuMain");
 const divCampaign = document.getElementById("menuCampaign");
@@ -38,480 +39,539 @@ let tabPersoDOM = document.getElementById("choosePerso");
 let divChooseDiff = document.getElementById("divIAdiff");
 let divShopList = document.getElementById("shopList");
 
+//TODO TODO TODO TODO TODO TODO
 //#endregion // TODO VAR DOM SECTION
 
 //#region // TODO VAR SECTION
+//TODO TODO TODO TODO TODO TODO
 
 let gameIsIa = false;
-let listCampaignDBZ = [
-    {
-        div : document.getElementById("campaign1"),
-        campaign : "DBZ",
-        level : 1,
-        difficulty : "D",
-        isLocked: false,
-        altReward:{
-            name: "GokuSSJ",
-            ID: 10,
-            version: ["GokuSSJ"]
-        },
-        reward: {
-            name: "Frieza",
-            ID: 8,
-            version: ["Frieza"]
-        },
-        player: {
-            name: "GokuSSJ",
-            ID: 10,
-            version: []
-        }
-    },
-    {
-        div : document.getElementById("campaign2"),
-        campaign : "DBZ",
-        level : 2,
-        difficulty : "C",
-        isLocked: true,
-        altReward:null,
-        reward: {
-            name: "Buutenks",
-            ID: 666,
-            version: []
-        },
-        player:{
-            name: "VegitoSSJ",
-            ID: 1,
-            version: []
-        }
-    },{
-        div : document.getElementById("campaign3"),
-        campaign : "DBZ",
-        level : 3,
-        difficulty : "C",
-        isLocked: true,
-        altReward:{
-            name: "GoldenCooler",
-            ID: 896,
-            version: []
-        },
-        reward: {
-            name: "FinalCooler",
-            ID: 896,
-            version: ["FinalCooler"]
-        },
-        player:{
-            name: "VegitoSSJ",
-            ID: 1,
-            version: []
-        }
-    },{
-        div : document.getElementById("campaign4"),
-        campaign : "DBZ",
-        level : 4,
-        difficulty : "B",
-        isLocked: true,
-        altReward:{
-            name: "GokuSSJ3",
-            ID: 10,
-            version: []
-        },
-        reward: {
-            name: "GoldenFrieza",
-            ID: 8,
-            version: []
-        },
-        player:{
-            name: "GokuSSJ3",
-            ID: 542,
-            version: []
-        }
-    },{
-        div : document.getElementById("campaign5"),
-        campaign : "DBZ",
-        level : 5,
-        isLocked: true,
-        difficulty : "A",
-        altReward:{
-            name: "GohanSSJ3",
-            ID: 54,
-            version: []
-        },
-        reward: {
-            name: "BlackGoku",
-            ID: 679,
-            version: ["BlackGoku"]
-        },
-        player:{
-            name: "GohanSSJ3",
-            ID: 54,
-            version: []
-        }
-    },{
-        div : document.getElementById("campaign6"),
-        campaign : "DBZ",
-        level : 6,
-        isLocked: true,
-        difficulty : "S",
-        altReward:{
-            name: "GogetaSSG",
-            ID: 0,
-            version: ["GogetaSSG"]
-        },
-        reward: {
-            name: "SuperJanembaXeno",
-            ID: 678,
-            version: ["SuperJanembaXeno"]
-        },
-        player:{
-            name: "GogetaSSG",
-            ID: 0,
-            version: ["GogetaSSG"]
-        }
-    },{
-        div : document.getElementById("campaign7"),
-        campaign : "DBZ",
-        level : 7,
-        isLocked: true,
-        difficulty : "SSS",
-        altReward:{
-            name: "VegitoXenoSSJ4",
-            ID: 1,
-            version: ["VegitoXenoSSJ4"]
-        },
-        reward: {
-            name: "MechaZamasu",
-            ID: 679,
-            version: ["MechaZamasu"]
-        },
-        player:{
-            name: "VegitoXenoSSJ4",
-            ID: 1,
-            version: ["VegitoXenoSSJ4"]
-        }
-    }
-]
-let listCampaignBTM = [
-    {
-        div : document.getElementById("campaignBTM1"),
-        campaign : "BTM",
-        level : 1,
-        difficulty : "A",
-        isLocked: false,
-        altReward:{
-            name: "SpiderMan",
-            ID: 102,
-            version: []
-        },
-        reward: {
-            name: "Venom",
-            ID: 81,
-            version: []
-        },
-        player: {
-            name: "SpiderMan",
-            ID: 102,
-            version: []
-        }
-    },{
-        div : document.getElementById("campaignBTM2"),
-        campaign : "BTM",
-        level : 2,
-        difficulty : "S",
-        isLocked: true,
-        altReward:{
-            name: "Sasuke",
-            ID: 1042,
-            version: ["Sasuke"]
-        },
-        reward: {
-            name: "Itachi",
-            ID: 811,
-            version: []
-        },
-        player: {
-            name: "Sasuke",
-            ID: 1042,
-            version: ["Sasuke"]
-        }
-    },{
-        div : document.getElementById("campaignBTM3"),
-        campaign : "BTM",
-        level : 3,
-        difficulty : "SS",
-        isLocked: true,
-        altReward:{
-            name: "SasukeRinnegan",
-            ID: 1042,
-            version: []
-        },
-        reward: {
-            name: "NarutoDemon",
-            ID: 812,
-            version: ["NarutoDemon"]
-        },
-        player: {
-            name: "SasukeRinnegan",
-            ID: 1042,
-            version: ["SasukeRinnegan"]
-        }
-    }
-]
-let listCampaignNTM = [
-    {
-        div : document.getElementById("campaignNTM1"),
-        campaign : "NTM",
-        level : 1,
-        difficulty : "SSSSS",
-        isLocked: false,
-        altReward:null,
-        reward: {
-            name: "NappaSSJ4",
-            ID: 8145,
-            version: []
-        },
-        player: {
-            name: "GogetaSSG",
-            ID: 102,
-            version: []
-        }
-    },{
-        div : document.getElementById("campaignNTM2"),
-        campaign : "NTM",
-        level : 2,
-        difficulty : "SSSSS",
-        isLocked: false,
-        altReward:{
-            name: "VegitoSSJPink",
-            ID: 1,
-            version: ["VegitoSSJPink"]
-        },
-        reward: {
-            name: "BrolySSJ",
-            ID: 175,
-            version: ["BrolySSJ"]
-        },
-        player: {
-            name: "VegitoSSJPink",
-            ID: 1,
-            version: ["VegitoSSJPink"]
-        }
-    }
-]
-let actualCampaign = null;
-let tabPerso = [
-    {
-        name: "Goku",
-        ID: 10,
-        version: ["Goku"]
-    },{
-        name: "Vegeta",
-        ID: 1123,
-        version: ["Vegeta"]
-    },{
-        name: "Gogeta",
-        ID: 0,
-        version: ["Gogeta"]
-    },{
-        name: "VegitoSSJ",
-        ID: 1,
-        version: ["VegitoSSJ"]
-    },{
-        name: "FirstFrieza",
-        ID: 8,
-        version: ["FirstFrieza"]
-    },{
-        name: "KidBuu",
-        ID: 666,
-        version: ["KidBuu"]
-    },{
-        name: "GohanSSJ",
-        ID: 54,
-        version: ["GohanSSJ"]
-    }
-];
-let tabAllPerso = [
-    {
-        name: "Goku",
-        ID: 10,
-        version: ["Goku", "MajinGoku", "GokuSSJ", "GokuSSJ3", "GokuSSJ4"]
-    },{
-        name: "Vegeta",
-        ID: 1123,
-        version: ["Vegeta", "MajinVegeta", "VegetaSSJ3", "VegetaSSB", "VegetaXenoSSJ5"]
-    },{
-        name: "Gogeta",
-        ID: 0,
-        version: ["Gogeta", "GogetaSSG"]
-    },{
-        name: "VegitoSSJ",
-        ID: 1,
-        version: ["VegitoSSJ", "VegitoSSJPink", "VegitoXenoSSJ4"]
-    },{
-        name: "FirstFrieza",
-        ID: 8,
-        version: ["FirstFrieza", "Frieza", "GoldenFrieza"]
-    },{
-        name: "KidBuu",
-        ID: 666,
-        version: ["KidBuu", "Buutenks", "Buumasu", "Buuhan", "ZenBuu"]
-    },{
-        name: "GohanSSJ",
-        ID: 54,
-        version: ["GohanSSJ", "GohanSSJ3", "GohanSSB"]
-    },{
-        name: "FinalCooler",
-        ID: 896,
-        version: ["FinalCooler", "GoldenCooler"]
-    },{
-        name: "SuperJanemba",
-        ID: 678,
-        version: ["SuperJanemba","SuperJanembaXeno"]
-    },{
-        name: "BlackGoku",
-        ID: 679,
-        version: ["BlackGoku", "CorruptedZamasu", "MechaZamasu"]
-    },{
-        name: "NappaSSJ4",
-        ID: 8145,
-        version: []
-    },{
-        name:"Bardock",
-        ID: 158,
-        version:["Bardock"]
-    },{
-        name: "BabyVegeta",
-        ID: 646,
-        version: ["BabyVegeta","BabyBlackVegito"]
-    },{
-        name:"BrolySSJ",
-        ID: 175,
-        version:["BrolySSJ"]
-    },{
-        name: "DrGero",
-        ID: 1124,
-        version: ["DrGero"]
-    },{
-        name: "Sasuke",
-        ID: 1042,
-        version: ["Sasuke", "SasukeRinnegan"]
-    },{
-        name: "Itachi",
-        ID: 811,
-        version: []
-    },{
-        name: "NarutoDemon",
-        ID: 812,
-        version: ["NarutoDemon"]
-    },{
-        name: "SpiderMan",
-        ID: 102,
-        version: []
-    },{
-        name: "Venom",
-        ID: 81,
-        version: []
-    }
-];
-let tabPersoDiv = [];
-let player1perso = null;
-let player2perso = null;
-let difficultyRank = "D";
-let timeOutIa = 350;
-let numberClickP1 = 0;
-let numberClickP2 = 0;
-let normalKamehaWidth = 43.75;
-let player1KamehaWidth = normalKamehaWidth;
-let player2KamehaWidth = normalKamehaWidth;
-let maxClick = 50;
-let gameStarted = true;
-let canClick = false;
-let TimeOutClickP1 = 2;
-let TimeOutClickP2 = 2;
-let whoWin;
-
 let dragonBall = 50;
 let money = 1000;
 
+    //#region //* Campaign var
+    let listCampaignDBZ = [
+        {
+            div : document.getElementById("campaign1"),
+            campaign : "DBZ",
+            level : 1,
+            difficulty : "D",
+            isLocked: false,
+            altReward:{
+                name: "GokuSSJ",
+                ID: 10,
+                version: ["GokuSSJ"]
+            },
+            reward: {
+                name: "Frieza",
+                ID: 8,
+                version: ["Frieza"]
+            },
+            player: {
+                name: "GokuSSJ",
+                ID: 10,
+                version: []
+            }
+        },
+        {
+            div : document.getElementById("campaign2"),
+            campaign : "DBZ",
+            level : 2,
+            difficulty : "C",
+            isLocked: true,
+            altReward:null,
+            reward: {
+                name: "Buutenks",
+                ID: 666,
+                version: []
+            },
+            player:{
+                name: "VegitoSSJ",
+                ID: 1,
+                version: []
+            }
+        },{
+            div : document.getElementById("campaign3"),
+            campaign : "DBZ",
+            level : 3,
+            difficulty : "C",
+            isLocked: true,
+            altReward:{
+                name: "GoldenCooler",
+                ID: 896,
+                version: []
+            },
+            reward: {
+                name: "FinalCooler",
+                ID: 896,
+                version: ["FinalCooler"]
+            },
+            player:{
+                name: "VegitoSSJ",
+                ID: 1,
+                version: []
+            }
+        },{
+            div : document.getElementById("campaign4"),
+            campaign : "DBZ",
+            level : 4,
+            difficulty : "B",
+            isLocked: true,
+            altReward:{
+                name: "GokuSSJ3",
+                ID: 10,
+                version: []
+            },
+            reward: {
+                name: "GoldenFrieza",
+                ID: 8,
+                version: []
+            },
+            player:{
+                name: "GokuSSJ3",
+                ID: 542,
+                version: []
+            }
+        },{
+            div : document.getElementById("campaign5"),
+            campaign : "DBZ",
+            level : 5,
+            isLocked: true,
+            difficulty : "A",
+            altReward:{
+                name: "GohanSSJ3",
+                ID: 54,
+                version: []
+            },
+            reward: {
+                name: "BlackGoku",
+                ID: 679,
+                version: ["BlackGoku"]
+            },
+            player:{
+                name: "GohanSSJ3",
+                ID: 54,
+                version: []
+            }
+        },{
+            div : document.getElementById("campaign6"),
+            campaign : "DBZ",
+            level : 6,
+            isLocked: true,
+            difficulty : "S",
+            altReward:{
+                name: "GogetaSSG",
+                ID: 0,
+                version: ["GogetaSSG"]
+            },
+            reward: {
+                name: "SuperJanembaXeno",
+                ID: 678,
+                version: ["SuperJanembaXeno"]
+            },
+            player:{
+                name: "GogetaSSG",
+                ID: 0,
+                version: ["GogetaSSG"]
+            }
+        },{
+            div : document.getElementById("campaign7"),
+            campaign : "DBZ",
+            level : 7,
+            isLocked: true,
+            difficulty : "SSS",
+            altReward:{
+                name: "VegitoXenoSSJ4",
+                ID: 1,
+                version: ["VegitoXenoSSJ4"]
+            },
+            reward: {
+                name: "MechaZamasu",
+                ID: 679,
+                version: ["MechaZamasu"]
+            },
+            player:{
+                name: "VegitoXenoSSJ4",
+                ID: 1,
+                version: ["VegitoXenoSSJ4"]
+            }
+        }
+    ]
+    let listCampaignBTM = [
+        {
+            div : document.getElementById("campaignBTM1"),
+            campaign : "BTM",
+            level : 1,
+            difficulty : "A",
+            isLocked: false,
+            altReward:{
+                name: "SpiderMan",
+                ID: 102,
+                version: []
+            },
+            reward: {
+                name: "Venom",
+                ID: 81,
+                version: []
+            },
+            player: {
+                name: "SpiderMan",
+                ID: 102,
+                version: []
+            }
+        },{
+            div : document.getElementById("campaignBTM2"),
+            campaign : "BTM",
+            level : 2,
+            difficulty : "S",
+            isLocked: true,
+            altReward:{
+                name: "Sasuke",
+                ID: 1042,
+                version: ["Sasuke"]
+            },
+            reward: {
+                name: "Itachi",
+                ID: 811,
+                version: []
+            },
+            player: {
+                name: "Sasuke",
+                ID: 1042,
+                version: ["Sasuke"]
+            }
+        },{
+            div : document.getElementById("campaignBTM3"),
+            campaign : "BTM",
+            level : 3,
+            difficulty : "SS",
+            isLocked: true,
+            altReward:{
+                name: "SasukeRinnegan",
+                ID: 1042,
+                version: []
+            },
+            reward: {
+                name: "NarutoDemon",
+                ID: 812,
+                version: ["NarutoDemon"]
+            },
+            player: {
+                name: "SasukeRinnegan",
+                ID: 1042,
+                version: ["SasukeRinnegan"]
+            }
+        }
+    ]
+    let listCampaignNTM = [
+        {
+            div : document.getElementById("campaignNTM1"),
+            campaign : "NTM",
+            level : 1,
+            difficulty : "SSSSS",
+            isLocked: false,
+            altReward:null,
+            reward: {
+                name: "NappaSSJ4",
+                ID: 8145,
+                version: []
+            },
+            player: {
+                name: "GogetaSSG",
+                ID: 102,
+                version: []
+            }
+        },{
+            div : document.getElementById("campaignNTM2"),
+            campaign : "NTM",
+            level : 2,
+            difficulty : "SSSSS",
+            isLocked: false,
+            altReward:{
+                name: "VegitoSSJPink",
+                ID: 1,
+                version: ["VegitoSSJPink"]
+            },
+            reward: {
+                name: "BrolySSJ",
+                ID: 175,
+                version: ["BrolySSJ"]
+            },
+            player: {
+                name: "VegitoSSJPink",
+                ID: 1,
+                version: ["VegitoSSJPink"]
+            }
+        }
+    ]
+    let actualCampaign = null;
+    //#endregion //* Campaign var
+
+    //#region //? Game var
+
+    let tabPerso = [
+        {
+            name: "Goku",
+            ID: 10,
+            version: ["Goku"]
+        },{
+            name: "Vegeta",
+            ID: 1123,
+            version: ["Vegeta"]
+        },{
+            name: "Gogeta",
+            ID: 0,
+            version: ["Gogeta"]
+        },{
+            name: "VegitoSSJ",
+            ID: 1,
+            version: ["VegitoSSJ"]
+        },{
+            name: "FirstFrieza",
+            ID: 8,
+            version: ["FirstFrieza"]
+        },{
+            name: "KidBuu",
+            ID: 666,
+            version: ["KidBuu"]
+        },{
+            name: "GohanSSJ",
+            ID: 54,
+            version: ["GohanSSJ"]
+        }
+    ];
+    let tabAllPerso = [
+        {
+            name: "Goku",
+            ID: 10,
+            version: ["Goku", "MajinGoku", "GokuSSJ", "GokuSSJ3", "GokuSSJ4"]
+        },{
+            name: "Vegeta",
+            ID: 1123,
+            version: ["Vegeta", "MajinVegeta", "VegetaSSJ3", "VegetaSSB", "VegetaXenoSSJ5"]
+        },{
+            name: "Gogeta",
+            ID: 0,
+            version: ["Gogeta", "GogetaSSG"]
+        },{
+            name: "VegitoSSJ",
+            ID: 1,
+            version: ["VegitoSSJ", "VegitoSSJPink", "VegitoXenoSSJ4"]
+        },{
+            name: "FirstFrieza",
+            ID: 8,
+            version: ["FirstFrieza", "Frieza", "GoldenFrieza"]
+        },{
+            name: "KidBuu",
+            ID: 666,
+            version: ["KidBuu", "Buutenks", "Buumasu", "Buuhan", "ZenBuu"]
+        },{
+            name: "GohanSSJ",
+            ID: 54,
+            version: ["GohanSSJ", "GohanSSJ3", "GohanSSB"]
+        },{
+            name: "FinalCooler",
+            ID: 896,
+            version: ["FinalCooler", "GoldenCooler"]
+        },{
+            name: "SuperJanemba",
+            ID: 678,
+            version: ["SuperJanemba","SuperJanembaXeno"]
+        },{
+            name: "BlackGoku",
+            ID: 679,
+            version: ["BlackGoku", "CorruptedZamasu", "MechaZamasu"]
+        },{
+            name: "NappaSSJ4",
+            ID: 8145,
+            version: []
+        },{
+            name:"Bardock",
+            ID: 158,
+            version:["Bardock"]
+        },{
+            name: "BabyVegeta",
+            ID: 646,
+            version: ["BabyVegeta","BabyBlackVegito"]
+        },{
+            name:"BrolySSJ",
+            ID: 175,
+            version:["BrolySSJ"]
+        },{
+            name: "DrGero",
+            ID: 1124,
+            version: ["DrGero"]
+        },{
+            name: "Sasuke",
+            ID: 1042,
+            version: ["Sasuke", "SasukeRinnegan"]
+        },{
+            name: "Itachi",
+            ID: 811,
+            version: []
+        },{
+            name: "NarutoDemon",
+            ID: 812,
+            version: ["NarutoDemon"]
+        },{
+            name: "SpiderMan",
+            ID: 102,
+            version: []
+        },{
+            name: "Venom",
+            ID: 81,
+            version: []
+        }
+    ];
+    let tabPersoDiv = [];
+    let player1perso = null;
+    let player2perso = null;
+    let difficultyRank = "D";
+    let timeOutIa = 350;
+    let numberClickP1 = 0;
+    let numberClickP2 = 0;
+    let normalKamehaWidth = 43.75;
+    let player1KamehaWidth = normalKamehaWidth;
+    let player2KamehaWidth = normalKamehaWidth;
+    let maxClick = 50;
+    let gameStarted = true;
+    let canClick = false;
+    let TimeOutClickP1 = 2;
+    let TimeOutClickP2 = 2;
+    let whoWin;
+
+    //#endregion //? Game var
+
+    //#region //! Shop var
+
+    let tablePersoShop = [
+        [{
+            name: "ZenBuu",
+            ID: 666,
+            version: ["ZenBuu"],
+        }, 200, true],
+        [{
+            name: "BabyVegeta",
+            ID: 646,
+            version: ["BabyVegeta"],
+        }, 300, true],
+        [{
+            name: "BabyBlackVegito",
+            ID: 646,
+            version: ["BabyBlackVegito"],
+        }, 500,true]
+    ]
+    let tableDivPersoShop = []
+
+    //#endregion //! Shop var
+
+    //#region //? Code var
+
+    let cheatCode = [
+        {
+        code : "unlockall",
+        function : getAllPerso,
+        active : false
+        },
+        {
+            code : "nightmare",
+            function : setNightmare,
+            active : false
+        },
+        {
+            code : "activekeydown",
+            function : setKeyDown,
+            active : false
+        }
+    ];
+
+    //#endregion //? Code var
+
+//TODO TODO TODO TODO TODO TODO
 //#endregion // TODO VAR SECTION
 
-//#region //? MainMenu
+//#region //? MainMenuNavigationAndDisplay
+//?????????????????????????????
 
-const rollFightMenu = () => {
-    underFightButton[0].classList.toggle("exist");
-    underFightButton[1].classList.toggle("exist");
-}
+    const rollFightMenu = () => {
+        underFightButton[0].classList.toggle("exist");
+        underFightButton[1].classList.toggle("exist");
+    }
 
-const setCountCrystal = () => {
-    document.getElementById("crystalCount").innerHTML = dragonBall;
-    document.getElementById("crystalCountSummon").innerHTML = dragonBall;
-}
+    const setCountCrystal = () => {
+        document.getElementById("crystalCount").innerHTML = dragonBall;
+        document.getElementById("crystalCountSummon").innerHTML = dragonBall;
+    }
 
-const setCountMoney = () => {
-    document.getElementById("moneyCount").innerHTML = money;
-    document.getElementById("moneyCountShop").innerHTML = money;
-}
+    const setCountMoney = () => {
+        document.getElementById("moneyCount").innerHTML = money;
+        document.getElementById("moneyCountShop").innerHTML = money;
+    }
 
-const goToSummonMenu = () => {
-    divSummon.style.display = "initial";
-    divMenu.style.display = "none";
-    rollCard();
-}
+    const goToSummonMenu = () => {
+        divSummon.style.display = "initial";
+        divMenu.style.display = "none";
+        rollCard();
+    }
 
-const goToShopMenu = () => {
-    divShop.style.display = "initial";
-    divMenu.style.display = "none";
-}
+    const goToShopMenu = () => {
+        divShop.style.display = "initial";
+        divMenu.style.display = "none";
+    }
 
-const goToCodeMenu = () => {
-    divCode.classList.toggle("active");
-}
+    const goToCodeMenu = () => {
+        divCode.classList.toggle("active");
+    }
 
-const startCampaign = () =>
-{
-    setVisualCampaignMenu(listCampaignDBZ);
-    setVisualCampaignMenu(listCampaignBTM);
-    setVisualCampaignMenu(listCampaignNTM);
-    divCampaign.style.display = "initial";
-    divMenu.style.display = "none";
-}
+    const startCampaign = () =>
+    {
+        setVisualCampaignMenu(listCampaignDBZ);
+        setVisualCampaignMenu(listCampaignBTM);
+        setVisualCampaignMenu(listCampaignNTM);
+        divCampaign.style.display = "initial";
+        divMenu.style.display = "none";
+    }
 
-const startChoosePerso = () => {
-    createTablePerso();
-    divChooseDiff.style.display = "none";
-    actualCampaign = null;
-    gameIsIa = false;
-    divMenu.style.display = "none";
-    divSelection.style.display = "initial"
-}
+    const startChoosePerso = () => {
+        createTablePerso();
+        divChooseDiff.style.display = "none";
+        actualCampaign = null;
+        gameIsIa = false;
+        divMenu.style.display = "none";
+        divSelection.style.display = "initial"
+    }
 
-const startChoosePersoIA = () => {
-    createTablePerso();
-    divChooseDiff.style.display = "flex";
-    actualCampaign = null;
-    gameIsIa = true;
-    setDifficultyInTab("D", 0);
-    divMenu.style.display = "none";
-    divSelection.style.display = "initial"
-}
+    const startChoosePersoIA = () => {
+        createTablePerso();
+        divChooseDiff.style.display = "flex";
+        actualCampaign = null;
+        gameIsIa = true;
+        setDifficultyInTab("D", 0);
+        divMenu.style.display = "none";
+        divSelection.style.display = "initial"
+    }
 
-setCountCrystal();
-document.getElementById("returnMainAsSummon").addEventListener("click", () =>
-{
     setCountCrystal();
-    divSummon.style.display = "none";
-    divMenu.style.display = "initial";
-})
-document.getElementById("returnMainAsShop").addEventListener("click", () =>
-{
-    divMenu.style.display = "initial";
-    divShop.style.display = "none";
-})
-document.getElementById("returnMainAsCode").addEventListener("click", () =>
-{
-    divCode.classList.toggle("active");
-})
 
-    //#region //* AddEventListenerOnButton
+    //#region //TODO returnFlechEvent
+    document.getElementById("returnMainAsSummon").addEventListener("click", () =>
+    {
+        setCountCrystal();
+        divSummon.style.display = "none";
+        divMenu.style.display = "initial";
+    })
+    document.getElementById("returnMainAsShop").addEventListener("click", () =>
+    {
+        divMenu.style.display = "initial";
+        divShop.style.display = "none";
+    })
+    document.getElementById("returnMainAsCode").addEventListener("click", () =>
+    {
+        divCode.classList.toggle("active");
+    })
+    //#endregion //TODO returnFlechEvent
+
+    //#region //TODO AddEventListenerOnButton
 
         fightButton.addEventListener("click", rollFightMenu);
         document.getElementById("agIA").addEventListener("click", startChoosePersoIA);
@@ -524,9 +584,9 @@ document.getElementById("returnMainAsCode").addEventListener("click", () =>
             window.close();
         })
 
-    //#endregion //* AddEventListenerOnButton
+    //#endregion //TODO AddEventListenerOnButton
 
-    //#region // ! FANCY MAIN MENU SMOOTH BACKGROUND
+    //#region //TODO FANCY MAIN MENU SMOOTH BACKGROUND
 
         let clientHeight = document.documentElement.clientHeight;
         let clientWidth = document.documentElement.clientWidth;
@@ -544,89 +604,97 @@ document.getElementById("returnMainAsCode").addEventListener("click", () =>
 
         document.addEventListener('mousemove', logMovement);
 
-    //#endregion // ! FANCY MAIN MENU SMOOTH BACKGROUND
+    //#endregion //TODO FANCY MAIN MENU SMOOTH BACKGROUND
 
-//#endregion //? MainMenu
+//?????????????????????????????
+//#endregion //? MainMenuNavigationAndDisplay
 
 //#region //* Campaign
+//******************************
 
-const setVisualCampaignMenu = (campaignSlide) => {
-    for(let i =0;i<campaignSlide.length;i++){
-        if(campaignSlide[i].isLocked === true){
-            campaignSlide[i].div.classList.add("locked");
-        }else{
-            campaignSlide[i].div.classList.remove("locked");
-            campaignSlide[i].div.innerHTML ="";
-            let rankTier = campaignSlide[i].div.appendChild(document.createElement("div"));
-            rankTier.classList.add("ranking");
-            rankTier.classList.add(campaignSlide[i].difficulty);
+    const setVisualCampaignMenu = (campaignSlide) => {
+        for(let i =0;i<campaignSlide.length;i++){
+            if(campaignSlide[i].isLocked === true){
+                campaignSlide[i].div.classList.add("locked");
+            }else{
+                campaignSlide[i].div.classList.remove("locked");
+                campaignSlide[i].div.innerHTML ="";
+                let rankTier = campaignSlide[i].div.appendChild(document.createElement("div"));
+                rankTier.classList.add("ranking");
+                rankTier.classList.add(campaignSlide[i].difficulty);
+            }
         }
     }
-}
 
-const returnToMainMenuAsCampaign = () => {
-    divCampaign.style.display = "none";
-    divMenu.style.display = "initial";
-    setCountCrystal();
-}
+    const returnToMainMenuAsCampaign = () => {
+        divCampaign.style.display = "none";
+        divMenu.style.display = "initial";
+        setCountCrystal();
+    }
 
-const rollCampaignSlide = (campaignSlide) => {
-    for(let i =0;i<campaignSlide.length;i++){
-        campaignSlide[i].div.classList.toggle("exist");
-        if(campaignSlide[i].isLocked === true){
-            campaignSlide[i].div.classList.add("locked");
-        }else{
-            campaignSlide[i].div.classList.remove("locked");
+    const rollCampaignSlide = (campaignSlide) => {
+        for(let i =0;i<campaignSlide.length;i++){
+            campaignSlide[i].div.classList.toggle("exist");
+            if(campaignSlide[i].isLocked === true){
+                campaignSlide[i].div.classList.add("locked");
+            }else{
+                campaignSlide[i].div.classList.remove("locked");
+            }
         }
     }
-}
 
-const chooseCampaign = (campaign) => {
-    if(campaign.isLocked === false){
-        actualCampaign = campaign;
-        player1perso = campaign.player.name;
-        player2perso = campaign.reward.name;
-        difficultyRank = campaign.difficulty;
-        gameIsIa = true;
-        startGame();
+    const chooseCampaign = (campaign) => {
+        if(campaign.isLocked === false){
+            actualCampaign = campaign;
+            player1perso = campaign.player.name;
+            player2perso = campaign.reward.name;
+            difficultyRank = campaign.difficulty;
+            gameIsIa = true;
+            startGame();
+        }
     }
-}
 
-const setCampaignEvent = () => {
-    for(let i = 0;i<listCampaignDBZ.length;i++){
-        listCampaignDBZ[i].div.addEventListener("click", () => {
-            chooseCampaign(listCampaignDBZ[i]);
-        })
+    const setCampaignEvent = () => {
+        for(let i = 0;i<listCampaignDBZ.length;i++){
+            listCampaignDBZ[i].div.addEventListener("click", () => {
+                chooseCampaign(listCampaignDBZ[i]);
+            })
+        }
+        for(let j = 0;j<listCampaignBTM.length;j++){
+            listCampaignBTM[j].div.addEventListener("click", () => {
+                chooseCampaign(listCampaignBTM[j]);
+            })
+        }
+        for(let k = 0;k<listCampaignNTM.length;k++){
+            listCampaignNTM[k].div.addEventListener("click", () => {
+                chooseCampaign(listCampaignNTM[k]);
+            })
+        }
     }
-    for(let j = 0;j<listCampaignBTM.length;j++){
-        listCampaignBTM[j].div.addEventListener("click", () => {
-            chooseCampaign(listCampaignBTM[j]);
-        })
-    }
-    for(let k = 0;k<listCampaignNTM.length;k++){
-        listCampaignNTM[k].div.addEventListener("click", () => {
-            chooseCampaign(listCampaignNTM[k]);
-        })
-    }
-}
 
-setCampaignEvent();
+    setCampaignEvent();
 
-document.getElementById("returnMainAsCampaign").addEventListener("click", returnToMainMenuAsCampaign)
-document.getElementById("campaignSlide1").addEventListener("click", ()=>{
-    rollCampaignSlide(listCampaignDBZ);
-})
-document.getElementById("campaignSlide2").addEventListener("click", ()=>{
-    rollCampaignSlide(listCampaignBTM);
-})
-document.getElementById("campaignSlide3").addEventListener("click", ()=>{
-    rollCampaignSlide(listCampaignNTM);
-})
+    document.getElementById("returnMainAsCampaign").addEventListener("click", returnToMainMenuAsCampaign);
 
+    //#region //TODO CampaignSlide
 
+    document.getElementById("campaignSlide1").addEventListener("click", ()=>{
+        rollCampaignSlide(listCampaignDBZ);
+    })
+    document.getElementById("campaignSlide2").addEventListener("click", ()=>{
+        rollCampaignSlide(listCampaignBTM);
+    })
+    document.getElementById("campaignSlide3").addEventListener("click", ()=>{
+        rollCampaignSlide(listCampaignNTM);
+    })
+
+    //#endregion //TODO CampaignSlide
+
+//******************************
 //#endregion //* Campaign
 
 //#region //! TableSelectPerso
+//!!!!!!!!!!!!!!!!!!!!!!!!
 
     const createTablePerso = () => {
 
@@ -811,417 +879,402 @@ document.getElementById("campaignSlide3").addEventListener("click", ()=>{
 
     //#endregion // TODO SET DIFFICULTY WITH EVENT ON ICON
 
+//!!!!!!!!!!!!!!!!!!!!!!!!
 //#endregion //! TableSelectPerso
 
 //#region //? Game
+//?????????????????????????????
 
-document.addEventListener("keyup", (e) => {
-    if(gameStarted === true && canClick === true){
-        if(e.key === " "){
-            addPlayer1Click();
-        }
-        if(e.code === "Numpad0" && gameIsIa === false){
-            addPlayer2Click();
-        }
-    }
-});
-
-const callbackFunctionDelay = () => {
-    setTimeout(() => {
-        if(numberClickP1 >= 0 && numberClickP2 >= 0 && gameStarted === true)
-        {
-            TimeOutClickP1-= 0.4;
-            TimeOutClickP2-= 0.4;
-            if(TimeOutClickP1 <= 0){
-                isNotClickingP1();
+    document.addEventListener("keyup", (e) => {
+        if(gameStarted === true && canClick === true){
+            if(e.key === " "){
+                addPlayer1Click();
             }
-            if(TimeOutClickP2<=0){
-                isNotClickingP2();
-            }
-            setWidthKameha();
-        }
-        if(gameStarted===true){
-            callbackFunctionDelay();
-        }
-    },250)
-}
-
-const iaAgainstPlayer = () => {
-    setTimeout(()=>{
-        if(gameIsIa===true && gameStarted === true){
-            if(getRandomInt(3)<=1){
+            if(e.code === "Numpad0" && gameIsIa === false){
                 addPlayer2Click();
             }
-            iaAgainstPlayer();
         }
-    }, timeOutIa)
-}
+    });
 
-const isNotClickingP1 =() => {
-    numberClickP1 -= 1;
-    if(numberClickP1 < 0){
-        numberClickP1 =0;
-    }
-    setCase();
-}
-
-const isNotClickingP2 = () => {
-    numberClickP2 -= 1;
-    if(numberClickP2 < 0){
-        numberClickP2 =0;
-    }
-    setCase();
-}
-
-const setVisual = () => {
-    P1.classList.toggle(player1perso);
-    P2.classList.toggle(player2perso);
-    portgame1DOM.classList.toggle(player1perso);
-    portgame2DOM.classList.toggle(player2perso);
-    auraP1.classList.toggle(player1perso);
-    auraP2.classList.toggle(player2perso);
-    auraP1starting.classList.toggle(player1perso);
-    auraP2starting.classList.toggle(player2perso);
-    kamehaPlayer1.classList.toggle(player1perso);
-    kamehaPlayer2.classList.toggle(player2perso);
-    document.getElementById("player1txt").innerHTML = player1perso;
-    document.getElementById("player2txt").innerHTML = player2perso;
-}
-
-const setDifficulty = () => {
-    if(difficultyRank === "D"){
-        timeOutIa = 325;
-    }else if(difficultyRank === "C"){
-        timeOutIa = 275;
-    }else if(difficultyRank === "B"){
-        timeOutIa = 250;
-    }else if(difficultyRank === "A"){
-        timeOutIa = 210;
-    }else if(difficultyRank === "S"){
-        timeOutIa = 160;
-    }else if(difficultyRank === "SS"){
-        timeOutIa = 110;
-    }else if(difficultyRank === "SSS"){
-        timeOutIa = 90;
-    }else if(difficultyRank === "SSSS"){
-        timeOutIa = 70;
-    }else if(difficultyRank === "SSSSS"){
-        timeOutIa = 50;
-    }
-}
-
-const addPlayer1Click = () => {
-    TimeOutClickP1 =2;
-    numberClickP1++;
-    player1KamehaWidth+=0.7;
-    player2KamehaWidth-=0.7;
-    setCase();
-    setGameState();
-    setWidthKameha();
-}
-
-const addPlayer2Click = () => {
-    TimeOutClickP2 =2;
-    numberClickP2++;
-    player2KamehaWidth+=0.7;
-    player1KamehaWidth-=0.7;
-    setCase();
-    setGameState();
-    setWidthKameha();
-}
-
-const setWidthKameha = () => {
-    // ! midwidth of a kameha is 43.75
-        if(gameStarted === true){
-            kamehaPlayer1.style.opacity = "100";
-            kamehaPlayer2.style.opacity = "100";
-            let tempWidth1 = 43.75 + (numberClickP1-numberClickP2)/2.25;
-            let tempWidth2 = 43.75 + (numberClickP2-numberClickP1)/2.25;
-
-            kamehaPlayer1.style.width = tempWidth1 + "%";
-            kamehaPlayer2.style.width = tempWidth2 + "%";
-            if(tempWidth1 < 31.31){
-                document.getElementById("mid1").style.backgroundSize = "cover";
-            }else{
-                document.getElementById("mid1").style.backgroundSize = "contain";
+    const callbackFunctionDelay = () => {
+        setTimeout(() => {
+            if(numberClickP1 >= 0 && numberClickP2 >= 0 && gameStarted === true)
+            {
+                TimeOutClickP1-= 0.4;
+                TimeOutClickP2-= 0.4;
+                if(TimeOutClickP1 <= 0){
+                    isNotClickingP1();
+                }
+                if(TimeOutClickP2<=0){
+                    isNotClickingP2();
+                }
+                setWidthKameha();
             }
-            if(tempWidth2 < 31.31){
-                document.getElementById("mid2").style.backgroundSize = "cover";
-            }else{
-            document.getElementById("mid2").style.backgroundSize = "contain";
+            if(gameStarted===true){
+                callbackFunctionDelay();
+            }
+        },250)
+    }
+
+    const iaAgainstPlayer = () => {
+        setTimeout(()=>{
+            if(gameIsIa===true && gameStarted === true){
+                if(getRandomInt(3)<=1){
+                    addPlayer2Click();
+                }
+                iaAgainstPlayer();
+            }
+        }, timeOutIa)
+    }
+
+    const isNotClickingP1 =() => {
+        numberClickP1 -= 1;
+        if(numberClickP1 < 0){
+            numberClickP1 =0;
+        }
+        setCase();
+    }
+
+    const isNotClickingP2 = () => {
+        numberClickP2 -= 1;
+        if(numberClickP2 < 0){
+            numberClickP2 =0;
+        }
+        setCase();
+    }
+
+    const setVisual = () => {
+        P1.classList.toggle(player1perso);
+        P2.classList.toggle(player2perso);
+        portgame1DOM.classList.toggle(player1perso);
+        portgame2DOM.classList.toggle(player2perso);
+        auraP1.classList.toggle(player1perso);
+        auraP2.classList.toggle(player2perso);
+        auraP1starting.classList.toggle(player1perso);
+        auraP2starting.classList.toggle(player2perso);
+        kamehaPlayer1.classList.toggle(player1perso);
+        kamehaPlayer2.classList.toggle(player2perso);
+        document.getElementById("player1txt").innerHTML = player1perso;
+        document.getElementById("player2txt").innerHTML = player2perso;
+    }
+
+    const setDifficulty = () => {
+        if(difficultyRank === "D"){
+            timeOutIa = 325;
+        }else if(difficultyRank === "C"){
+            timeOutIa = 275;
+        }else if(difficultyRank === "B"){
+            timeOutIa = 250;
+        }else if(difficultyRank === "A"){
+            timeOutIa = 210;
+        }else if(difficultyRank === "S"){
+            timeOutIa = 160;
+        }else if(difficultyRank === "SS"){
+            timeOutIa = 110;
+        }else if(difficultyRank === "SSS"){
+            timeOutIa = 90;
+        }else if(difficultyRank === "SSSS"){
+            timeOutIa = 70;
+        }else if(difficultyRank === "SSSSS"){
+            timeOutIa = 50;
         }
     }
-}
 
-const setCase = () => {
-    let numbertemp1 = numberClickP1*2;
-    let numbertemp2 = numberClickP2*2;
-    document.getElementById("fillCase1").style.width = numbertemp1 + "%";
-    document.getElementById("fillCase2").style.width = numbertemp2 + "%";
-}
-
-const setGameState = () => {
-    if(numberClickP1 >= maxClick){
-        gameStarted = false;
-        whoWin = "player1";
-        finishGame();
-    }else if(numberClickP2>=maxClick){
-        gameStarted = false;
-        whoWin = "player2";
-        finishGame();
-    }else{
-        gameStarted = true;
+    const addPlayer1Click = () => {
+        TimeOutClickP1 =2;
+        numberClickP1++;
+        player1KamehaWidth+=0.7;
+        player2KamehaWidth-=0.7;
+        setCase();
+        setGameState();
+        setWidthKameha();
     }
-}
 
-const finishGame = () => {
-    txtStarting.innerHTML = whoWin;
-    gameStarted = false;
-    if(whoWin === "player1"){
-        kamehaPlayer1.style.width = "110%";
-        kamehaPlayer2.style.width = "0%";
-        kamehaPlayer2.style.opacity = "0";
-        kamehaPlayer1.style.transition = "all 1s";
-        kamehaPlayer2.style.transition = "all 1s";
-        if(actualCampaign!==null){
-            endCampaign();
+    const addPlayer2Click = () => {
+        TimeOutClickP2 =2;
+        numberClickP2++;
+        player2KamehaWidth+=0.7;
+        player1KamehaWidth-=0.7;
+        setCase();
+        setGameState();
+        setWidthKameha();
+    }
+
+    const setWidthKameha = () => {
+        // ! midwidth of a kameha is 43.75
+            if(gameStarted === true){
+                kamehaPlayer1.style.opacity = "100";
+                kamehaPlayer2.style.opacity = "100";
+                let tempWidth1 = 43.75 + (numberClickP1-numberClickP2)/2.25;
+                let tempWidth2 = 43.75 + (numberClickP2-numberClickP1)/2.25;
+
+                kamehaPlayer1.style.width = tempWidth1 + "%";
+                kamehaPlayer2.style.width = tempWidth2 + "%";
+                if(tempWidth1 < 31.31){
+                    document.getElementById("mid1").style.backgroundSize = "cover";
+                }else{
+                    document.getElementById("mid1").style.backgroundSize = "contain";
+                }
+                if(tempWidth2 < 31.31){
+                    document.getElementById("mid2").style.backgroundSize = "cover";
+                }else{
+                document.getElementById("mid2").style.backgroundSize = "contain";
+            }
         }
-    }else if(whoWin === "player2"){
-        console.log("test2");
-        kamehaPlayer1.style.width = "0%";
-        kamehaPlayer2.style.width = "110%";
-        kamehaPlayer1.style.opacity = "0";
-        kamehaPlayer2.style.transition = "all 1s";
-        kamehaPlayer1.style.transition = "all 1s";
     }
-    callbackDisapearKameAndWin();
-}
 
-const endCampaign= () => {
-    addCharacter(actualCampaign.reward);
-    addCharacter(actualCampaign.altReward);
-    unlockNextLevel();
-}
+    const setCase = () => {
+        let numbertemp1 = numberClickP1*2;
+        let numbertemp2 = numberClickP2*2;
+        document.getElementById("fillCase1").style.width = numbertemp1 + "%";
+        document.getElementById("fillCase2").style.width = numbertemp2 + "%";
+    }
 
-const addCharacter = (Character) => {
-    if(Character !== null){
-        let tempTapDoublon=false;
-        let canAddDoublonInVersion = true;
-        for(let k = 0; k < tabPerso.length;k++){
-            if(tabPerso[k].ID===Character.ID){
-                tempTapDoublon = true;
-                for(let y = 0; y<tabPerso[k].version.length;y++){
-                    if(tabPerso[k].version[y]===Character.name){
-                        canAddDoublonInVersion = false;
+    const setGameState = () => {
+        if(numberClickP1 >= maxClick){
+            gameStarted = false;
+            whoWin = "player1";
+            finishGame();
+        }else if(numberClickP2>=maxClick){
+            gameStarted = false;
+            whoWin = "player2";
+            finishGame();
+        }else{
+            gameStarted = true;
+        }
+    }
+
+    const finishGame = () => {
+        txtStarting.innerHTML = whoWin;
+        gameStarted = false;
+        if(whoWin === "player1"){
+            kamehaPlayer1.style.width = "110%";
+            kamehaPlayer2.style.width = "0%";
+            kamehaPlayer2.style.opacity = "0";
+            kamehaPlayer1.style.transition = "all 1s";
+            kamehaPlayer2.style.transition = "all 1s";
+            if(actualCampaign!==null){
+                endCampaign();
+            }
+        }else if(whoWin === "player2"){
+            console.log("test2");
+            kamehaPlayer1.style.width = "0%";
+            kamehaPlayer2.style.width = "110%";
+            kamehaPlayer1.style.opacity = "0";
+            kamehaPlayer2.style.transition = "all 1s";
+            kamehaPlayer1.style.transition = "all 1s";
+        }
+        callbackDisapearKameAndWin();
+    }
+
+    const endCampaign= () => {
+        addCharacter(actualCampaign.reward);
+        addCharacter(actualCampaign.altReward);
+        unlockNextLevel();
+    }
+
+    const addCharacter = (Character) => {
+        if(Character !== null){
+            let tempTapDoublon=false;
+            let canAddDoublonInVersion = true;
+            for(let k = 0; k < tabPerso.length;k++){
+                if(tabPerso[k].ID===Character.ID){
+                    tempTapDoublon = true;
+                    for(let y = 0; y<tabPerso[k].version.length;y++){
+                        if(tabPerso[k].version[y]===Character.name){
+                            canAddDoublonInVersion = false;
+                        }
+                    }
+                    if(canAddDoublonInVersion=== true){
+                        tabPerso[k].version.push(Character.name);
                     }
                 }
-                if(canAddDoublonInVersion=== true){
-                    tabPerso[k].version.push(Character.name);
-                }
+            }
+            if(tempTapDoublon===false){
+                tabPerso.push(Character);
             }
         }
-        if(tempTapDoublon===false){
-            tabPerso.push(Character);
+    }
+
+    const unlockNextLevel = () => {
+        if(actualCampaign.campaign === "DBZ" && actualCampaign.level<listCampaignDBZ.length){
+            let tempNextLVL = actualCampaign.level;
+            listCampaignDBZ[tempNextLVL].isLocked = false;
+            listCampaignDBZ[tempNextLVL].div.classList.remove("locked");
+        }
+        if(actualCampaign.campaign === "BTM" && actualCampaign.level<listCampaignBTM.length){
+            let tempNextLVL = actualCampaign.level;
+            listCampaignBTM[tempNextLVL].isLocked = false;
+            listCampaignBTM[tempNextLVL].div.classList.remove("locked");
         }
     }
-}
 
-const unlockNextLevel = () => {
-    if(actualCampaign.campaign === "DBZ" && actualCampaign.level<listCampaignDBZ.length){
-        let tempNextLVL = actualCampaign.level;
-        listCampaignDBZ[tempNextLVL].isLocked = false;
-        listCampaignDBZ[tempNextLVL].div.classList.remove("locked");
+    const callbackDisapearKameAndWin = () => {
+        setTimeout(() => {
+            kamehaPlayer1.style.opacity = "0";
+            kamehaPlayer2.style.opacity = "0";
+            if(whoWin === "player1"){
+                p1DOM.classList.toggle("win");
+                p2DOM.classList.toggle("loose");
+                auraP2.classList.remove(player2perso);
+                auraP1.classList.remove(player1perso);
+            }else if(whoWin === "player2"){
+                p2DOM.classList.toggle("win");
+                p1DOM.classList.toggle("loose");
+                auraP1.classList.remove(player1perso);
+                auraP2.classList.remove(player2perso);
+            }
+            callbackAppearRestartMenu();
+        },1000)
     }
-    if(actualCampaign.campaign === "BTM" && actualCampaign.level<listCampaignBTM.length){
-        let tempNextLVL = actualCampaign.level;
-        listCampaignBTM[tempNextLVL].isLocked = false;
-        listCampaignBTM[tempNextLVL].div.classList.remove("locked");
+
+    const callbackAppearRestartMenu = () => {
+        setTimeout(()=>{
+            document.getElementById("restartMenu").style.display = "initial";
+            document.getElementById("restartMenu").style.opacity = "100%";
+        },4000)
     }
-}
 
-const callbackDisapearKameAndWin = () => {
-    setTimeout(() => {
-        kamehaPlayer1.style.opacity = "0";
-        kamehaPlayer2.style.opacity = "0";
-        if(whoWin === "player1"){
-            p1DOM.classList.toggle("win");
-            p2DOM.classList.toggle("loose");
-            auraP2.classList.remove(player2perso);
-            auraP1.classList.remove(player1perso);
-        }else if(whoWin === "player2"){
-            p2DOM.classList.toggle("win");
-            p1DOM.classList.toggle("loose");
-            auraP1.classList.remove(player1perso);
-            auraP2.classList.remove(player2perso);
-        }
-        callbackAppearRestartMenu();
-    },1000)
-}
+    const goToMainMenu = () => {
+        gameIsIa = false;
+        divMenu.style.display = "initial";
+        divGame.style.display = "none";
+        setCountCrystal();
+        resetVisual();
+        player1perso = null;
+        player2perso = null;
+        document.getElementById("restartMenu").style.display = "none";
+    }
 
-const callbackAppearRestartMenu = () => {
-    setTimeout(()=>{
-        document.getElementById("restartMenu").style.display = "initial";
-        document.getElementById("restartMenu").style.opacity = "100%";
-    },4000)
-}
+    const resetVisual = () => {
+        P1.classList.remove(player1perso);
+        P2.classList.remove(player2perso);
+        kamehaPlayer1.classList.remove(player1perso);
+        kamehaPlayer2.classList.remove(player2perso);
+        P1.classList.remove("win");
+        P2.classList.remove("win");
+        P1.classList.remove("loose");
+        P2.classList.remove("loose");
+        auraP1.classList.remove(player1perso);
+        auraP2.classList.remove(player2perso);
+        auraP1starting.classList.remove(player1perso);
+        auraP2starting.classList.remove(player2perso);
+        player2DOM.classList.remove(player2perso);
+        player1DOM.classList.remove(player1perso);
+        portgame1DOM.classList.remove(player1perso);
+        portgame2DOM.classList.remove(player2perso);
+    }
 
-const goToMainMenu = () => {
-    gameIsIa = false;
-    divMenu.style.display = "initial";
-    divGame.style.display = "none";
-    setCountCrystal();
-    resetVisual();
-    player1perso = null;
-    player2perso = null;
-    document.getElementById("restartMenu").style.display = "none";
-}
+    document.getElementById("buttonMainMenu").addEventListener("click", goToMainMenu);
 
-const resetVisual = () => {
-    P1.classList.remove(player1perso);
-    P2.classList.remove(player2perso);
-    kamehaPlayer1.classList.remove(player1perso);
-    kamehaPlayer2.classList.remove(player2perso);
-    P1.classList.remove("win");
-    P2.classList.remove("win");
-    P1.classList.remove("loose");
-    P2.classList.remove("loose");
-    auraP1.classList.remove(player1perso);
-    auraP2.classList.remove(player2perso);
-    auraP1starting.classList.remove(player1perso);
-    auraP2starting.classList.remove(player2perso);
-    player2DOM.classList.remove(player2perso);
-    player1DOM.classList.remove(player1perso);
-    portgame1DOM.classList.remove(player1perso);
-    portgame2DOM.classList.remove(player2perso);
-}
-
-document.getElementById("buttonMainMenu").addEventListener("click", goToMainMenu);
-
+//?????????????????????????????
 //#endregion //? Game
 
 //#region //* SummonCharacter
 //******************************
 
-let summoningCharacter = [
-    {
-        name: "MajinVegeta",
-        ID: 1123,
-        version: ["MajinVegeta"]
-    },{
-        name: "DrGero",
-        ID: 1124,
-        version: ["DrGero"]
-    },{
-        name: "Buumasu",
-        ID: 666,
-        version: ["Buumasu"]
-    },{
-        name: "GohanSSB",
-        ID: 54,
-        version: ["GohanSSB"]
-    },{
-        name: "GokuSSJ4",
-        ID:10,
-        version: ["GokuSSJ4"]
-    },{
-        name: "VegetaSSB",
-        ID: 1123,
-        version: ["VegetaSSB"]
-    },{
-        name:"Bardock",
-        ID: 158,
-        version:["Bardock"]
-    }
-];
-let random = [summoningCharacter[(getRandomInt(summoningCharacter.length))],
-            summoningCharacter[(getRandomInt(summoningCharacter.length))],
-            summoningCharacter[(getRandomInt(summoningCharacter.length))]];
-let tirageSlot = document.getElementById("tirageSlot");
-let iterationOfRoll = 0;
-let waitCall = 25;
-let canSummon = true;
-
-const summonNewCharacter = () => {
-    if(dragonBall>=7 && canSummon === true){
-        tirageSlot.children[1].style.animation = "none";
-        canSummon = false;
-        waitCall = 25;
-        dragonBall -= 7;
-        iterationOfRoll = 0;
-        setCountCrystal();
-        callBackForSummon();
-    }
-}
-
-const callBackForSummon = () =>{
-    setTimeout(() => {
-        if(iterationOfRoll<15){
-            iterationOfRoll++;
-            waitCall +=25;
-            rollCard();
-            callBackForSummon();
-        }else{
-            endRoll();
+    let summoningCharacter = [
+        {
+            name: "MajinVegeta",
+            ID: 1123,
+            version: ["MajinVegeta"]
+        },{
+            name: "DrGero",
+            ID: 1124,
+            version: ["DrGero"]
+        },{
+            name: "Buumasu",
+            ID: 666,
+            version: ["Buumasu"]
+        },{
+            name: "GohanSSB",
+            ID: 54,
+            version: ["GohanSSB"]
+        },{
+            name: "GokuSSJ4",
+            ID:10,
+            version: ["GokuSSJ4"]
+        },{
+            name: "VegetaSSB",
+            ID: 1123,
+            version: ["VegetaSSB"]
+        },{
+            name:"Bardock",
+            ID: 158,
+            version:["Bardock"]
         }
-    }, waitCall);
-}
+    ];
+    let random = [summoningCharacter[(getRandomInt(summoningCharacter.length))],
+                summoningCharacter[(getRandomInt(summoningCharacter.length))],
+                summoningCharacter[(getRandomInt(summoningCharacter.length))]];
+    let tirageSlot = document.getElementById("tirageSlot");
+    let iterationOfRoll = 0;
+    let waitCall = 25;
+    let canSummon = true;
 
-const resetRandom= () => {
-    random = [summoningCharacter[(getRandomInt(summoningCharacter.length))],
-            summoningCharacter[(getRandomInt(summoningCharacter.length))],
-            summoningCharacter[(getRandomInt(summoningCharacter.length))]];
+    const summonNewCharacter = () => {
+        if(dragonBall>=7 && canSummon === true){
+            tirageSlot.children[1].style.animation = "none";
+            canSummon = false;
+            waitCall = 25;
+            dragonBall -= 7;
+            iterationOfRoll = 0;
+            setCountCrystal();
+            callBackForSummon();
+        }
+    }
 
-    if(random[0] === random[1] || random[0] === random[2] || random[2] === random[1]){
+    const callBackForSummon = () =>{
+        setTimeout(() => {
+            if(iterationOfRoll<15){
+                iterationOfRoll++;
+                waitCall +=25;
+                rollCard();
+                callBackForSummon();
+            }else{
+                endRoll();
+            }
+        }, waitCall);
+    }
+
+    const resetRandom= () => {
+        random = [summoningCharacter[(getRandomInt(summoningCharacter.length))],
+                summoningCharacter[(getRandomInt(summoningCharacter.length))],
+                summoningCharacter[(getRandomInt(summoningCharacter.length))]];
+
+        if(random[0] === random[1] || random[0] === random[2] || random[2] === random[1]){
+            resetRandom();
+        }
+    }
+
+    const rollCard = () => {
+        
+        for(let k = 0; k <tirageSlot.children.length;k++){
+            tirageSlot.children[k].children[1].classList.remove(random[k].name);
+        }
+
         resetRandom();
-    }
-}
 
-const rollCard = () => {
-    
-    for(let k = 0; k <tirageSlot.children.length;k++){
-        tirageSlot.children[k].children[1].classList.remove(random[k].name);
+        for(let i = 0; i < tirageSlot.children.length;i++){
+            tirageSlot.children[i].children[2].innerHTML = random[i].name;
+            tirageSlot.children[i].children[1].classList.add(random[i].name);
+        }
     }
 
-    resetRandom();
-
-    for(let i = 0; i < tirageSlot.children.length;i++){
-        tirageSlot.children[i].children[2].innerHTML = random[i].name;
-        tirageSlot.children[i].children[1].classList.add(random[i].name);
+    const endRoll = () => {
+        tirageSlot.children[1].style.animation = "animationGotya 1.5s";
+        canSummon = true;
+        addCharacter(random[1]);
     }
-}
 
-const endRoll = () => {
-    tirageSlot.children[1].style.animation = "animationGotya 1.5s";
-    canSummon = true;
-    addCharacter(random[1]);
-}
-
-document.getElementById("summonB").addEventListener("click", summonNewCharacter);
+    document.getElementById("summonB").addEventListener("click", summonNewCharacter);
 
 //******************************
 //#endregion //* SummonCharacter
 
 //#region //! Shop
+//!!!!!!!!!!!!!!!!!!!!!!!!
 
-
-let tablePersoShop = [
-    [{
-        name: "ZenBuu",
-        ID: 666,
-        version: ["ZenBuu"],
-    }, 200, true],
-    [{
-        name: "BabyVegeta",
-        ID: 646,
-        version: ["BabyVegeta"],
-    }, 300, true],
-    [{
-        name: "BabyBlackVegito",
-        ID: 646,
-        version: ["BabyBlackVegito"],
-    }, 500,true]
-]
-let tableDivPersoShop = []
 
 const buyCharacter = (character, price, shopCase, id) => {
     if(money>=price){
@@ -1274,10 +1327,11 @@ const createShopTable = () => {
 
 createShopTable();
 
-
+//!!!!!!!!!!!!!!!!!!!!!!!!
 //#endregion //! Shop
 
 //#region //? Code
+//?????????????????????????????
 
     //#region //* Function applied when code is good
 
@@ -1315,24 +1369,6 @@ createShopTable();
 
     //#endregion //* Function applied when code is good
 
-let cheatCode = [
-    {
-    code : "unlockall",
-    function : getAllPerso,
-    active : false
-    },
-    {
-        code : "nightmare",
-        function : setNightmare,
-        active : false
-    },
-    {
-        code : "activekeydown",
-        function : setKeyDown,
-        active : false
-    }
-];
-
 document.getElementById("codeForm").addEventListener("submit", (e) => {
     e.preventDefault();
     checkCode(document.getElementById("code").value);
@@ -1356,5 +1392,5 @@ const codeIsGood = (code) => {
     codeDiv.innerHTML = code;
 }
 
-
+//?????????????????????????????
 //#endregion //? Code
