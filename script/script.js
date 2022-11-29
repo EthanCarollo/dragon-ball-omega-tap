@@ -467,6 +467,42 @@ let money = 1000;
 
     //#region //? Code var
 
+        //#region //* Function applied when code is good
+
+    const getAllPerso = () => {
+        tabPerso = [...tabAllPerso];
+    }
+
+    const setNightmare = () => {
+        document.getElementById("campaignSlide3").style.display = "initial";
+        document.getElementById("SSSSS").style.display = "initial";
+    }
+
+    const setKeyDown = () => {
+        document.removeEventListener("keydown", (e) => {
+            if(gameStarted === true && canClick === true){
+                if(e.key === " "){
+                    addPlayer1Click();
+                }
+                if(e.code === "Numpad0" && gameIsIa === false){
+                    addPlayer2Click();
+                }
+            }
+        });
+        document.addEventListener("keydown", (e) => {
+            if(gameStarted === true && canClick === true){
+                if(e.key === " "){
+                    addPlayer1Click();
+                }
+                if(e.code === "Numpad0" && gameIsIa === false){
+                    addPlayer2Click();
+                }
+            }
+        });
+    }
+
+//#endregion //* Function applied when code is good
+
     let cheatCode = [
         {
         code : "unlockall",
@@ -1332,42 +1368,6 @@ createShopTable();
 
 //#region //? Code
 //?????????????????????????????
-
-    //#region //* Function applied when code is good
-
-        const getAllPerso = () => {
-            tabPerso = [...tabAllPerso];
-        }
-
-        const setNightmare = () => {
-            document.getElementById("campaignSlide3").style.display = "initial";
-            document.getElementById("SSSSS").style.display = "initial";
-        }
-
-        const setKeyDown = () => {
-            document.removeEventListener("keydown", (e) => {
-                if(gameStarted === true && canClick === true){
-                    if(e.key === " "){
-                        addPlayer1Click();
-                    }
-                    if(e.code === "Numpad0" && gameIsIa === false){
-                        addPlayer2Click();
-                    }
-                }
-            });
-            document.addEventListener("keydown", (e) => {
-                if(gameStarted === true && canClick === true){
-                    if(e.key === " "){
-                        addPlayer1Click();
-                    }
-                    if(e.code === "Numpad0" && gameIsIa === false){
-                        addPlayer2Click();
-                    }
-                }
-            });
-        }
-
-    //#endregion //* Function applied when code is good
 
 document.getElementById("codeForm").addEventListener("submit", (e) => {
     e.preventDefault();

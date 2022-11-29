@@ -1873,6 +1873,16 @@ body{
   font-size: 3vh;
 }
 
+@keyframes appearFT{
+  from{
+    opacity: 0;
+    transform: translateY(-1vh);
+  }to{
+    opacity: 100;
+    transform: translateY(0vh);
+  }
+}
+
 #innerCode{
   width: 100%;
 }
@@ -1881,6 +1891,7 @@ body{
   text-align: center;
   color: white;
   font-size: 2vh;
+  animation: appearFT 1s;
 }
 
 /**********************************************************/
