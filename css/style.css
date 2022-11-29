@@ -1419,6 +1419,11 @@ body{
   background-image: url(../images/ui/SSSS-tier.png);
 }
 
+#SSSSS{
+  display: none;
+  background-image: url(../images/ui/SSSSS-tier.png);
+}
+
 /**********************************************************/
 /***************************CHOOSE DIFFICULTY*******************************/
 /**********************************************************/
@@ -1851,6 +1856,31 @@ body{
 
 #returnMainAsCode{
   z-index: 1000;
+}
+
+.codeActived{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  top: 2%;
+  right: 2%;
+}
+
+.codeActived h1{
+  color: white;
+  text-shadow: 0vh 0.3vh 0vh rgba(0, 68, 255, 0.2);
+  font-size: 3vh;
+}
+
+#innerCode{
+  width: 100%;
+}
+
+.codeTxT{
+  text-align: center;
+  color: white;
+  font-size: 2vh;
 }
 
 /**********************************************************/
