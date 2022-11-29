@@ -777,7 +777,7 @@ document.getElementById("returnMain").addEventListener("click", returnMainMenu);
 //?GAME*********************************
 //?GAME*********************************
 
-document.addEventListener('keyup', (e) => {
+document.addEventListener("keyup", (e) => {
     if(gameStarted === true && canClick === true){
         if(e.key === " "){
             addPlayer1Click();
@@ -1258,6 +1258,29 @@ const setNightmare = () => {
     document.getElementById("campaignSlide3").style.display = "initial";
 }
 
+const setKeyDown = () => {
+    document.removeEventListener("keydown", (e) => {
+        if(gameStarted === true && canClick === true){
+            if(e.key === " "){
+                addPlayer1Click();
+            }
+            if(e.code === "Numpad0" && gameIsIa === false){
+                addPlayer2Click();
+            }
+        }
+    });
+    document.addEventListener("keydown", (e) => {
+        if(gameStarted === true && canClick === true){
+            if(e.key === " "){
+                addPlayer1Click();
+            }
+            if(e.code === "Numpad0" && gameIsIa === false){
+                addPlayer2Click();
+            }
+        }
+    });
+}
+
 let cheatCode = [
     {
     code : "unlockall",
@@ -1266,6 +1289,10 @@ let cheatCode = [
     {
         code : "nightmare",
         function : setNightmare
+    },
+    {
+        code : "activekeydown",
+        function : setKeyDown
     }
 ];
 

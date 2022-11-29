@@ -1787,6 +1787,7 @@ body{
   background-image: url(../images/background/backgroundTamise.png);
   animation: appearBG 0.5s reverse;
   z-index: 150;
+  background-size: cover;
 }
 
 .code.active{

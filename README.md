@@ -7,3 +7,4 @@
 # CHEAT CODES (you can write with or withour uppercase):
 # unlockall (unlock all characters)
 # nightmare (unlock nightmare campaign)
+# activekeydown (active key down)
