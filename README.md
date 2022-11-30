@@ -16,3 +16,5 @@
 # unlockall (unlock all characters)
 # nightmare (unlock nightmare campaign and SS Nightmare difficulty)
 # activekeydown (active key down)
+
+# Enjoy !
