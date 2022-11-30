@@ -1,4 +1,4 @@
-# Listes Persos et avancement sur les animations
+# List characters
 
 # Gogeta = ++
 # GogetaSSG = ++
@@ -38,7 +38,6 @@
 # Buutenks = ++
 # ZenBuu = ++
 # Buuhan = ++
-
 
 # BabyVegeta = ++
 # BabyBlackVegito = ++
