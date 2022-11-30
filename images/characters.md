@@ -7,6 +7,7 @@
 # XenoVegitoSSJ5 = ++
 
 # Goku = ++
+# MajjinGoku = ++
 # GokuSSJ = ++
 # GokuSSJ3 = ++
 # GokuSSJ4 = ++
@@ -38,12 +39,20 @@
 # ZenBuu = ++
 # Buuhan = ++
 
+
+# BabyVegeta = ++
+# BabyBlackVegito = ++
+
+# Nappa SSJ4 = ++
+
+# Broly SSJ = ++
+
+# SuperJanemba = ++
+# SuperJanembaXeno = ++
+
 # Venom = ++
 # SpiderMan = ++
 # Itachi = ++
 # Sasuke = ++
 # SasukeRinnegan = ++
 # NarutoDemon = ++
-
-# BabyVegeta = ++
-# BabyBlackVegito = ++
