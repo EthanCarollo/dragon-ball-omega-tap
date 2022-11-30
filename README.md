@@ -2,7 +2,7 @@
 
 # DragonBallOmegaTap is a tap game where you just tap
 # Its better to play on a 16:9 screen
-# +40 Playable characters
+# +40 Playable characters (~25 Unlockable)
 
 # Dragon ball Omega Tap is like a cheap gatcha game
 # We have a fight menu, a campaign menu, a summon menu, a shop menu and a code menu for cheat
