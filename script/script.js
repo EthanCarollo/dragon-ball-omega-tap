@@ -831,6 +831,12 @@ let money = 1000;
         numberClickP1 = 0;
         numberClickP2 = 0;
         setCase();
+
+        let _percent1 = numberClickP1*200/100;
+        let _percent2 = numberClickP2*200/100;
+
+        document.getElementById("Player1Click").innerHTML = _percent1 + "%";
+        document.getElementById("Player2Click").innerHTML = _percent2 + "%";
     }
 
     const startingCount = () => {
@@ -1041,11 +1047,19 @@ let money = 1000;
             if(gameStarted === true){
                 kamehaPlayer1.style.opacity = "100";
                 kamehaPlayer2.style.opacity = "100";
+
                 let tempWidth1 = 43.75 + (numberClickP1-numberClickP2)/2.25;
                 let tempWidth2 = 43.75 + (numberClickP2-numberClickP1)/2.25;
 
                 kamehaPlayer1.style.width = tempWidth1 + "%";
                 kamehaPlayer2.style.width = tempWidth2 + "%";
+
+                let _percent1 = numberClickP1*200/100;
+                let _percent2 = numberClickP2*200/100;
+
+                document.getElementById("Player1Click").innerHTML = _percent1 + "%";
+                document.getElementById("Player2Click").innerHTML = _percent2 + "%";
+
                 if(tempWidth1 < 31.31){
                     document.getElementById("mid1").style.backgroundSize = "cover";
                 }else{
@@ -1083,6 +1097,10 @@ let money = 1000;
     const finishGame = () => {
         txtStarting.innerHTML = whoWin;
         gameStarted = false;
+        let _percent1 = numberClickP1*200/100;
+        let _percent2 = numberClickP2*200/100;
+        document.getElementById("Player1Click").innerHTML = _percent1 + "%";
+        document.getElementById("Player2Click").innerHTML = _percent2 + "%";
         if(whoWin === "player1"){
             kamehaPlayer1.style.width = "110%";
             kamehaPlayer2.style.width = "0%";

@@ -292,6 +292,21 @@ body{
   z-index: -1;
 }
 
+.playerClick{
+  position: absolute;
+  bottom: 9.5%;
+  font-size: 3vh;
+  color: white;
+}
+
+#Player1Click{
+  left: 26%;
+}
+
+#Player2Click{
+  right: 26%;
+}
+
 /***************AURASET********************/
 
 #auraP1.GokuSSJ3{
