@@ -3306,6 +3306,10 @@
     background-image: url(../images/slotCharacter/gohanSSJPortrait.png);
   }
 
+  .subPerso.GohanSSJ{
+    background-image: url(../images/slotCharacter/gohanSSJPortrait.png);
+  }
+
   .subPerso.Vegeta{
     background-image: url(../images/slotCharacter/VegetaSlot.png);
   }
